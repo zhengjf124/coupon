@@ -65,7 +65,7 @@ class AddressController extends ApiController
      * list :
      *      name     |  type  | description
      * --------------|--------|----------------------
-     *     city_id   |  int   |  县/区ID
+     *     district_id   |  int   |  县/区ID
      * district_name | string |  县/区名称
      *
      */
