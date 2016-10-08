@@ -1,0 +1,375 @@
+[ 2016-08-17T14:10:50+08:00 ] 127.0.0.1 /Home/index/index?_app=shop&_platform=weixin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000569s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000580s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000633s ]
+SQL: SHOW COLUMNS FROM `gwshop_ad` [ RunTime:0.0577s ]
+SQL: SELECT `ad_name`,`ad_link`,`ad_code` FROM `gwshop_ad` WHERE `pid` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0028s ]
+SQL: SELECT `type_name`,`type_img`,`id` FROM `gwshop_goods_category` WHERE ( level=1 ) ORDER BY sort_order LIMIT 4   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0027s ]
+SQL: SELECT `id`,`goods_img`,`goods_price`,`goods_name`,`goods_brief`,`click_count`,`favorite_count`,`comment_count` FROM `gwshop_goods` WHERE ( is_recommend=1 and is_on_sale=1 ) ORDER BY id DESC LIMIT 3   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`goods_img`,`goods_price`,`goods_name`,`market_price` FROM `gwshop_goods` WHERE ( goods_type=2 and is_on_sale=1 ) ORDER BY id DESC LIMIT 3   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `gwshop_active` [ RunTime:0.0026s ]
+SQL: SELECT `end_time` FROM `gwshop_active` WHERE `type` = 'limit_goods' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`goods_img`,`goods_price`,`goods_name`,`goods_brief`,`click_count` FROM `gwshop_goods` WHERE ( is_hot=1 and is_on_sale=1 ) ORDER BY id DESC LIMIT 8   [ RunTime:0.0003s ]
+
+[ 2016-08-17T14:11:14+08:00 ] 127.0.0.1 /Home/index/index?_app=shop&_platform=weixin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000276s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000488s ]
+SQL: SHOW COLUMNS FROM `gwshop_ad` [ RunTime:0.0030s ]
+SQL: SELECT `ad_name`,`ad_link`,`ad_code` FROM `gwshop_ad` WHERE `pid` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0030s ]
+SQL: SELECT `type_name`,`type_img`,`id` FROM `gwshop_goods_category` WHERE ( level=1 ) ORDER BY sort_order LIMIT 4   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`goods_img`,`goods_price`,`goods_name`,`goods_brief`,`click_count`,`favorite_count`,`comment_count` FROM `gwshop_goods` WHERE ( is_recommend=1 and is_on_sale=1 ) ORDER BY id DESC LIMIT 3   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`goods_img`,`goods_price`,`goods_name`,`market_price` FROM `gwshop_goods` WHERE ( goods_type=2 and is_on_sale=1 ) ORDER BY id DESC LIMIT 3   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_active` [ RunTime:0.0027s ]
+SQL: SELECT `end_time` FROM `gwshop_active` WHERE `type` = 'limit_goods' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`goods_img`,`goods_price`,`goods_name`,`goods_brief`,`click_count` FROM `gwshop_goods` WHERE ( is_hot=1 and is_on_sale=1 ) ORDER BY id DESC LIMIT 8   [ RunTime:0.0003s ]
+
+[ 2016-08-17T14:23:54+08:00 ] 127.0.0.1 /index.php?m=Home&c=api&a=get_category&parent_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000188s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000596s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000722s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000850s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `gwshop_goods_category` WHERE ( parent_id = 1 )  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\gwshop\Shop\Application\Home\Controller\ApiController.class.php 第 58 行.
+
+[ 2016-08-17T14:23:55+08:00 ] 127.0.0.1 /index.php?m=Home&c=api&a=get_category&parent_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000427s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000697s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000768s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `gwshop_goods_category` WHERE ( parent_id = 4 )  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\gwshop\Shop\Application\Home\Controller\ApiController.class.php 第 58 行.
+
+[ 2016-08-17T14:24:34+08:00 ] 127.0.0.1 /index.php?m=Home&c=api&a=get_category&parent_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000455s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000517s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `gwshop_goods_category` WHERE ( parent_id = 4 )  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\gwshop\Shop\Application\Home\Controller\ApiController.class.php 第 58 行.
+
+[ 2016-08-17T14:24:35+08:00 ] 127.0.0.1 /index.php?m=Home&c=api&a=get_category&parent_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000428s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000623s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `gwshop_goods_category` WHERE ( parent_id = 1 )  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\gwshop\Shop\Application\Home\Controller\ApiController.class.php 第 58 行.
+
+[ 2016-08-17T14:24:56+08:00 ] 127.0.0.1 /index.php?m=Home&c=api&a=get_category&parent_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000577s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000427s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000481s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `gwshop_goods_category` WHERE ( parent_id = 1 )  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\gwshop\Shop\Application\Home\Controller\ApiController.class.php 第 58 行.
+
+[ 2016-08-17T14:24:57+08:00 ] 127.0.0.1 /index.php?m=Home&c=api&a=get_category&parent_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000444s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000506s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `gwshop_goods_category` WHERE ( parent_id = 4 )  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\gwshop\Shop\Application\Home\Controller\ApiController.class.php 第 58 行.
+
+[ 2016-08-17T14:44:27+08:00 ] 127.0.0.1 /index.php?m=Home&c=api&a=get_category&parent_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000419s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000572s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000647s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `gwshop_goods_category` WHERE ( parent_id = 4 )  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\gwshop\Shop\Application\Home\Controller\ApiController.class.php 第 58 行.
+
+[ 2016-08-17T14:44:28+08:00 ] 127.0.0.1 /index.php?m=Home&c=api&a=get_category&parent_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000485s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000692s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000769s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `gwshop_goods_category` WHERE ( parent_id = 1 )  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\gwshop\Shop\Application\Home\Controller\ApiController.class.php 第 58 行.
+
+[ 2016-08-17T15:13:38+08:00 ] 127.0.0.1 /index.php?m=Home&c=api&a=get_category&parent_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000440s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000640s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000698s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `gwshop_goods_category` WHERE ( parent_id = 1 )  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\gwshop\Shop\Application\Home\Controller\ApiController.class.php 第 58 行.
+
+[ 2016-08-17T15:13:39+08:00 ] 127.0.0.1 /index.php?m=Home&c=api&a=get_category&parent_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000395s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000635s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `gwshop_goods_category` WHERE ( parent_id = 4 )  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\gwshop\Shop\Application\Home\Controller\ApiController.class.php 第 58 行.
+
+[ 2016-08-17T15:34:56+08:00 ] 127.0.0.1 /index.php?m=Home&c=api&a=get_category&parent_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000391s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000586s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000648s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `gwshop_goods_category` WHERE ( parent_id = 1 )  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\gwshop\Shop\Application\Home\Controller\ApiController.class.php 第 58 行.
+
+[ 2016-08-17T15:34:57+08:00 ] 127.0.0.1 /index.php?m=Home&c=api&a=get_category&parent_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000430s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000699s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000769s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `gwshop_goods_category` WHERE ( parent_id = 4 )  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\gwshop\Shop\Application\Home\Controller\ApiController.class.php 第 58 行.
+
+[ 2016-08-17T15:37:46+08:00 ] 127.0.0.1 /index.php?m=Home&c=api&a=get_category&parent_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000649s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `gwshop_goods_category` WHERE ( parent_id = 1 )  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\gwshop\Shop\Application\Home\Controller\ApiController.class.php 第 58 行.
+
+[ 2016-08-17T15:37:47+08:00 ] 127.0.0.1 /index.php?m=Home&c=api&a=get_category&parent_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000403s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000679s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000747s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `gwshop_goods_category` WHERE ( parent_id = 4 )  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\gwshop\Shop\Application\Home\Controller\ApiController.class.php 第 58 行.
+
+[ 2016-08-17T15:38:10+08:00 ] 127.0.0.1 /index.php?m=Home&c=api&a=get_category&parent_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000514s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `gwshop_goods_category` WHERE ( parent_id = 4 )  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\gwshop\Shop\Application\Home\Controller\ApiController.class.php 第 58 行.
+
+[ 2016-08-17T15:38:12+08:00 ] 127.0.0.1 /index.php?m=Home&c=api&a=get_category&parent_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000597s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000649s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `gwshop_goods_category` WHERE ( parent_id = 1 )  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\gwshop\Shop\Application\Home\Controller\ApiController.class.php 第 58 行.
+
+[ 2016-08-17T15:38:26+08:00 ] 127.0.0.1 /index.php?m=Home&c=api&a=get_category&parent_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000341s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000484s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `gwshop_goods_category` WHERE ( parent_id = 4 )  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\gwshop\Shop\Application\Home\Controller\ApiController.class.php 第 58 行.
+
+[ 2016-08-17T15:38:27+08:00 ] 127.0.0.1 /index.php?m=Home&c=api&a=get_category&parent_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000639s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000700s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `gwshop_goods_category` WHERE ( parent_id = 1 )  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\gwshop\Shop\Application\Home\Controller\ApiController.class.php 第 58 行.
+
+[ 2016-08-17T15:40:15+08:00 ] 127.0.0.1 /Home/index/index?_app=shop&_platform=weixin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000392s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000677s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000746s ]
+SQL: SHOW COLUMNS FROM `gwshop_ad` [ RunTime:0.0028s ]
+SQL: SELECT `ad_name`,`ad_link`,`ad_code` FROM `gwshop_ad` WHERE `pid` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0028s ]
+SQL: SELECT `type_name`,`type_img`,`id` FROM `gwshop_goods_category` WHERE ( level=1 ) ORDER BY sort_order LIMIT 4   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0033s ]
+SQL: SELECT `id`,`goods_img`,`goods_price`,`goods_name`,`goods_brief`,`click_count`,`favorite_count`,`comment_count` FROM `gwshop_goods` WHERE ( is_recommend=1 and is_on_sale=1 ) ORDER BY id DESC LIMIT 3   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`goods_img`,`goods_price`,`goods_name`,`market_price` FROM `gwshop_goods` WHERE ( goods_type=2 and is_on_sale=1 ) ORDER BY id DESC LIMIT 3   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_active` [ RunTime:0.0027s ]
+SQL: SELECT `end_time` FROM `gwshop_active` WHERE `type` = 'limit_goods' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] A non well formed numeric value encountered D:\phpStudy\WWW\gwshop\Shop\Application\Home\Controller\IndexController.class.php 第 109 行.
+SQL: SELECT `id`,`goods_img`,`goods_price`,`goods_name`,`goods_brief`,`click_count` FROM `gwshop_goods` WHERE ( is_hot=1 and is_on_sale=1 ) ORDER BY id DESC LIMIT 8   [ RunTime:0.0003s ]
+
+[ 2016-08-17T15:40:55+08:00 ] 127.0.0.1 /Home/index/index?_app=shop&_platform=weixin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000444s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000621s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000681s ]
+SQL: SHOW COLUMNS FROM `gwshop_ad` [ RunTime:0.0026s ]
+SQL: SELECT `ad_name`,`ad_link`,`ad_code` FROM `gwshop_ad` WHERE `pid` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0026s ]
+SQL: SELECT `type_name`,`type_img`,`id` FROM `gwshop_goods_category` WHERE ( level=1 ) ORDER BY sort_order LIMIT 4   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0029s ]
+SQL: SELECT `id`,`goods_img`,`goods_price`,`goods_name`,`goods_brief`,`click_count`,`favorite_count`,`comment_count` FROM `gwshop_goods` WHERE ( is_recommend=1 and is_on_sale=1 ) ORDER BY id DESC LIMIT 3   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`goods_img`,`goods_price`,`goods_name`,`market_price` FROM `gwshop_goods` WHERE ( goods_type=2 and is_on_sale=1 ) ORDER BY id DESC LIMIT 3   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `gwshop_active` [ RunTime:0.0027s ]
+SQL: SELECT `end_time` FROM `gwshop_active` WHERE `type` = 'limit_goods' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`goods_img`,`goods_price`,`goods_name`,`goods_brief`,`click_count` FROM `gwshop_goods` WHERE ( is_hot=1 and is_on_sale=1 ) ORDER BY id DESC LIMIT 8   [ RunTime:0.0003s ]
+
+[ 2016-08-17T15:41:21+08:00 ] 127.0.0.1 /Home/index/index?_app=shop&_platform=weixin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000918s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001016s ]
+SQL: SHOW COLUMNS FROM `gwshop_ad` [ RunTime:0.0029s ]
+SQL: SELECT `ad_name`,`ad_link`,`ad_code` FROM `gwshop_ad` WHERE `pid` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0026s ]
+SQL: SELECT `type_name`,`type_img`,`id` FROM `gwshop_goods_category` WHERE ( level=1 ) ORDER BY sort_order LIMIT 4   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0035s ]
+SQL: SELECT `id`,`goods_img`,`goods_price`,`goods_name`,`goods_brief`,`click_count`,`favorite_count`,`comment_count` FROM `gwshop_goods` WHERE ( is_recommend=1 and is_on_sale=1 ) ORDER BY id DESC LIMIT 3   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`goods_img`,`goods_price`,`goods_name`,`market_price` FROM `gwshop_goods` WHERE ( goods_type=2 and is_on_sale=1 ) ORDER BY id DESC LIMIT 3   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_active` [ RunTime:0.0027s ]
+SQL: SELECT `end_time` FROM `gwshop_active` WHERE `type` = 'limit_goods' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`goods_img`,`goods_price`,`goods_name`,`goods_brief`,`click_count` FROM `gwshop_goods` WHERE ( is_hot=1 and is_on_sale=1 ) ORDER BY id DESC LIMIT 8   [ RunTime:0.0003s ]
+
+[ 2016-08-17T15:42:32+08:00 ] 127.0.0.1 /Home/index/index?_app=shop&_platform=weixin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000288s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000525s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000588s ]
+SQL: SHOW COLUMNS FROM `gwshop_ad` [ RunTime:0.0026s ]
+SQL: SELECT `ad_name`,`ad_link`,`ad_code` FROM `gwshop_ad` WHERE `pid` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0028s ]
+SQL: SELECT `type_name`,`type_img`,`id` FROM `gwshop_goods_category` WHERE ( level=1 ) ORDER BY sort_order LIMIT 4   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0029s ]
+SQL: SELECT `id`,`goods_img`,`goods_price`,`goods_name`,`goods_brief`,`click_count`,`favorite_count`,`comment_count` FROM `gwshop_goods` WHERE ( is_recommend=1 and is_on_sale=1 ) ORDER BY id DESC LIMIT 3   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`goods_img`,`goods_price`,`goods_name`,`market_price` FROM `gwshop_goods` WHERE ( gtype=2 and is_on_sale=1 ) ORDER BY id DESC LIMIT 3   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `gwshop_active` [ RunTime:0.0031s ]
+SQL: SELECT `end_time` FROM `gwshop_active` WHERE `type` = 'limit_goods' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`goods_img`,`goods_price`,`goods_name`,`goods_brief`,`click_count` FROM `gwshop_goods` WHERE ( is_hot=1 and is_on_sale=1 ) ORDER BY id DESC LIMIT 8   [ RunTime:0.0003s ]
+
+[ 2016-08-17T15:42:49+08:00 ] 127.0.0.1 /Home/Collect/isCollect
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000451s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000608s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000674s ]
+
+[ 2016-08-17T15:42:50+08:00 ] 127.0.0.1 /Home/Goods/youLike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000447s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000629s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000689s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0028s ]
+SQL: SELECT `id`,`goods_name`,`goods_price`,`goods_img` FROM `gwshop_goods` WHERE `goods_type` = 0 LIMIT 4   [ RunTime:0.0004s ]
+
+[ 2016-08-17T15:42:51+08:00 ] 127.0.0.1 /Home/Goods/detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000408s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000482s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000532s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0045s ]
+SQL: SELECT `id`,`cat_id`,`goods_name`,`goods_price`,`market_price`,`store_count`,`goods_brief`,`is_hot`,`is_best`,`is_new`,`spec_type`,`goods_type`,`end_time` FROM `gwshop_goods` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `gwshop_active` [ RunTime:0.0043s ]
+SQL: SELECT `end_time` FROM `gwshop_active` WHERE `type` = 'limit_goods' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_images` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `gwshop_goods_images` WHERE ( goods_id=2 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec_goods_price` [ RunTime:0.0026s ]
+SQL: SELECT GROUP_CONCAT(`key` SEPARATOR '_') FROM `gwshop_spec_goods_price` WHERE ( goods_id = 2 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec_image` [ RunTime:0.0048s ]
+SQL: SELECT `spec_image_id`,`src` FROM `gwshop_spec_image` WHERE ( goods_id = 2 and src != ''  )  [ RunTime:0.0002s ]
+SQL: SELECT a.name,a.order,b.* FROM gwshop_spec AS a INNER JOIN gwshop_spec_item AS b ON a.id = b.spec_id WHERE b.id IN(1,3,1,4) ORDER BY a.order [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec_goods_price` [ RunTime:0.0039s ]
+SQL: SELECT `key`,`price`,`store_count` FROM `gwshop_spec_goods_price` WHERE ( goods_id = 2 )  [ RunTime:0.0004s ]
+
+[ 2016-08-17T15:42:52+08:00 ] 127.0.0.1 /index.php?m=home&c=wxLogin&a=ind&redirect_uri=http://gwshop.wbzz.com/weixin/html/goods/cont.html?id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000435s ]
+SQL: SHOW COLUMNS FROM `gwshop_wx_user` [ RunTime:0.0472s ]
+SQL: SELECT * FROM `gwshop_wx_user` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2016-08-17T16:12:48+08:00 ] 127.0.0.1 /Home/index/index?_app=shop&_platform=weixin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000384s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000625s ]
+SQL: SHOW COLUMNS FROM `gwshop_ad` [ RunTime:0.0033s ]
+SQL: SELECT `ad_name`,`ad_link`,`ad_code` FROM `gwshop_ad` WHERE `pid` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0032s ]
+SQL: SELECT `type_name`,`type_img`,`id` FROM `gwshop_goods_category` WHERE ( level=1 ) ORDER BY sort_order LIMIT 4   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0032s ]
+SQL: SELECT `id`,`goods_img`,`goods_price`,`goods_name`,`goods_brief`,`click_count`,`favorite_count`,`comment_count` FROM `gwshop_goods` WHERE ( is_recommend=1 and is_on_sale=1 ) ORDER BY id DESC LIMIT 3   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`goods_img`,`goods_price`,`goods_name`,`market_price` FROM `gwshop_goods` WHERE ( gtype=2 and is_on_sale=1 ) ORDER BY id DESC LIMIT 3   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_active` [ RunTime:0.0028s ]
+SQL: SELECT `end_time` FROM `gwshop_active` WHERE `type` = 'limit_goods' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`goods_img`,`goods_price`,`goods_name`,`goods_brief`,`click_count` FROM `gwshop_goods` WHERE ( is_hot=1 and is_on_sale=1 ) ORDER BY id DESC LIMIT 8   [ RunTime:0.0003s ]
+

@@ -1,0 +1,37 @@
+
+<include file="Public:head"/>
+<body>
+
+<div class="wrapper">
+    <include file="Public:nav"/>
+
+    <br>
+    <div>
+        <button type="button" class="btn btn-default"><a href="{:U('User/index')}">会员列表</a></button>
+        <button type="button"  class="btn btn-default"><a href="#">添加会员</a></button>
+    </div>
+
+    <table class="table table-bordered">
+        <caption>会员列表</caption>
+        <thead>
+        <tr>
+            <th>用户名</th>
+            <th>邮箱</th>
+            <th>添加时间</th>
+        </tr>
+        </thead>
+        <tbody>
+        <volist name="admin" id="ad">
+        <tr>
+            <td>{$ad.user_name}</td>
+            <td>{$ad.email}</td>
+            <td>{$ad.add_time}</td>
+        </tr>
+       </volist>
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>

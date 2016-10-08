@@ -1,0 +1,54 @@
+.focus {
+    position: relative;
+    @include focus($base-width);
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+    .arrow-left {
+        @include position-top(absolute,50%,$base-size*1.2,10);
+        margin-top: - $base-size*2;
+        i {
+            @include icon-font($base-font-size*3,$white,$base-size*4);
+        }
+    }
+    .arrow-right {
+        @include position-top-right(absolute,50%,$base-size*1.2,10);
+        margin-top: - $base-size*2;
+        i {
+            @include icon-font($base-font-size*3,$white,$base-size*4);
+        }
+    }
+    .swiper-main {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .swiper1 {
+        width: 100%;
+        height: 100%;
+        .swiper-slide {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .pagination1 {
+        @include position-bottom(absolute,0,0,10);
+        width: 100%;
+        text-align: center;
+        .swiper-pagination-switch {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+            background: #999;
+            box-shadow: 0 1px 2px #555 inset;
+            margin: 0 3px;
+            cursor: pointer;
+        }
+        .swiper-active-switch {
+            background: #fff;
+        }
+    }
+}

@@ -1,0 +1,903 @@
+<?php
+
+class WeixinAction extends Action
+{
+	
+	private $token;
+	private $fromuser;
+	private $postObj;
+	public function _initialize() {
+		//parent::_initialize();
+		$this->token=session('token');
+
+	}
+	
+
+	
+	public function index(){
+		
+		$token=$_GET['token'];
+		$this->token=$token;
+		
+		//验证、回复
+		//$wechat = new Wechat($token);
+		if (isset($_GET['echostr'])) {
+			//$wechat->valid($token);//验证成为开发者
+			$this->valid($token);//验证成为开发者
+			
+		}else{
+			//$wechat->responseMsg($token);
+			$this->responseMsg($token);
+		}
+	}
+	//---------------------------验证star--------------------------//
+	public function valid($token)
+    {
+        $echoStr = $_GET["echostr"];
+        if($this->checkSignature($token)){
+        	echo $echoStr;
+        	exit;
+        }
+    }
+	//验证
+	private function checkSignature($token)
+	{
+        $signature = $_GET["signature"];
+        $timestamp = $_GET["timestamp"];
+        $nonce = $_GET["nonce"];	
+        		
+		//$token = "gnwai";
+		$tmpArr = array($token, $timestamp, $nonce);
+		sort($tmpArr, SORT_STRING);
+		$tmpStr = implode( $tmpArr );
+		$tmpStr = sha1( $tmpStr );
+		
+		if( $tmpStr == $signature ){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	//----------------------- 回复star-------------------------//
+	public function responseMsg($token)
+		{
+			
+			$postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
+		
+			//extract post data
+			if (!empty($postStr)){
+					
+					$postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
+					$RX_TYPE = trim($postObj->MsgType);
+					
+					$this->postObj=$postObj;  
+					$this->fromuser=trim($postObj->FromUserName);  //成员变量
+					
+					switch ($RX_TYPE)
+					{
+					case "event"://事件消息
+						$result = $this->receiveEvent($postObj,$this->token);
+						break;
+					case "text"://文本消息
+						//保存用户消息到数据库
+						/*$rid=$this->savetoDatabase($postObj,$token);*/
+						$result = $this->receiveText($postObj,$token,$rid);
+						break;
+					case "location"://地理位置消息
+					//	$res=$postObj->ToUserName;
+						//$result = $this->transmitText($postObj,$res);
+						$result = $this->receiveLocation($postObj,$token);
+						break;
+					case "image"://图片消息
+						
+						break;
+					
+					}
+					//
+					echo $result;
+
+
+			}else {
+				echo "";
+				exit;
+			}
+		}
+		//保存用户消息到数据库
+		private function savetoDatabase($postObj,$token){
+				//
+				$openid=trim($postObj->FromUserName);
+				$data['fromuser']=trim($postObj->FromUserName);
+				$data['createtime']=trim($postObj->CreateTime);
+				$data['title']=trim($postObj->Content);
+				$data['touser']=trim($postObj->ToUserName);
+				$data['token']=$token;
+				$db=M("Message");
+				$id=$db->add($data);
+				
+				//
+				$db2=M('Cususer');
+				$res=$db2->where(array("openid"=>$openid))->find();
+				if(!$res){
+						//保存粉丝信息
+						$cuser=new Guser($token);
+						$userinfo=$cuser->getUserInfo($openid);
+						$userinfo=json_decode($userinfo,true);
+						$userinfo['status']=1;
+						$userinfo['token']=$token;
+						$db2->create($userinfo);
+						$db2->add();		
+				}
+				
+				return $id;
+			
+		}
+	
+	//接收到地理位置消息
+	private function receiveLocation($object,$token){
+		$lat = $object->Location_Y;//地理位置经度
+		$lng = $object->Location_X;//地理位置纬度
+		$info= $object->Label;//地理位置信息
+		//$content = $info;
+		$news=new News();
+		$res=$news->location($token,$lat,$lng);
+		//$result = $this->transmitDef($object, $res);
+		$result = $this->transmitText($object,$res);
+		return $result;
+	}
+	
+	
+	//接收到事件，返回消息
+		private function receiveEvent($object,$token)
+		{
+			$content = "";
+			switch ($object->Event)
+			{
+				case "CLICK"://自定义菜单栏点击事件
+				//$content = "欢迎关注广为网络\n\n 业务咨询：\n 0591-83203805\n";
+					switch ($object->EventKey){
+						case "index":
+							//$content = "欢迎关注广为网络\n\n 业务咨询：\n 0591-83203805\n";
+						break;
+						case "商城":
+							//$content = "点此进入微商城";
+							$news=new News();
+							$res=$news->shop($token); 
+							if($res){
+								$title=$res['title'];
+								$content=$res['info'];
+								$image=$res['picurl'];
+								//$url=$res['homeurl'];
+								//$url=C("site_url").'/index.php/Wap/Product/index/token/'.$token.'/wecha_id/'.$object->FromUserName;
+								$url=C("site_url").'/index.php/Wap/Store/cats/token/'.$token.'/wecha_id/'.$object->FromUserName;
+								$result = $this->transmitNews2($object,$title,$content,$image,$url);
+								return $result;
+							}
+						break;
+						
+						case "订餐":
+							
+							    $info = M('Company')->where(array('token'=>$token))->find();
+								$title=$info['name'];
+								$content=$info['intro'];
+								$image=$info['logourl'];
+								//$url=$res['homeurl'];
+								$url=C("site_url").'/index.php/Wap/Repast/index/token/'.$token.'/wecha_id/'.$object->FromUserName.'/cid/'.$info['id'];
+								
+								$result = $this->transmitNews2($object,$title,$content,$image,$url);
+								return $result;
+						break;
+						
+				
+						case "团购":
+							$news=new News();
+							$res=$news->groupon($token); 
+							//$content = $res['info'];//取得对应用户的首页内容
+							//$result = $this->transmitDef($object, $content);
+							if($res){
+								$title=$res['title'];
+								$content=$res['info'];
+								$image=$res['picurl'];
+								//$url=$res['homeurl'];
+								$url=C("site_url").'/index.php/Wap/Groupon/grouponIndex/token/'.$token.'/wecha_id/'.$object->FromUserName;
+								$result = $this->transmitNews2($object,$title,$content,$image,$url);
+								return $result;
+							}
+						break;
+						/* case "名片":
+							$content = "微名片功能正在升级中。。。"; */
+						break;
+						case "全景":
+							$info = M('reply_info')->where(array('infotype'=>'Panorama','token'=>$token))->find();
+							$title=$info['title'];
+							$image=$info['picurl'];
+							$url=C("site_url").'/index.php/Wap/Panorama/index/token/'.$token.'/wecha_id/'.$object->FromUserName;
+							$content=$info['info'];
+							$result = $this->transmitNews2($object,$title,$content,$image,$url);
+							return $result;
+						break;
+						case "会员":
+						case "会员卡":
+							$info=$this->member();
+							$title=$info['title'];
+							$image=$info['picurl'];
+							$url=$info['url'];
+							$content=$info['keyword'];
+							$result = $this->transmitNews2($object,$title,$content,$image,$url);
+							return $result;
+						break;
+						case "微客服":
+							$result = $this->mulServer($object, $res);	
+						
+							return $result;
+						break;
+						default :
+							$result=$this->click($object,$object->EventKey);
+							return $result;
+						break;
+					}
+				$result = $this->transmitText($object, $content);
+				break;
+				
+				/*case "VIEW":
+				$content = "跳转链接 ".$object->EventKey;
+				break;*/
+				
+				
+				
+				case "scancode_waitmsg":
+				$content = "扫码带提示：类型 ".$object->ScanCodeInfo->ScanType." 结果：".$object->ScanCodeInfo->ScanResult;
+				$result = $this->transmitText($object, $content);
+				break;
+				
+				case "scancode_push":
+				$content = "扫码推事件";
+				$result = $this->transmitText($object, $content);
+				break;
+				
+				case "pic_sysphoto":
+				$content = "系统拍照";
+				$result = $this->transmitText($object, $content);
+				break;
+				
+				case "pic_weixin":
+				 $content = "相册发图：数量 ".$object->SendPicsInfo->Count;
+				 $result = $this->transmitText($object, $content);
+				 
+				break;
+				
+				case "pic_photo_or_album":
+				 $content = "拍照或者相册：数量 ".$object->SendPicsInfo->Count;
+				 $result = $this->transmitText($object, $content);
+				break;
+				
+				
+				case "LOCATION"://地理位置
+					$Latitude=$object->Latitude;  //纬度
+					$Longitude=$object->Longitude;  //经度
+					//$Precision=$object->Precision; //精度
+					//$content = "您的地理位置：经度-".$Longitude." 纬度-".$Latitude."精度-".$Precision;
+					//$content = "经度:".$Longitude." 纬度:".$Latitude;
+					//$result = $this->transmitText($object, $content);
+			
+				break;
+				
+				case "location_select":
+                	$content = "发送位置：标签 ".$object->SendLocationInfo->Label;
+					$result = $this->transmitText($object, $content);
+                break;
+				
+				case "unsubscribe"://取消关注事件
+					$content = "取消关注";
+					//取消关注 
+					 $saveinfo = Wxfan();
+					 $saveinfo->saveUser($token,$object);
+					$result = $this->transmitText($object, $content);
+					
+				 //    $news->statSuborUnsub($token,'unsubnum');
+				break;
+				
+				case "SCAN"://扫描了带参数（注意）的二维码
+					//保存扫描记录，创建新用户 
+					$qrcode=D("Qrcode");
+					$res=$qrcode->addUser($object,$token); 
+					if($res){
+						$content="亲！你好！欢迎来到酒龙城。系统全面升级中，除礼品赠送外，其它功能暂未开放，尽请期待！";
+					}else{
+						//$content="欢迎光临，请点击下面的菜单，选择您要的操作。";
+						$content="亲！你好！欢迎来到酒龙城。系统全面升级中，除礼品赠送外，其它功能暂未开放，尽请期待！";
+					}
+					// EventKey   6
+					//$content = $object->FromUserName."扫描了二维码-- ".$object->EventKey;
+					
+					$result = $this->transmitText($object, $content);
+				break;
+				
+				case "subscribe": //关注事件
+					
+					//保存扫描记录，创建新用户 
+					$qrcode=D("Qrcode");
+					$res=$qrcode->addUser2($object,$token); 
+					if($res){
+						$content="亲！你好！欢迎来到酒龙城。系统全面升级中，除礼品赠送外，其它功能暂未开放，尽请期待！";
+					}else{
+						$content="亲！你好！欢迎来到酒龙城。系统全面升级中，除礼品赠送外，其它功能暂未开放，尽请期待！";
+					}
+					// EventKey   qrscene_6
+					//$content = $object->FromUserName."扫描了二维码-- ".$object->EventKey;
+					
+					$result = $this->transmitText($object, $content);
+					
+				
+				break;
+				
+				
+			}
+			
+			return $result;  //返回xml消息给微信服务器
+		}
+	//接收文本消息，返回文本消息
+		 private function receiveText($object,$token,$rid="")
+		{
+			
+			$keyword = trim($object->Content);
+			//天气查询
+			/*if(strstr($keyword,'天气')){
+				$keyword=$city = str_replace('天气', '', $keyword);
+				$url = "http://apix.sinaapp.com/weather/?appkey=".$object->ToUserName."&city=".urlencode($keyword); 
+				$output = file_get_contents($url);
+				$content = json_decode($output, true);
+				$result = $this->transmitNews($object, $content);
+				return $result;
+			}
+			if(strstr($keyword,'笑话')){
+				
+				$content = "没有这个功能或者查询方式错误！\n 发送 0 返回主菜单。";
+				$result = $this->transmitDef($object, $content);
+				return $result;
+			}*/
+			//
+			switch($keyword){
+			
+				case 'home': 
+				case '首页': 
+					$news=new News();
+					$res=$news->shouye($token); 
+					//$content = $res['info'];//取得对应用户的首页内容
+					//$result = $this->transmitDef($object, $content);
+					$title=$res['title'];
+					$content=$res['info'];
+					$image=$res['picurl'];
+					$url=$res['url'];
+					$result = $this->transmitNews2($object,$title,$content,$image,$url);
+					return $result;
+				break;
+				
+				case '商城': 
+					$news=new News();
+					$res=$news->shop($token); 
+					//$content = $res['info'];//取得对应用户的首页内容
+					//$result = $this->transmitDef($object, $content);
+					if($res){
+						$title=$res['title'];
+						$content=$res['info'];
+						$image=$res['picurl'];
+						//$url=$res['homeurl'];
+						//$url=C("site_url").'/index.php/Wap/Product/index/token/'.$token.'/wecha_id/'.$object->FromUserName;
+						$url=C("site_url").'/index.php/Wap/Store/cats/token/'.$token.'/wecha_id/'.$object->FromUserName;//新微商城
+						$result = $this->transmitNews2($object,$title,$content,$image,$url);
+						return $result;
+					}
+				break;
+				
+				
+				case '我爱php':				
+					$wxfan=new Wxfan();
+					$res = $wxfan->sendHb($token, $object); 
+					$content = "红包发送成功";
+					$result = $this->transmitDef($object, $res->return_msg);
+					return $result;
+				break;
+				
+				
+				case '团购': 
+					$news=new News();
+					$res=$news->groupon($token); 
+					//$content = $res['info'];//取得对应用户的首页内容
+					//$result = $this->transmitDef($object, $content);
+					if($res){
+						$title=$res['title'];
+						$content=$res['info'];
+						$image=$res['picurl'];
+						//$url=$res['homeurl'];
+						$url='http://gweixin.gnwai.com/index.php/Wap/Groupon/grouponIndex/token/'.$token.'/wecha_id/'.$object->FromUserName;
+						$result = $this->transmitNews2($object,$title,$content,$image,$url);
+						return $result;
+					}
+				break;
+				
+				
+				case '授权':			
+					$uri='http://wx.gnwai.com/index.php/Wap/Shouquan/';	
+					$uri=urlencode($uri);
+					$content = "欢迎关注广为网络
+					<a href='https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx04c802e5c13bc942&redirect_uri=".$uri."&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect'>体验OAuth2授权</a>";//
+					$result = $this->transmitDef($object, $content);
+					return $result;
+				break;
+				case 'baidu':
+				case '百度':				
+					$content = "<a href='weixin://addfriend/gnwaiocm'>点击关注广为网络</a>";
+					$result = $this->transmitDef($object, $content);
+					return $result;
+				break;
+				
+				case '2048':	
+					$news=new News();
+					$res=$news->games($token,'games'); 			
+					if($res){
+						$title=$res['title'];
+						$content=$res['info'];
+						$image=$res['picurl'];
+						//$url=$res['homeurl'];
+						$url='http://wx.gnwai.com/index.php/Wap/Games/index/token/'.$token.'/wecha_id/'.$object->FromUserName;
+						$result = $this->transmitNews2($object,$title,$content,$image,$url);
+					}else{
+						$content = "未设置";	
+						$result = $this->transmitDef($object, $content);
+					}
+					return $result;
+				break;
+				
+				case 'sjm':	
+				case '神经猫':	
+					$news=new News();
+					$res=$news->games($token,'sjmreply_info'); 			
+					if($res){
+						$title=$res['title'];
+						$content=$res['info'];
+						$image=$res['picurl'];
+						//$url=$res['homeurl'];
+						$url='http://wx.gnwai.com/games/sjm/';
+						$result = $this->transmitNews2($object,$title,$content,$image,$url);
+					}else{
+						$content = "未设置";	
+						$result = $this->transmitDef($object, $content);
+					}
+					return $result;
+				break;
+				
+				case "全景": //360°全景
+					$token=$this->token;
+					$info = M('reply_info')->where(array('infotype'=>'Panorama','token'=>$token))->find();
+					$title=$info['title'];
+					$image=$info['picurl'];
+					$url=C("site_url").'/index.php/Wap/Panorama/index/token/'.$token.'/wecha_id/'.$object->FromUserName;
+					$content=$info['info'];
+					$result = $this->transmitNews2($object,$title,$content,$image,$url);
+					return $result;
+				break;
+				
+				case "相册": 
+					$token=$this->token;
+					$info = M('Photo')->where(array('status'=>1,'token'=>$token))->find();
+					$title=$info['title'];
+					$image=$info['picurl'];
+					$url=C("site_url").'/index.php/Wap/Photo/index/token/'.$token.'/wecha_id/'.$object->FromUserName;
+					$content=$info['info'];
+					$result = $this->transmitNews2($object,$title,$content,$image,$url);
+					return $result;
+				break;
+				
+				case "会员":
+				case "会员卡":
+					$info=$this->member();
+					$title=$info['title'];
+					$image=$info['picurl'];
+					$url=$info['url'];
+					$content=$info['keyword'];
+					$result = $this->transmitNews2($object,$title,$content,$image,$url);
+					return $result;
+				break;
+				
+				/*case "活动":
+					//$info=$this->member();
+					$title='500元京东卡，不带走怎能罢休！';
+					$image='http://wx.gnwai.com/Upfiles/test/share1.jpg';
+					$url='http://wx.gnwai.com/index.php/Wap/Mobile/index/code/1/token/'.$token.'/wecha_id/'.$object->FromUserName;
+					$content='500元京东卡，不带走怎能罢休！';
+					$result = $this->transmitNews2($object,$title,$content,$image,$url);
+					return $result;
+				break;*/
+				
+				default:
+					$res=$this->keyword($keyword);
+					
+					if($res['type']==1){//文本消息
+						$content=$res['info']['text'];
+						$result = $this->transmitDef($object, $content ,$rid);
+						return $result;
+						
+					}elseif($res['type']==2){//图文消息
+						
+						$result = $this->transmitNews($object, $res);
+						return $result;
+						
+					}elseif($res['type']==5){
+						$result = $this->transmitImgs($object, $res['info']);	
+						//$res='出错啦';
+						//$result = $this->transmitText($object, $res);	
+						return $result;	
+					}
+					/*elseif($res['type']==3){//多客服。不建议使用
+						
+						$result = $this->mulServer($object, $res);	
+						return $result;
+					}*/
+					elseif($res['type']==4){//无回复
+						return '';
+					}	
+				break;
+				
+			}
+		}
+		
+		//菜单栏点击事件
+		public function click($object,$key){
+			$res=$this->keyword($key);
+			
+			if($res['type']==2){//单图文消息
+				$result = $this->transmitNews($object, $res);
+			}elseif($res['type']==3){//多客服
+				$result = $this->mulServer($object, $res);	
+			}elseif($res['type']==5){
+				$result = $this->transmitImgs($object, $res['info']);	
+				//$res='出错啦';
+				//$result = $this->transmitText($object, $res);		
+			}elseif($res['type']==1){
+				$content=$res['info']['text'];
+				$result = $this->transmitDef($object, $content ,$rid);	
+			}
+			
+			return $result;
+		}
+	//会员卡
+	public	function member(){
+		$card=M('member_card_create')->where(array('token'=>$this->token,'wecha_id'=>$this->postObj->FromUserName))->find();
+		//F('card',$card);
+		if($card==false){
+			$data['picurl']=rtrim(C('site_url'),'/').'/tpl/static/images/member.jpg';
+			$data['title']='会员卡,省钱，打折,促销，优先知道,有奖励哦';
+			$data['keyword']='尊贵vip，是您消费身份的体现,会员卡,省钱，打折,促销，优先知道,有奖励哦';
+			$data['url']=rtrim(C('site_url'),'/').U('Wap/Card/get_card',array('token'=>$this->token,'wecha_id'=>$this->postObj->FromUserName));
+		}else{
+			$data['picurl']=rtrim(C('site_url'),'/').'/tpl/static/images/vip.jpg';
+			$data['title']='尊敬的会员卡用户欢迎您的再次访问,省钱，打折,促销，优先知道';
+			$data['keyword']='尊贵vip，是您消费身份的体现,会员卡,省钱，打折,促销，优先知道,有奖励哦';
+			$data['url']=rtrim(C('site_url'),'/').U('Wap/Card/vip',array('token'=>$this->token,'wecha_id'=>$this->postObj->FromUserName));
+		
+		}
+		//return array(array(array($data['title'],$data['keyword'],$data['picurl'],$data['url'])),'news');
+		return $data;
+		
+	
+	}
+		
+		//关键字查询
+		public function keyword($key){
+			$like['keyword'] = array('like', ('%' . $key) . '%');
+			$like['token'] = $this->token;
+			
+			$res['info'] = M('Text')->where($like,array('type'=>1))->order('id desc')->find();
+			if($res['info']){
+				$res['type']=1;//文本
+				return $res;exit;
+				
+			}
+			
+			if($res['info']==false){
+				$like2['keyword'] = array('like', ('%' . $key) . '%');
+				$like2['token'] = $this->token;
+				$like2['type'] = 2;//图文
+	
+				$res['info'] = M('Text')->where($like2)->order('id desc')->limit(10)->select();
+				if($res['info']){
+					$res['type']=5;//多图文
+					foreach($res['info'] as &$val){
+						if( $val['content']){
+							$val['url']=C("site_url")."/index.php/Wap/Index/ccontent/id/".$val['id']."/wecha_id/".$this->postObj->FromUserName;
+						}unset($val);
+					}
+					return $res;exit;
+					
+				}	
+			}
+			
+			
+			
+			if($res['info']==false){
+				//$data = M('Img')->where($like)->order('id desc')->find();
+				$like['keyword'] = array('like', ('%' . $key) . '%');
+				$like['token'] = $this->token;
+				$res['info'] = M('Img')->where($like)->order('id desc')->limit(10)->select();
+				//$res['info'] = M('Img')->where($like)->order('id desc')->find();
+				if($res['info']){
+					$res['type']=5;//多图文
+					
+					foreach($res['info'] as &$val){
+						$val['image']=$val['pic'];
+						if($val['info']){
+							$val['url']=C('site_url').'/index.php/Wap/Index/content/token/'.$this->token.'/id/'.$val['id'];
+						}	
+					}unset($val);
+					
+					return $res;exit;	
+				}
+				
+			}
+			if($res['info']==false){
+				$data = M('Keyword')->where($like)->order('id desc')->find();
+				if($data){
+					switch ($data['module']) {
+						case "Lottery":
+						$info = M('Lottery')->find($data['pid']);
+						 switch ($info['type']) {
+							case 1:
+								$model = 'Lottery';
+								break;
+							case 2:
+								$model = 'Guajiang';
+								break;
+							case 3:
+								$model = 'Coupon';
+								break;
+							case 4:
+								$model = 'LuckyFruit';
+								break;
+							case 5:
+								$model = 'GoldenEgg';
+								break;
+							case 8:
+								$model = 'Redpacket';
+								break;
+						  }
+						$token=$this->token;
+						$data['type']=2;
+						$data['title']=$info['title'];
+						$data['image']=$info['starpicurl'];
+						$data['url']=C("site_url").'/index.php/Wap/'.$model.'/index/code/1/token/'.$token.'/id/'.$info['id'].'/wecha_id/'.$this->fromuser;
+						$data['text']=$info['info'];
+						break;
+						
+					case "games":
+						$info = M('Games')->find($data['pid']);
+						$token=$this->token;
+						$data['type']=2;
+						$data['title']=$info['title'];
+						$data['image']=$info['starpicurl'];
+						$data['url']=$info['url'];
+						$data['text']=$info['info'];
+					break;
+					case "Invites":
+						$info = M('invites')->find($data['pid']);
+						$token=$this->token;
+						$data['type']=2;
+						$data['title']=$info['title'];
+						$data['image']=$info['picurl'];
+						$data['url']=C("site_url").'/index.php/Wap/Invites/index/token/'.$token.'/id/'.$info['id'];
+						$data['text']=$info['content'];
+					break;
+					
+					
+					case "Business":
+						$info = M('Busines')->find($data['pid']);
+						$token=$this->token;
+						$data['type']=2;
+						$data['title']=$info['title'];
+						$data['image']=$info['picurl'];
+						$data['url']=C("site_url").'/index.php/Wap/Business/index/token/'.$token.'/bid/'.$info['bid'].'/type/'.$info['type'].'/wecha_id/'.$this->fromuser;
+						$data['text']=$info['business_desc'];
+					break;
+					
+					case "Zhuli":
+						$info = M('Zhuli')->where("id=".$data['pid'])->select();
+						$token=$this->token;
+						$data['type']=2;
+						$data['title']=$info[0]['title'];
+						$data['image']=$info[0]['picurl'];
+						$data['url']=C("site_url").'/index.php/Wap/Zhuli/index/token/'.$token.'/code/1/id/'.$info[0]['id'].'/wecha_id/'.$this->fromuser;
+						$data['text']=$info[0]['info'];
+					break;
+					case "Dazp":
+						$info = M('Dazp')->where("id=".$data['pid'])->limit(1)->select();
+						$token=$this->token;
+						$data['type']=2;
+						$data['title']=$info[0]['title'];
+						$data['image']=$info[0]['starpicurl'];
+						$data['url']=C("site_url").'/index.php/Wap/Dazp/index/token/'.$token.'/code/1/id/'.$info[0]['id'].'/wecha_id/'.$this->fromuser;
+						$data['text']=$info[0]['info'];
+					break;
+					
+					case "Festival":
+						$info = M('Festival')->where("id=".$data['pid'])->limet(1)->select();
+						$token=$this->token;
+						$data['type']=2;
+						$data['title']=$info[0]['title'];
+						$data['image']=$info[0]['picurl'];
+						$data['url']=C("site_url").'/index.php/Wap/Festival/index/token/'.$token.'/id/'.$info[0]['id'];
+						$data['text']=$info[0]['info'];
+					break;
+					
+						
+					}
+					
+				}
+				
+			}
+			if($data==false){
+				//$data=array('type'=>4,'text'=>'默认回复');
+				$data=M('Dreply')->where(array('token'=>$this->token))->find();//默认回复
+				if($data['image']){//图文
+					$data['type']=2;
+					$data['text']=$data['content'];
+					
+				}else{
+					$data['type']=1;
+					$data['info']['text']=$data['content'];	
+					
+				}
+			}
+			if ($data != false) {
+				return $data;
+			}else{
+				//$data=array('type'=>3,'text'=>'多客服');
+				$data=array('type'=>4,'text'=>'无回复');
+				return $data;
+			}
+		}
+		
+		//事件消息格式
+		private function transmitText($object, $content)
+		{
+			$textTpl = "<xml>
+			<ToUserName><![CDATA[%s]]></ToUserName>
+			<FromUserName><![CDATA[%s]]></FromUserName>
+			<CreateTime>%s</CreateTime>
+			<MsgType><![CDATA[text]]></MsgType>
+			<Content><![CDATA[%s]]></Content>
+			</xml>";
+			$result = sprintf($textTpl, $object->FromUserName, $object->ToUserName, time(), $content);
+			return $result;
+		}
+		//单图文消息格式
+		private function transmitNews($object, $newsArray)
+		{
+			if(!is_array($newsArray)){
+				return;
+				
+			}else{
+				$itemTpl = "<item>
+				<Title><![CDATA[%s]]></Title>
+				<Description><![CDATA[%s]]></Description>
+				<PicUrl><![CDATA[%s]]></PicUrl>
+				<Url><![CDATA[%s]]></Url>
+				</item>";
+				$item_str = "";
+				//foreach ($newsArray as $item){
+				//	$item_str .= sprintf($itemTpl, $item['title'], $item['text'], $item['image'],$item['url']);
+				//}
+				$item_str .= sprintf($itemTpl, $newsArray['title'], $newsArray['text'], $newsArray['image'],$newsArray['url']);
+				$newsTpl = "<xml>
+				<ToUserName><![CDATA[%s]]></ToUserName>
+				<FromUserName><![CDATA[%s]]></FromUserName>
+				<CreateTime>%s</CreateTime>
+				<MsgType><![CDATA[news]]></MsgType>
+				<ArticleCount>%s</ArticleCount>
+				<Articles>$item_str</Articles>
+				</xml>";
+	
+				$result = sprintf($newsTpl, $object->FromUserName, $object->ToUserName, time() ,1);  //count($newsArray)
+				return $result;
+			}
+		}
+		
+		
+		//图文消息格式2
+		private function transmitNews2($object, $title,$content,$image,$url)
+		{
+			$itemTpl = "<item>
+			<Title><![CDATA[%s]]></Title>
+			<Description><![CDATA[%s]]></Description>
+			<PicUrl><![CDATA[%s]]></PicUrl>
+			<Url><![CDATA[%s]]></Url>
+			</item>";
+			$item_str = "";
+			$item_str .= sprintf($itemTpl, $title, $content, $image, $url);
+			$newsTpl = "<xml>
+			<ToUserName><![CDATA[%s]]></ToUserName>
+			<FromUserName><![CDATA[%s]]></FromUserName>
+			<CreateTime>%s</CreateTime>
+			<MsgType><![CDATA[news]]></MsgType>
+			<ArticleCount>1</ArticleCount>
+			<Articles>$item_str</Articles>
+			</xml>";
+
+			$result = sprintf($newsTpl, $object->FromUserName, $object->ToUserName, time() );  //count($newsArray)
+			return $result;
+		}
+		
+		
+		
+		//多图文消息格式
+		private function transmitImgs($object, $newsArray)
+		{
+			if(!is_array($newsArray)){
+				return;
+			}
+			$itemTpl = "<item>
+			<Title><![CDATA[%s]]></Title>
+			<Description><![CDATA[%s]]></Description>
+			<PicUrl><![CDATA[%s]]></PicUrl>
+			<Url><![CDATA[%s]]></Url>
+			</item>";
+			$item_str = "";
+			foreach ($newsArray as $item){
+				$item_str .= sprintf($itemTpl, $item['title'], $item['text'], $item['image'],$item['url']);
+			}
+			
+			$newsTpl = "<xml>
+			<ToUserName><![CDATA[%s]]></ToUserName>
+			<FromUserName><![CDATA[%s]]></FromUserName>
+			<CreateTime>%s</CreateTime>
+			<MsgType><![CDATA[news]]></MsgType>
+			<ArticleCount>%s</ArticleCount>
+			<Articles>$item_str</Articles>
+			</xml>";
+
+			$result = sprintf($newsTpl, $object->FromUserName, $object->ToUserName, time() ,count($newsArray));  //count($newsArray)
+			//$result = sprintf($xmlTpl, $object->FromUserName, $object->ToUserName, time(), count($newsArray));
+			return $result;
+		}
+		
+		
+		
+		
+	//文本格式回复
+		private function transmitDef($object, $content ,$rid=""){
+			//保存到数据库
+						$data['fromuser']=trim($object->ToUserName);
+						$data['createtime']=time();
+						$data['title']=$content;
+						$data['rid']=$rid;
+						$data['touser']=trim($object->FromUserName);
+						//$data['token']=$token;
+						$db=M("Message");
+						$db->add($data);
+			$textTpl = "<xml>
+			<ToUserName><![CDATA[%s]]></ToUserName>
+			<FromUserName><![CDATA[%s]]></FromUserName>
+			<CreateTime>%s</CreateTime>
+			<MsgType><![CDATA[text]]></MsgType>
+			<Content><![CDATA[%s]]></Content>
+			</xml>";
+			$result = sprintf($textTpl, $object->FromUserName, $object->ToUserName, time(), $content);
+			return $result;
+		}
+		//多客服
+		private function mulServer($object, $content){
+			$textTpl = "<xml>
+			<ToUserName><![CDATA[%s]]></ToUserName>
+			<FromUserName><![CDATA[%s]]></FromUserName>
+			<CreateTime>%s</CreateTime>
+			<MsgType><![CDATA[transfer_customer_service]]></MsgType>
+			</xml>";
+			$result = sprintf($textTpl, $object->FromUserName, $object->ToUserName, time());
+			return $result;
+		}
+	
+	
+	//----------------------回复end-----------------------------------//
+
+
+}
+
+?>

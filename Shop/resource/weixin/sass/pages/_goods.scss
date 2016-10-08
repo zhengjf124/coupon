@@ -1,0 +1,1109 @@
+@charset "UTF-8"; //商品分类
+//商品分类
+.category-menu {
+    @include position-top(fixed,0,auto,10);
+    width: $base-size*13.8;
+    height: 100%;
+    padding: $base-size*7.6 0 0;
+    overflow-x: hidden;
+    background-color: $body-bg-color;
+    border-right: 1px solid rgba($gray,.9);
+    scrollbar-3dlight-color: transparent;
+    scrollbar-highlight-color: transparent;
+    scrollbar-face-color: transparent;
+    scrollbar-arrow-color: transparent;
+    scrollbar-shadow-color: transparent;
+    scrollbar-darkshadow-color: transparent;
+    ul {
+        width: 100%;
+        overflow: hidden;
+        padding-bottom: $base-size*8;
+        li {
+            display: block;
+            width: $base-size*13.8;
+            height: $base-size*13.8;
+            margin-top: -1px;
+            overflow: hidden;
+            border-top: 1px solid rgba($gray,.9);
+            border-bottom: 1px solid rgba($gray,.9);
+            a {
+                @extend display-block;
+                i {
+                    display: block;
+                    width: $base-size*13.8;
+                    height: $base-size*8.5;
+                    padding-top: $base-size;
+                    @include align($base-size*13.8,$base-size*8.5,center,middle);
+                    img {
+                        max-width: 80%;
+                        max-height: 80%;
+                    }
+                }
+                h5 {
+                    color: rgba($gray-darker,.8);
+                    text-align: center;
+                }
+            }
+            &.active {
+                width: $base-size*13.8;
+                overflow: hidden;
+                a {
+                    i {
+                        color: $blue;
+                    }
+                    h5 {
+                        color: $blue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.category-list {
+    width: $base-width;
+    padding-left: $base-size*13.8;
+    overflow: hidden;
+    h4 {
+        padding: $base-size*2 $base-size*2 $base-size*1.2;
+        color: $gray-dark;
+    }
+    ul.hot-kind {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        @extend border-top;
+        li {
+            float: left;
+            display: block;
+            width: $base-size*16.7;
+            height: $base-size*21.7;
+            overflow: hidden;
+            @extend border-right;
+            @extend border-bottom;
+            a {
+                @extend display-block;
+                .img {
+                    width: $base-size*16.6;
+                    height: $base-size*16.6;
+                    overflow: hidden;
+                    @extend center;
+                    span {
+                        @extend span-center;
+                    }
+                    img {
+                        @include img-center(100%,100%,bottom);
+                    }
+                }
+                .name {
+                    width: $base-size*16.6;
+                    height: $base-size*5;
+                    overflow: hidden;
+                    color: rgba($gray-darker,.8);
+                    @include text-align(center,$base-size*5);
+                }
+            }
+            &:nth-child(2n+3) {
+                border-right: none;
+            }
+        }
+    }
+    ul.hot-list {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        @extend border-top;
+        background-color: $white;
+        li {
+            display: block;
+            width: 100%;
+            padding: $base-size*1.8;
+            overflow: hidden;
+            @extend border-bottom;
+            a {
+                @extend display-block;
+                .img {
+                    float: left;
+                    width: $base-size*14;
+                    height: $base-size*14;
+                    @extend center;
+                    span {
+                        @extend span-center;
+                    }
+                    img {
+                        @include img-center(100%,100%,bottom);
+                    }
+                }
+                .info {
+                    float: right;
+                    width: $base-size*31;
+                    overflow: hidden;
+                    .name {
+                        width: 100%;
+                        overflow: hidden;
+                        color: $gray-darker;
+                    }
+                    .tag {
+                        width: 100%;
+                        margin-top: $base-size*.5;
+                        span {
+                            display: inline-block;
+                            height: $base-size*3.4;
+                            padding: 0 $base-size*.8;
+                            margin-right: $base-size;
+                            font-size: $base-font-size*2.4;
+                            line-height: $base-size*3.4;
+                            vertical-align: middle;
+                            color: $white;
+                            &.hot {
+                                background-color: $orange;
+                            }
+                            &.new {
+                                background-color: $green;
+                            }
+                        }
+                    }
+                    .price {
+                        width: 100%;
+                        margin-top: $base-size*.5;
+                        overflow: hidden;
+                        span {
+                            font-size: $base-font-size*2.6;
+                            color: $orange;
+                        }
+                        del {
+                            font-size: $base-font-size*2.4;
+                            color: $gray-dark;
+                        }
+                        em {
+                            float: right;
+                            font-size: $base-font-size*2.4;
+                            color: $gray-dark;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//商品列表
+.goods-sort-h {
+    width: $base-width;
+    height: $base-size*7.6;
+    overflow: hidden;
+}
+.goods-sort {
+    display: flex;
+    flex-wrap: nowrap;
+    @include position-top(fixed,$base-size*7.6,auto,$zindex-fixed-topbar);
+    width: $base-width;
+    height: $base-size*7.6;
+    max-width: $max-width;
+    min-width: $min-width;
+    @extend border-bottom;
+    background-color: $white;
+    a {
+        flex: 1;
+        display: inline-block;
+        height: $base-size*7.6;
+        font-size: $base-size*2.4;
+        color: rgba($gray-darker,.8);
+        text-align: center;
+        i {
+            padding: 0 $base-size;
+            @include icon-font($base-size*1.8,rgba($gray-darker,.8),$base-size*7.6);
+        }
+        &.active {
+            color: $red;
+            i {
+                color: $red;
+            }
+        }
+        &.active-up {
+            color: $red;
+            i {
+                color: $red;
+            }
+        }
+    }
+}
+.screen {
+    display: none;
+    @include position-top(fixed,0,auto,$zindex-modal);
+    width: $base-width;
+    height: 100%;
+    max-width: $max-width;
+    min-width: $min-width;
+    padding-left: $base-size*20;
+    .screen-container {
+        width: 100%;
+        height: 100%;
+        max-width: $max-width;
+        min-width: $min-width;
+        overflow: hidden;
+        background-color: $white;
+        .screen-fixed {
+            @include position-top(fixed,0,auto,$zindex-modal+1);
+            width: 100%;
+            height: $base-size*7.6;
+            max-width: $max-width;
+            min-width: $min-width;
+            overflow: hidden;
+            background-color: $gray-light;
+            line-height: $base-size*7.6;
+            .screen-close {
+                display: inline-block;
+                width: $base-size*7.6;
+                height: $base-size*7.6;
+                text-align: center;
+                i {
+                    @include icon-font($base-size*3,$blue,$base-size*7.6);
+                    vertical-align: middle;
+                    margin-bottom: $base-size;
+                }
+            }
+            span {
+                padding-left: $base-size*9;
+                font-size: $base-size*2.6;
+                color: $blue;
+            }
+            .done {
+                display: inline-block;
+                width: $base-size*7.6;
+                height: $base-size*7.6;
+                margin-left: $base-size*9;
+                font-size: $base-size*2;
+                color: $blue;
+                text-align: center;
+                line-height: $base-size*7.6;
+            }
+        }
+        .screen-content {
+            width: 100%;
+            height: 100%;
+            padding: $base-size*7.6 $base-size*2 0;
+            overflow: hidden;
+            overflow-y: auto;
+            dl {
+                display: block;
+                width: 100%;
+                overflow: hidden;
+                margin: $base-size*2 0 0;
+                dt {
+                    display: block;
+                    width: 100%;
+                    overflow: hidden;
+                    line-height: $base-size*5;
+                    strong {
+                        float: left;
+                        font-size: $base-size*2.6;
+                        color: $gray-darker;
+                        font-weight: normal;
+                    }
+                    span {
+                        float: right;
+                        font-size: $base-size*2.2;
+                        color: $blue;
+                    }
+                }
+                dd {
+                    display: block;
+                    width: 100%;
+                    overflow: hidden;
+                    label {
+                        display: inline-block;
+                        height: $base-size*4;
+                        padding: 0 $base-size*1.8;
+                        margin: 0 $base-size*1.5 $base-size*1.5 0;
+                        border-radius: $base-radius;
+                        background-color: rgba($gray,.5);
+                        font-size: $base-size*2;
+                        color: rgba($gray-darker,.7);
+                        line-height: $base-size*4;
+                        &.active {
+                            background-color: $blue;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.list-md {
+    width: $base-width;
+    overflow: hidden;
+    ul {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        background-color: $white;
+        .no-list-warning {
+            padding-top: $base-size*2;
+            padding-bottom: $base-size;
+            font-size: $base-font-size*2.8;
+            color: $gray-dark;
+            text-align: center;
+        }
+        li {
+            display: block;
+            position: relative;
+            width: 100%;
+            padding: $base-size*2;
+            overflow: hidden;
+            @extend border-bottom;
+            a {
+                @extend display-block;
+                .img {
+                    float: left;
+                    width: $base-size*18;
+                    height: $base-size*18;
+                    @extend center;
+                    span {
+                        @extend span-center;
+                    }
+                    img {
+                        @include img-center(100%,100%,bottom);
+                    }
+                }
+                .info {
+                    float: right;
+                    width: $base-size*39;
+                    overflow: hidden;
+                    .name {
+                        width: 100%;
+                        overflow: hidden;
+                        color: $gray-darker;
+                    }
+                    .brief {
+                        width: 100%;
+                        padding-top: $base-size;
+                        overflow: hidden;
+                        color: $gray-dark;
+                    }
+                    .tag {
+                        width: 100%;
+                        margin-top: $base-size;
+                        span {
+                            display: inline-block;
+                            height: $base-size*3.4;
+                            padding: 0 $base-size*.8;
+                            margin-right: $base-size;
+                            line-height: $base-size*3.4;
+                            color: $white;
+                            &.hot {
+                                background-color: $orange;
+                            }
+                            &.new {
+                                background-color: $green;
+                            }
+                            &.dis {
+                                background-color: $green-light;
+                            }
+                        }
+                    }
+                    .price {
+                        width: 100%;
+                        margin-top: $base-size*1.5;
+                        overflow: hidden;
+                        span {
+                            padding-right: $base-font-size;
+                            font-size: $base-font-size*2.6;
+                            color: $orange;
+                        }
+                        del {
+                            font-size: $base-font-size*2.4;
+                            color: $gray-dark;
+                        }
+                        em {
+                            float: right;
+                            font-size: $base-font-size*2.4;
+                            color: $gray-dark;
+                            line-height: $base-size*3.6;
+                        }
+                    }
+                }
+            }
+            .favorites-cancel {
+                @include position-bottom-right(absolute,$base-size*6.5,$base-size*2,10);
+                width: $base-size*10;
+                height: $base-size*10;
+                text-align: center;
+                color: $gray-dark;
+                i {
+                    @include icon-font($base-font-size*4,$gray-dark,$base-size*4);
+                }
+            }
+            .dis-share {
+                @include position-bottom-right(absolute,0,0,10);
+                width: $base-size*8;
+                height: $base-size*8;
+                text-align: center;
+                color: $gray-dark;
+                i {
+                    @include icon-font($base-font-size*3,$gray-dark,$base-size*8);
+                }
+            }
+            .share-show {
+                display: none;
+                @include position-bottom-right(absolute,$base-size*6,$base-size*2,15);
+                .share-container {
+                    width: auto;
+                    height: $base-size*9;
+                    border-radius: $base-size*.5;
+                    overflow: hidden;
+                    a {
+                        display: block;
+                        float: left;
+                        width: $base-size*9;
+                        height: $base-size*9;
+                        background-color: rgba($black,.7);
+                        text-align: center;
+                        i {
+                            display: block;
+                            padding-top: $base-size;
+                            @include icon-font($base-font-size*3.6,$white,$base-size*4);
+                        }
+                        p {
+                            color: $white;
+                            text-align: center;
+                        }
+                    }
+                }
+                .triangle {
+                    float: right;
+                    margin-right: $base-size*1.5;
+                    width: 0;
+                    height: 0;
+                    border-top: $base-size*1.6 solid rgba($black,.7);
+                    border-right: $base-size*1.4 solid transparent;
+                    border-left: $base-size*1.4 solid transparent;
+                }
+            }
+        }
+    }
+}
+.goods-pics {
+    width: $base-width;
+    overflow: hidden;
+    @extend border-bottom;
+    img {
+        @extend img-responsive;
+    }
+}
+.goods-info {
+    width: $base-width;
+    padding: $base-size * 2 $base-size * 2.5;
+    position: relative;
+    background-color: $white;
+    @extend border-bottom;
+    .name {
+        width: 100%;
+        color: $gray-darker;
+        margin-bottom: $base-size;
+    }
+    .times {
+        width: 100%;
+        color: $orange;
+        span {
+            padding-right: $base-size;
+        }
+    }
+    .price-storage {
+        width: 100%;
+        overflow: hidden;
+        padding-top: $base-size*1.5;
+        .price {
+            float: left;
+            font-size: $base-font-size*2.4;
+            color: $gray-dark;
+            line-height: $base-size*3.6;
+            span {
+                font-size: $base-font-size*2.2;
+                padding-right: $base-size;
+                color: $orange;
+                strong {
+                    font-size: $base-size*3.8;
+                    font-weight: normal;
+                }
+            }
+        }
+        .storage {
+            float: right;
+            text-align: right;
+            color: $gray-dark;
+            line-height: $base-size*3.6;
+            span {
+                padding: 0 $base-size;
+            }
+        }
+    }
+    .time-over {
+        width: 100%;
+        overflow: hidden;
+        color: $gray-dark;
+        span {
+            float: right;
+        }
+    }
+}
+.goods-info-other {
+    width: $base-width;
+    padding: 0 $base-size*2.5;
+    background-color: $white;
+    @extend border-bottom;
+    p {
+        width: 100%;
+        display: block;
+        overflow: hidden;
+        padding: $base-size*2 0;
+        @extend border-bottom;
+        strong {
+            width: $base-size*7.2;
+            height: $base-size*3;
+            display: inline-block;
+            color: $gray-dark;
+            line-height: $base-size*3;
+            font-weight: normal;
+        }
+        span {
+            height: $base-size*3;
+            display: inline-block;
+            padding-right: $base-size*4;
+            line-height: $base-size*3;
+            i {
+                @include icon-font($base-font-size*3,$blue,$base-size*3);
+                padding-right: $base-size;
+                vertical-align: middle;
+                margin: 0 $base-size*.5 $base-size*.5 0;
+            }
+            font {
+                @include tags($base-size*3,$base-size*3,$green-light,3px,$base-font-size*2.2,$white);
+                display: inline;
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0 $base-size*.5 $base-size*.5 0;
+                &.hot {
+                    @include tags($base-size*3,$base-size*3,$orange,3px,$base-font-size*2.2,$white);
+                    display: inline;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin: 0 $base-size*.5 $base-size*.5 0;
+                }
+            }
+        }
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+.goods-judge {
+    width: $base-width;
+    margin-top: $base-size*1.8;
+    overflow: hidden;
+    background-color: $white;
+    .judge-top {
+        width: $base-width;
+        height: $base-size*7.6;
+        padding: 0 $base-size*2.5;
+        overflow: hidden;
+        @extend border-top;
+        @extend border-bottom;
+        strong {
+            float: left;
+            font-size: $base-size*2.4;
+            color: $gray-dark;
+            line-height: $base-size*7.6;
+            font-weight: normal;
+        }
+        i {
+            float: right;
+            @include icon-font($base-size*2.4,rgba($gray-dark,.6),$base-size*7.6);
+        }
+    }
+    @at-root {
+        .judge-bottom {
+            width: $base-width;
+            overflow: hidden;
+            padding: 0 $base-size*2.5;
+            @extend border-bottom;
+            background-color: $white;
+            .judge-menu {
+                width: 100%;
+                overflow: hidden;
+                padding-top: $base-size*2.4;
+                h3 {
+                    padding-bottom: $base-size*2;
+                }
+                a {
+                    height: $base-size*4.4;
+                    padding: 0 $base-size*1.5;
+                    display: inline-block;
+                    border: 1px solid rgba($green,.6);
+                    border-radius: $small-radius;
+                    background-color: rgba($green,.1);
+                    margin: 0 $base-size*2.4 $base-size*2.4 0;
+                    color: $gray-darker;
+                    line-height: $base-size*4.4;
+                    &.bad {
+                        border: 1px solid rgba($orange,.6);
+                        background-color: rgba($orange,.1);
+                    }
+                }
+            }
+            .judge-list {
+                width: 100%;
+                overflow: hidden;
+                h3 {
+                    padding-bottom: $base-size;
+                }
+                ul {
+                    width: 100%;
+                    overflow: hidden;
+                    @extend border-top;
+                    li {
+                        width: 100%;
+                        display: block;
+                        overflow: hidden;
+                        padding: $base-size*2;
+                        @extend border-bottom;
+                        .name {
+                            width: 100%;
+                            overflow: hidden;
+                            img {
+                                width: $base-size*5.6;
+                                height: $base-size*5.6;
+                                border-radius: 100%;
+                                float: left;
+                            }
+                            strong {
+                                float: left;
+                                padding-left: $base-size*1.5;
+                                line-height: $base-size*5.6;
+                                color: rgba($gray-darker,.7);
+                                font-weight: normal;
+                            }
+                            span {
+                                float: right;
+                                line-height: $base-size*5.6;
+                                color: rgba($gray-dark,.7);
+                            }
+                        }
+                        .brief {
+                            width: 100%;
+                            overflow: hidden;
+                            padding-top: $base-size*2;
+                        }
+                        .imgs{
+                            width: 100%;
+                            overflow:hidden;
+                            img{
+                                float:left;
+                                width: 1rem;
+                                height: 1rem;
+                                margin:.15rem .2rem 0 0;
+
+                            }
+                        }
+                        &:last-child {
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .judge-more {
+        width: $base-width;
+        height: $base-size*8;
+        overflow: hidden;
+        @extend border-bottom;
+        a {
+            @extend display-block;
+            @include text-align(center,$base-size*8);
+            font-size: $base-size*2.4;
+        }
+    }
+}
+.judge-score {
+    width: 100%;
+    overflow: hidden;
+    h3 {
+        padding: $base-size*2 0 $base-size;
+    }
+    p {
+        i {
+            @include icon-font($base-size*3.4,rgba($gray-dark,.7),$base-size*3.6);
+            margin: 0 $base-size 0 0;
+            &.active {
+                color: $red;
+            }
+        }
+    }
+}
+.maybe-like {
+    width: $base-width;
+    height: $base-size*7.6;
+    overflow: hidden;
+    padding: 0 $base-size*2.5;
+    background-color: $white;
+    h3 {
+        line-height: $base-size*7.6;
+        color: $gray-darker;
+    }
+}
+.goods-detail {
+    width: $base-width;
+    padding: $base-size*2;
+    overflow: hidden;
+    font-size: $base-size*2.4;
+    color: $gray-dark;
+    background-color: $white;
+    img {
+        @extend img-responsive;
+    }
+}
+.goods-buy {
+    display: none;
+    width: $base-width;
+    overflow: hidden;
+    max-width: $max-width;
+    min-width: $min-width;
+    margin: 0 auto;
+    @include position-bottom(fixed,0,auto,$zindex-modal);
+    padding-top: $base-size*6.4;
+    .goods-buy-info {
+        width: $base-width;
+        height: $base-size*19.2;
+        position: relative;
+        padding: 0 $base-size*2;
+        background-color: $white;
+        .img {
+            width: $base-size*22.8;
+            height: $base-size*22.8;
+            float: left;
+            padding: $base-size;
+            background-color: $white;
+            margin-top: -($base-size*6.4);
+            border-radius: $base-size * 1;
+            @extend center;
+            span {
+                @extend span-center;
+            }
+            img {
+                @include img-center(100%,100%,middle);
+            }
+        }
+        .info {
+            width: $base-size*35;
+            height: $base-size*16;
+            overflow: hidden;
+            float: right;
+            .name {
+                width: $base-size*35;
+                height: $base-size*7.2;
+                overflow: hidden;
+                margin-top: $base-size*2;
+                h3 {
+                    color: $gray-darker;
+                    line-height: $base-size*3.6;
+                }
+            }
+            .price {
+                color: $gray-dark;
+                line-height: $base-size*3.6;
+                padding-top: $base-size;
+                span {
+                    padding-right: $base-size;
+                    color: $orange;
+                    strong {
+                        font-size: $base-size*3.8;
+                        font-weight: normal;
+                    }
+                }
+            }
+        }
+    }
+    .spec {
+        width: $base-width;
+        overflow: hidden;
+        background-color: $white;
+        padding: 0 $base-size*2;
+        .spec-container {
+            width: 100%;
+            overflow: hidden;
+            padding: $base-size*1.5 0;
+            @extend border-top;
+            dl {
+                width: 100%;
+                display: block;
+                overflow: hidden;
+                dt {
+                    width: $base-size*7.6;
+                    height: $base-size*5;
+                    display: inline-block;
+                    color: $gray-dark;
+                    vertical-align: top;
+                    line-height: $base-size*5;
+                }
+                dd {
+                    width: $base-size*51;
+                    display: inline-block;
+                    overflow: hidden;
+                    vertical-align: top;
+                    label {
+                        height: $base-size*5;
+                        padding: 0 $base-size*1.8;
+                        display: inline-block;
+                        overflow: hidden;
+                        background-color: rgba($gray,.7);
+                        color: rgba($gray-darker,.7);
+                        line-height: $base-size*5;
+                        border-radius: $small-radius;
+                        margin: 0 $base-size*2.2 $base-size*2.2 0;
+                        &.disabled {
+                            color: rgba($gray-dark,.5);
+                        }
+                        &.active {
+                            background-color: $orange;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .qty {
+        width: $base-width;
+        background-color: $white;
+        padding: 0 $base-size*2;
+        .qty-container {
+            width: 100%;
+            overflow: hidden;
+            padding: $base-size*2.4 0;
+            @extend border-top;
+            span {
+                float: left;
+                color: $gray-dark;
+                line-height: $base-size*5;
+            }
+            .qty-form {
+                width: $base-size*16.2;
+                height: $base-size*5;
+                overflow: hidden;
+                float: right;
+                border: 1px solid $gray;
+                border-radius: $base-radius;
+                button {
+                    width: $base-size*5;
+                    height: $base-size*5;
+                    display: inline-block;
+                    float: left;
+                    background: none;
+                    border: none;
+                    border-right: 1px solid rgba($gray,.6);
+                    text-align: center;
+                    i {
+                        font-size: $base-size*4;
+                        color: $gray-darker;
+                        line-height: $base-size*5;
+                    }
+                    &.disabled i {
+                        color: $gray;
+                    }
+                    &:last-child {
+                        border: none;
+                    }
+                }
+                input {
+                    width: $base-size*5.8;
+                    height: $base-size*5;
+                    display: inline-block;
+                    float: left;
+                    background: none;
+                    border: none;
+                    border-right: 1px solid rgba($gray,.6);
+                    text-align: center;
+                    font-size: $base-size*3;
+                    color: $gray-darker;
+                }
+            }
+        }
+    }
+}
+//团购
+.group-menu {
+    width: 100%;
+    height: $base-size*7;
+    background-color: $white;
+    @extend border-bottom;
+    li {
+        width: 100%;
+        text-align: center;
+        &.active {
+            a {
+                color: $blue;
+                border-bottom: $base-size*.4 $blue solid;
+            }
+        }
+    }
+    a {
+        display: inline-block;
+        width: 100%;
+        height: $base-size*7;
+        font-size: $base-size*2.4;
+        line-height: $base-size*7;
+        color: rgba($gray-darker,.7);
+    }
+}
+.group-banner {
+    width: 100%;
+    overflow: hidden;
+    @include focus;
+    img {
+        @extend img-responsive;
+    }
+}
+.group-list {
+    width: $base-width;
+    margin-top: $base-size*2;
+    overflow: hidden;
+    ul {
+        width: 100%;
+        overflow: hidden;
+        li {
+            display: block;
+            width: 100%;
+            margin-bottom: $base-size*2;
+            box-shadow: 0 2px 4px rgba($gray-dark,.5);
+            overflow: hidden;
+            background-color: $white;
+            .img {
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+                img{
+                    display: block;
+                    width: 100%;
+                }
+                a {
+                    position: relative;
+                    @extend display-block;
+                }
+                .price-show {
+                    @include position-bottom(absolute,0,0,5);
+                    width: 100%;
+                    padding: $base-size 0;
+                    background-color: rgba($black,.5);
+                    h4 {
+                        padding: $base-size*2 $base-size*2 $base-size;
+                        font-size: $base-size*2.8;
+                        color: $white;
+                    }
+                    .price-goods {
+                        padding-left: $base-size*2;
+                        font-size: $base-font-size*2.6;
+                        color: #fff;
+                        line-height: $base-size*4;
+                    }
+                    .price-makits {
+                        padding-left: $base-size*2;
+                        font-size: $base-font-size*2.4;
+                        color: $gray;
+                        line-height: $base-size*4;
+                    }
+                }
+            }
+            .info {
+                width: 100%;
+                padding: $base-size $base-size*2;
+                overflow: hidden;
+                .time {
+                    float: left;
+                    h5 {
+                        color: $orange;
+                    }
+                    .time-container {
+                        font-size: $base-size*2.4;
+                        color: $gray-darker;
+                        span {
+                            display: inline-block;
+                            width: $base-size*3.6;
+                            height: $base-size*3.6;
+                            margin: 0 $base-size*.5;
+                            border-radius: $small-radius;
+                            background-color: $black;
+                            font-size: $base-size*2.4;
+                            color: $white;
+                            @include text-align(center,$base-size*3.6);
+                        }
+                        label {
+                            font-size: $base-size*2;
+                            color: $gray-dark;
+                        }
+                    }
+                }
+                .rush {
+                    @include btn(right,inline-block,$base-size*19,$base-size*5.6,0,$base-size*.5 0 0 0,0,$base-radius,$red,$base-size*2.6,$white);
+                    text-align: center;
+                    line-height: $base-size*5.6;
+                }
+            }
+            .info-flash{
+                position: relative;
+                width: 100%;
+                padding: $base-size $base-size*2;
+                overflow: hidden;
+                .price-show {
+                    float: left;
+                    width: 100%;
+                    padding: $base-size 0;
+                    h4 {
+                        font-size: $base-size*2.8;
+                        color: $gray-darker;
+                    }
+                    .price-goods {
+                        font-size: $base-font-size*2.6;
+                        color: rgba($gray-darker,.7);
+                        line-height: $base-size*4;
+                    }
+                    .price-makits {
+                        padding-left: $base-size*2;
+                        font-size: $base-font-size*2.4;
+                        color: $gray-dark;
+                        line-height: $base-size*4;
+                    }
+                }
+                .rush {
+                    @include position-bottom-right(absolute,$base-size,$base-size,5);
+                    @include btn(right,inline-block,$base-size*19,$base-size*5.6,0,$base-size*.5 0 0 0,0,$base-radius,$red,$base-size*2.6,$white);
+                    text-align: center;
+                    line-height: $base-size*5.6;
+                }
+                
+            }
+        }
+    }
+}
+//限时抢购
+.flash-time {
+    width: 100%;
+    height: $base-size*7;
+    padding-left: $base-size*2;
+    background-color: $white;
+    @extend border-bottom;
+    font-size: $base-font-size * 2.4;
+    font-weight: bold;
+    line-height: $base-size*7;
+    span {
+        width: $base-size * 3.6;
+        height: $base-size * 3.6;
+        @include text-align(center,$base-size * 3.6);
+        display: inline-block;
+        background-color: $gray-darker;
+        color: $white;
+        margin: 0 $base-size * 0.5;
+        border-radius: $small-radius;
+        font-weight: bold;
+    }
+}

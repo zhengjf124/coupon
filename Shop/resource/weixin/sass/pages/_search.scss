@@ -1,0 +1,43 @@
+@charset "UTF-8";
+.search-newly {
+    padding: $base-size $base-size*2;
+    overflow: hidden;
+    .search-newly-title {
+        width: 100%;
+        height: $base-size*5;
+        overflow: hidden;
+        strong {
+            float: left;
+            font-size: $base-font-size*2.4;
+            color: rgba($gray-darker,.8);
+            line-height: $base-size*5;
+            font-weight: normal;
+        }
+        a {
+            display: inline-block;
+            float: right;
+            width: $base-size*5;
+            height: $base-size*5;
+            text-align: center;
+            i {
+                @include icon-font($base-font-size*2.4,$gray-dark,$base-size*5);
+            }
+        }
+    }
+    .search-newly-list {
+        width: 100%;
+        margin-top: $base-size;
+        overflow: hidden;
+        a {
+            display: inline-block;
+            padding: $base-size*1.2 $base-size*2;           
+            margin: 0 $base-size*1.6 $base-size*1.6 0;
+            border: 1px solid $gray;
+            border-radius: $base-radius;
+            background-color: $white;
+            font-size: $base-font-size*2.4;
+            color: rgba($gray-darker,.6);
+            text-align: center;
+        }
+    }
+}

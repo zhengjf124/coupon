@@ -1,0 +1,391 @@
+[ 2016-08-22T09:17:27+08:00 ] 127.0.0.1 /index.php?m=Home&c=api&a=get_category&parent_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000727s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000472s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000564s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0071s ]
+SQL: SELECT * FROM `gwshop_goods_category` WHERE ( parent_id = 1 )  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\gwshop\Shop\Application\Home\Controller\ApiController.class.php 第 58 行.
+
+[ 2016-08-22T09:17:29+08:00 ] 127.0.0.1 /index.php?m=Home&c=api&a=get_category&parent_id=7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000353s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000392s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `gwshop_goods_category` WHERE ( parent_id = 7 )  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\gwshop\Shop\Application\Home\Controller\ApiController.class.php 第 58 行.
+
+[ 2016-08-22T17:31:28+08:00 ] 127.0.0.1 /Home/index/index?_app=shop&_platform=weixin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000287s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000573s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000617s ]
+SQL: SHOW COLUMNS FROM `gwshop_ad` [ RunTime:0.0362s ]
+SQL: SELECT `ad_name`,`ad_link`,`ad_code` FROM `gwshop_ad` WHERE `pid` = 1  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0202s ]
+SQL: SELECT `type_name`,`type_img`,`id` FROM `gwshop_goods_category` WHERE ( level=1 ) ORDER BY sort_order LIMIT 4   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0189s ]
+SQL: SELECT `id`,`goods_img`,`goods_price`,`goods_name`,`goods_brief`,`click_count`,`favorite_count`,`comment_count` FROM `gwshop_goods` WHERE ( is_recommend=1 and is_on_sale=1 ) ORDER BY id DESC LIMIT 3   [ RunTime:0.0007s ]
+SQL: SELECT `id`,`goods_img`,`goods_price`,`goods_name`,`market_price` FROM `gwshop_goods` WHERE ( gtype=2 and is_on_sale=1 ) ORDER BY id DESC LIMIT 3   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `gwshop_active` [ RunTime:0.0168s ]
+SQL: SELECT `end_time` FROM `gwshop_active` WHERE `type` = 'limit_goods' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `id`,`goods_img`,`goods_price`,`goods_name`,`goods_brief`,`click_count` FROM `gwshop_goods` WHERE ( is_hot=1 and is_on_sale=1 ) ORDER BY id DESC LIMIT 8   [ RunTime:0.0006s ]
+
+[ 2016-08-22T17:31:29+08:00 ] 127.0.0.1 /Home/Login/check?_app=shop&_platform=weixin&_passport=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000536s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000583s ]
+
+[ 2016-08-22T17:31:29+08:00 ] 127.0.0.1 /Home/user/detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000454s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002209s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002488s ]
+
+[ 2016-08-22T17:31:30+08:00 ] 127.0.0.1 /index.php?m=home&c=wxLogin&a=ind&redirect_uri=http://gwshop.usrboot.com/weixin/html/user/user-center.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000431s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000463s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000514s ]
+SQL: SHOW COLUMNS FROM `gwshop_wx_user` [ RunTime:0.0345s ]
+SQL: SELECT * FROM `gwshop_wx_user` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0008s ]
+
+[ 2016-08-22T17:31:31+08:00 ] 127.0.0.1 /index.php?m=home&c=wxLogin&a=ind&redirect_uri=http://gwshop.usrboot.com/weixin/html/user/user-center.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000559s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000620s ]
+SQL: SHOW COLUMNS FROM `gwshop_wx_user` [ RunTime:0.0293s ]
+SQL: SELECT * FROM `gwshop_wx_user` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0012s ]
+
+[ 2016-08-22T17:31:36+08:00 ] 127.0.0.1 /home/wxLogin/wx_oauth?code=041V14pg1qHzfl0MFLog1Xh3pg1V14ps&state=http%3A%2F%2Fgwshop.usrboot.com%2Fweixin%2Fhtml%2Fuser%2Fuser-center.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000524s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000893s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `gwshop_wx_user` [ RunTime:0.0311s ]
+SQL: SELECT * FROM `gwshop_wx_user` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0344s ]
+SQL: SELECT `id`,`openid` FROM `gwshop_user` WHERE `openid` = 'oG7KGwJcCoAWHzZJTACiY4LL95M8' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `gwshop_user_passport` [ RunTime:0.0179s ]
+SQL: SELECT `passport` FROM `gwshop_user_passport` WHERE `user_id` = 5 LIMIT 1   [ RunTime:0.0007s ]
+
+[ 2016-08-22T17:31:37+08:00 ] 127.0.0.1 /Home/Login/check?_app=shop&_platform=weixin&_passport=dffa23e3f38973de8a5a2bce627e261b
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000399s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000585s ]
+SQL: SHOW COLUMNS FROM `gwshop_user_passport` [ RunTime:0.0326s ]
+SQL: SELECT * FROM `gwshop_user_passport` WHERE `passport` = 'dffa23e3f38973de8a5a2bce627e261b' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0133s ]
+SQL: SELECT `id`,`user_name` FROM `gwshop_user` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2016-08-22T17:31:38+08:00 ] 127.0.0.1 /Home/user/detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000296s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000455s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000493s ]
+SQL: SHOW COLUMNS FROM `gwshop_user_passport` [ RunTime:0.0252s ]
+SQL: SELECT * FROM `gwshop_user_passport` WHERE `passport` = 'dffa23e3f38973de8a5a2bce627e261b' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0203s ]
+SQL: SELECT * FROM `gwshop_user` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0011s ]
+
+[ 2016-08-22T17:31:40+08:00 ] 127.0.0.1 /Home/Login/check?_app=shop&_platform=weixin&_passport=dffa23e3f38973de8a5a2bce627e261b
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000412s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000553s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000610s ]
+SQL: SHOW COLUMNS FROM `gwshop_user_passport` [ RunTime:0.0283s ]
+SQL: SELECT * FROM `gwshop_user_passport` WHERE `passport` = 'dffa23e3f38973de8a5a2bce627e261b' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0130s ]
+SQL: SELECT `id`,`user_name` FROM `gwshop_user` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2016-08-22T17:31:42+08:00 ] 127.0.0.1 /Home/user/detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000564s ]
+SQL: SHOW COLUMNS FROM `gwshop_user_passport` [ RunTime:0.0269s ]
+SQL: SELECT * FROM `gwshop_user_passport` WHERE `passport` = 'dffa23e3f38973de8a5a2bce627e261b' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0201s ]
+SQL: SELECT * FROM `gwshop_user` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2016-08-22T17:52:11+08:00 ] 127.0.0.1 /Home/Login/check?_app=shop&_platform=weixin&_passport=dffa23e3f38973de8a5a2bce627e261b
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000495s ]
+SQL: SHOW COLUMNS FROM `gwshop_user_passport` [ RunTime:0.0223s ]
+SQL: SELECT * FROM `gwshop_user_passport` WHERE `passport` = 'dffa23e3f38973de8a5a2bce627e261b' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0173s ]
+SQL: SELECT `id`,`user_name` FROM `gwshop_user` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0007s ]
+
+[ 2016-08-22T17:52:12+08:00 ] 127.0.0.1 /Home/user/detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000463s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000499s ]
+SQL: SHOW COLUMNS FROM `gwshop_user_passport` [ RunTime:0.0279s ]
+SQL: SELECT * FROM `gwshop_user_passport` WHERE `passport` = 'dffa23e3f38973de8a5a2bce627e261b' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0138s ]
+SQL: SELECT * FROM `gwshop_user` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0008s ]
+
+[ 2016-08-22T17:52:15+08:00 ] 127.0.0.1 /Home/Cart/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000315s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000491s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000546s ]
+SQL: SHOW COLUMNS FROM `gwshop_cart` [ RunTime:0.0351s ]
+SQL: SHOW COLUMNS FROM `gwshop_user_passport` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `gwshop_user_passport` WHERE `passport` = 'dffa23e3f38973de8a5a2bce627e261b' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0114s ]
+SQL: SELECT * FROM `gwshop_user` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `gwshop_cart` [ RunTime:0.0082s ]
+SQL: SELECT `id`,`goods_id`,`goods_name`,`market_price`,`goods_price`,`goods_num`,`spec_key_name` FROM `gwshop_cart` WHERE `user_id` = 5 LIMIT 0,20   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_cart` WHERE `user_id` = 5 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT SUM(goods_num) AS tp_sum FROM `gwshop_cart` WHERE `user_id` = 5 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2016-08-22T17:52:19+08:00 ] 127.0.0.1 /Home/Login/check?_app=shop&_platform=weixin&_passport=dffa23e3f38973de8a5a2bce627e261b
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000523s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000584s ]
+SQL: SHOW COLUMNS FROM `gwshop_user_passport` [ RunTime:0.0702s ]
+SQL: SELECT * FROM `gwshop_user_passport` WHERE `passport` = 'dffa23e3f38973de8a5a2bce627e261b' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0198s ]
+SQL: SELECT `id`,`user_name` FROM `gwshop_user` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0007s ]
+
+[ 2016-08-22T17:52:20+08:00 ] 127.0.0.1 /Home/user/detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000285s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000460s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000494s ]
+SQL: SHOW COLUMNS FROM `gwshop_user_passport` [ RunTime:0.0232s ]
+SQL: SELECT * FROM `gwshop_user_passport` WHERE `passport` = 'dffa23e3f38973de8a5a2bce627e261b' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0111s ]
+SQL: SELECT * FROM `gwshop_user` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2016-08-22T17:52:22+08:00 ] 127.0.0.1 /Home/index/index?_app=shop&_platform=weixin&_passport=dffa23e3f38973de8a5a2bce627e261b
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000450s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000903s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000998s ]
+SQL: SHOW COLUMNS FROM `gwshop_ad` [ RunTime:0.0376s ]
+SQL: SELECT `ad_name`,`ad_link`,`ad_code` FROM `gwshop_ad` WHERE `pid` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0192s ]
+SQL: SELECT `type_name`,`type_img`,`id` FROM `gwshop_goods_category` WHERE ( level=1 ) ORDER BY sort_order LIMIT 4   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0135s ]
+SQL: SELECT `id`,`goods_img`,`goods_price`,`goods_name`,`goods_brief`,`click_count`,`favorite_count`,`comment_count` FROM `gwshop_goods` WHERE ( is_recommend=1 and is_on_sale=1 ) ORDER BY id DESC LIMIT 3   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`goods_img`,`goods_price`,`goods_name`,`market_price` FROM `gwshop_goods` WHERE ( gtype=2 and is_on_sale=1 ) ORDER BY id DESC LIMIT 3   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `gwshop_active` [ RunTime:0.0133s ]
+SQL: SELECT `end_time` FROM `gwshop_active` WHERE `type` = 'limit_goods' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`goods_img`,`goods_price`,`goods_name`,`goods_brief`,`click_count` FROM `gwshop_goods` WHERE ( is_hot=1 and is_on_sale=1 ) ORDER BY id DESC LIMIT 8   [ RunTime:0.0005s ]
+
+[ 2016-08-22T17:52:23+08:00 ] 127.0.0.1 /Home/goodsCategory/index?_app=shop&_platform=weixin&_passport=dffa23e3f38973de8a5a2bce627e261b
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000398s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000790s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000864s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0250s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_goods_category` WHERE `parent_id` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`type_name`,`type_desc`,`type_img`,`parent_id` FROM `gwshop_goods_category` WHERE `parent_id` = 0  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0128s ]
+SQL: SELECT `id` FROM `gwshop_goods_category` WHERE `parent_id_path` LIKE '0_1_%'  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`goods_name`,`goods_price`,`market_price`,`goods_img` FROM `gwshop_goods` WHERE `cat_id` IN ('4','5','7','9','10','11','12') ORDER BY goods_sales desc LIMIT 0,8   [ RunTime:0.0009s ]
+SQL: SELECT `id`,`type_name`,`type_desc`,`type_img`,`parent_id` FROM `gwshop_goods_category` WHERE `parent_id` = 1  [ RunTime:0.0005s ]
+SQL: SELECT `id`,`type_name`,`type_desc`,`type_img`,`parent_id` FROM `gwshop_goods_category` WHERE `parent_id` = 4  [ RunTime:0.0005s ]
+SQL: SELECT `id`,`type_name`,`type_desc`,`type_img`,`parent_id` FROM `gwshop_goods_category` WHERE `parent_id` = 7  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0094s ]
+SQL: SELECT `id` FROM `gwshop_goods_category` WHERE `parent_id_path` LIKE '0_2_%'  [ RunTime:0.0006s ]
+SQL: SELECT `id`,`goods_name`,`goods_price`,`market_price`,`goods_img` FROM `gwshop_goods` WHERE `cat_id` IN ('6') ORDER BY goods_sales desc LIMIT 0,8   [ RunTime:0.0006s ]
+SQL: SELECT `id`,`type_name`,`type_desc`,`type_img`,`parent_id` FROM `gwshop_goods_category` WHERE `parent_id` = 2  [ RunTime:0.0005s ]
+SQL: SELECT `id`,`type_name`,`type_desc`,`type_img`,`parent_id` FROM `gwshop_goods_category` WHERE `parent_id` = 6  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0095s ]
+SQL: SELECT `id` FROM `gwshop_goods_category` WHERE `parent_id_path` LIKE '0_3_%'  [ RunTime:0.0007s ]
+SQL: SELECT `id`,`goods_name`,`goods_price`,`market_price`,`goods_img` FROM `gwshop_goods` WHERE `cat_id` IN ('') ORDER BY goods_sales desc LIMIT 0,8   [ RunTime:0.0008s ]
+SQL: SELECT `id`,`type_name`,`type_desc`,`type_img`,`parent_id` FROM `gwshop_goods_category` WHERE `parent_id` = 3  [ RunTime:0.0006s ]
+SQL: SELECT `id`,`type_name`,`type_desc`,`type_img`,`parent_id` FROM `gwshop_goods_category` WHERE `parent_id` = 8  [ RunTime:0.0005s ]
+
+[ 2016-08-22T17:52:25+08:00 ] 127.0.0.1 /Home/goods/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000495s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000778s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0263s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_goods` WHERE `is_on_sale` = 1 AND `gtype` = 0 AND `cat_id` = 9 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT `id`,`goods_name`,`goods_price`,`market_price`,`goods_brief`,`is_hot`,`is_new`,`is_best`,`goods_img` FROM `gwshop_goods` WHERE `is_on_sale` = 1 AND `gtype` = 0 AND `cat_id` = 9 ORDER BY sort_order desc LIMIT 0,4   [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `gwshop_comments` [ RunTime:0.0267s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_comments` WHERE `goods_id` = 7 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_comments` WHERE `goods_id` = 6 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_comments` WHERE `goods_id` = 3 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_comments` WHERE `goods_id` = 5 LIMIT 1   [ RunTime:0.0007s ]
+
+[ 2016-08-22T17:52:28+08:00 ] 127.0.0.1 /Home/Goods/detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000548s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000795s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000875s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0870s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`cat_id`,`goods_name`,`goods_price`,`market_price`,`store_count`,`goods_brief`,`is_hot`,`is_best`,`is_new`,`spec_type`,`gtype`,`end_time` FROM `gwshop_goods` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_images` [ RunTime:0.0230s ]
+SQL: SELECT * FROM `gwshop_goods_images` WHERE ( goods_id=7 )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec_goods_price` [ RunTime:0.0165s ]
+SQL: SELECT GROUP_CONCAT(`key` SEPARATOR '_') FROM `gwshop_spec_goods_price` WHERE ( goods_id = 7 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec_goods_price` [ RunTime:0.0055s ]
+SQL: SELECT `key`,`price`,`store_count` FROM `gwshop_spec_goods_price` WHERE ( goods_id = 7 )  [ RunTime:0.0004s ]
+
+[ 2016-08-22T17:52:29+08:00 ] 127.0.0.1 /Home/Goods/youLike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000523s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000893s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000966s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0267s ]
+SQL: SELECT `id`,`goods_name`,`goods_price`,`goods_img` FROM `gwshop_goods` WHERE `goods_type` = 0 LIMIT 4   [ RunTime:0.0012s ]
+
+[ 2016-08-22T17:52:30+08:00 ] 127.0.0.1 /Home/Collect/isCollect
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000838s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000926s ]
+SQL: SHOW COLUMNS FROM `gwshop_user_passport` [ RunTime:0.0246s ]
+SQL: SELECT * FROM `gwshop_user_passport` WHERE `passport` = 'dffa23e3f38973de8a5a2bce627e261b' LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0206s ]
+SQL: SELECT * FROM `gwshop_user` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_favorite` [ RunTime:0.0198s ]
+SQL: SELECT * FROM `gwshop_goods_favorite` WHERE `goods_id` = 7 AND `user_id` = 5 LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2016-08-22T17:52:31+08:00 ] 127.0.0.1 /Home/Goods/detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000536s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000581s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0288s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0151s ]
+SQL: SELECT `id`,`cat_id`,`goods_name`,`goods_price`,`market_price`,`store_count`,`goods_brief`,`is_hot`,`is_best`,`is_new`,`spec_type`,`gtype`,`end_time` FROM `gwshop_goods` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_images` [ RunTime:0.0203s ]
+SQL: SELECT * FROM `gwshop_goods_images` WHERE ( goods_id=7 )  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec_goods_price` [ RunTime:0.0199s ]
+SQL: SELECT GROUP_CONCAT(`key` SEPARATOR '_') FROM `gwshop_spec_goods_price` WHERE ( goods_id = 7 ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec_goods_price` [ RunTime:0.0134s ]
+SQL: SELECT `key`,`price`,`store_count` FROM `gwshop_spec_goods_price` WHERE ( goods_id = 7 )  [ RunTime:0.0008s ]
+
+[ 2016-08-22T17:52:34+08:00 ] 127.0.0.1 /Home/Cart/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000641s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000683s ]
+SQL: SHOW COLUMNS FROM `gwshop_cart` [ RunTime:0.0262s ]
+SQL: SHOW COLUMNS FROM `gwshop_user_passport` [ RunTime:0.0192s ]
+SQL: SELECT * FROM `gwshop_user_passport` WHERE `passport` = 'dffa23e3f38973de8a5a2bce627e261b' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0147s ]
+SQL: SELECT * FROM `gwshop_user` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0123s ]
+SQL: SELECT * FROM `gwshop_goods` WHERE ( id = 7 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec_goods_price` [ RunTime:0.0116s ]
+SQL: SELECT `key`,`key_name`,`price`,`store_count`,`bar_code` FROM `gwshop_spec_goods_price` WHERE ( goods_id = 7 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `gwshop_cart` [ RunTime:0.0091s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_cart` WHERE `user_id` = 5 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: prom_type D:\phpStudy\WWW\gwshop\Shop\Application\Home\Logic\CartLogic.class.php 第 42 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\gwshop\Shop\Application\Home\Logic\CartLogic.class.php 第 51 行.
+NOTIC: [8] Undefined variable: spec_key D:\phpStudy\WWW\gwshop\Shop\Application\Home\Logic\CartLogic.class.php 第 69 行.
+SQL: SELECT * FROM `gwshop_cart` WHERE (  goods_id = 7 and spec_key = ''  and ( user_id = 5)  ) LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined variable: spec_price D:\phpStudy\WWW\gwshop\Shop\Application\Home\Logic\CartLogic.class.php 第 81 行.
+NOTIC: [8] Undefined variable: spec_key D:\phpStudy\WWW\gwshop\Shop\Application\Home\Logic\CartLogic.class.php 第 97 行.
+NOTIC: [8] Undefined variable: spec_key D:\phpStudy\WWW\gwshop\Shop\Application\Home\Logic\CartLogic.class.php 第 98 行.
+SQL: INSERT INTO `gwshop_cart` (`user_id`,`goods_id`,`goods_sn`,`goods_name`,`market_price`,`goods_price`,`goods_num`,`spec_key`,`spec_key_name`) VALUES ('5','7','','小米MAX','1599.00','1499.00','2','','') [ RunTime:0.0696s ]
+SQL: SELECT SUM(goods_num) AS tp_sum FROM `gwshop_cart` WHERE `user_id` = 5 LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2016-08-22T17:52:39+08:00 ] 127.0.0.1 /Home/Cart/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000312s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004417s ]
+SQL: SHOW COLUMNS FROM `gwshop_cart` [ RunTime:0.0280s ]
+SQL: SHOW COLUMNS FROM `gwshop_user_passport` [ RunTime:0.0231s ]
+SQL: SELECT * FROM `gwshop_user_passport` WHERE `passport` = 'dffa23e3f38973de8a5a2bce627e261b' LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0155s ]
+SQL: SELECT * FROM `gwshop_user` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `gwshop_cart` [ RunTime:0.0064s ]
+SQL: SELECT `id`,`goods_id`,`goods_name`,`market_price`,`goods_price`,`goods_num`,`spec_key_name` FROM `gwshop_cart` WHERE `user_id` = 5 LIMIT 0,20   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0097s ]
+SQL: SELECT `original_img` FROM `gwshop_goods` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `store_count` FROM `gwshop_goods` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_cart` WHERE `user_id` = 5 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT SUM(goods_num) AS tp_sum FROM `gwshop_cart` WHERE `user_id` = 5 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2016-08-22T18:08:46+08:00 ] 127.0.0.1 /Home/Cart/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000535s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000853s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000926s ]
+SQL: SHOW COLUMNS FROM `gwshop_cart` [ RunTime:0.0283s ]
+SQL: SHOW COLUMNS FROM `gwshop_user_passport` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `gwshop_user_passport` WHERE `passport` = 'dffa23e3f38973de8a5a2bce627e261b' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0145s ]
+SQL: SELECT * FROM `gwshop_user` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `gwshop_cart` [ RunTime:0.0071s ]
+SQL: SELECT `id`,`goods_id`,`goods_name`,`market_price`,`goods_price`,`goods_num`,`spec_key_name` FROM `gwshop_cart` WHERE `user_id` = 5 LIMIT 0,20   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0100s ]
+SQL: SELECT `original_img` FROM `gwshop_goods` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `store_count` FROM `gwshop_goods` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_cart` WHERE `user_id` = 5 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT SUM(goods_num) AS tp_sum FROM `gwshop_cart` WHERE `user_id` = 5 LIMIT 1   [ RunTime:0.0004s ]
+

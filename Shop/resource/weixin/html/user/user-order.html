@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>b2c</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default">
+		<link href="../../css/style.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="wrap">
+			<!--顶部-->
+			<header>
+				<a onclick="javascript:history.back();" class="return"><i>&#xe6d6;</i></a>
+				<div class="header-title">
+					<div class="header-title-center" id="order_menu">
+						<em>全部订单</em><i>&#xe6d8;</i>
+					</div>
+				</div>
+				<a href="../search.html" class="header-right"><i class="blue">&#xe6b3;</i></a>
+			</header>
+			<div class="header-h"></div>
+			<!--顶部:over-->
+			<!--订单选择菜单-->
+			<div class="order-menu" id="order_menu_show">
+				<a href="user-order.html" class="active">全部订单</a><a href="user-order-daiFuKuan.html">待付款订单</a><a href="user-order-daiFaHuo.html">待发货订单</a><a href="user-order-daiShouHuo.html">待收货订单</a><a href="user-order-judge.html">评价中心</a><a href="user-order-return.html">退换货订单</a>
+			</div>
+			<div class="order-menu-black" id="order_menu_black"></div>
+			<!--订单选择菜单:over-->
+			<!--订单列表-->
+			<div class="order-list" id="order_list">
+
+				
+			</div>
+			<!--订单列表:over-->
+		</div>
+		<!--script-->
+		<script src="../../js/lib/jquery.min.js"></script>
+		<script src="../../js/gui/cloud.min.js"></script>
+		<script src="../../js/public.js"></script>
+		<script src="../../js/user/user-order.js"></script>
+
+	</body>
+
+</html>

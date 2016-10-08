@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>b2c</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default">
+		<link href="../../css/style.css" rel="stylesheet">
+	</head>
+
+	<body style="background-color: white;">
+		<div class="wrap">
+			<!--顶部-->
+			<header>
+				<a onclick="javascript:history.back();" class="return"><i>&#xe6d6;</i></a>
+				<div class="header-title">
+					<div class="header-title-center">
+						<em>新增地址</em>
+					</div>
+				</div>
+			</header>
+			<div class="header-h"></div>
+			<!--顶部:over-->
+			<div class="address-form">
+				<form action="" method="" id="address-form">
+					<p>
+						<span>收货人</span>
+						<input type="text" id="consignee" name="consignee" datatype="*" nullmsg="请输入姓名！" errormsg="请输入正确的姓名！" class="txt" placeholder="请输入姓名" />
+					</p>
+					<p>
+						<span>手机号码</span>
+						<input type="text" id="mobile" name="mobile" datatype="m" nullmsg="请手机号码！" errormsg="请输入正确的手机号！" class="txt" placeholder="请输入手机" />
+					</p>
+					<p>
+						<span>省/直辖市</span>
+						<input type="text" id="province" name="province" datatype="s" nullmsg="请选择省！" errormsg="" class="txt" readonly="" onClick="showProvince();" /><i>&#xe6d8;</i>
+					</p>
+					<p>
+						<span>市</span>
+						<input type="text" id="city" name="city" datatype="s" nullmsg="请选择市！" errormsg="" class="txt" readonly="" /><i>&#xe6d8;</i>
+					</p>
+					<p>
+						<span>区/县</span>
+						<input type="text" id="district" name="district" datatype="s" nullmsg="请选择区/县！" errormsg="" class="txt" readonly="" /><i>&#xe6d8;</i>
+					</p>
+					<p>
+						<span>街道地址</span>
+						<input type="text" id="address" name="address" datatype="*" nullmsg="请填写街道地址！" errormsg="请填写正确的街道地址！" class="txt" placeholder="请输入详细地址" />
+					</p>
+					<button class="btn-confirm" id="submit_address">确定</button>
+				</form>
+
+			</div>
+		</div>
+		<!--选择地区-->
+		<div class="pop_area_wrap">
+			<div class="sheng_box" style="display:none;" id="province2">
+				<div class="titleWrap">
+					<h2><strong>省份选择</strong></h2><span class="back"><a onClick="backdiv('1')">返回</a></span></div>
+				<ul id="provinceDiv">
+
+				</ul>
+			</div>
+
+			<div class="city_box" style="display:none;" id="city2">
+				<div class="titleWrap">
+					<h2><strong>市选择</strong></h2><span class="back"><a onClick="backdiv('2')">返回</a></span></div>
+				<ul id="cityDiv">
+
+				</ul>
+			</div>
+
+			<div class="district_box" style="display:none;" id="district2">
+				<div class="titleWrap">
+					<h2><strong>区/县选择</strong></h2><span class="back"><a onClick="backdiv('3')">返回</a></span></div>
+				<ul id="districtDiv">
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+
+		</div>
+		<!--选择地区:over-->
+
+		<!--script-->
+		<script src="../../js/lib/jquery.min.js"></script>
+		<script src="../../js/gui/json-array-of-province.js"></script>
+		<script src="../../js/gui/json-array-of-city.js"></script>
+		<script src="../../js/gui/json-array-of-district.js"></script>
+		<script src="../../js/shopping/area.js"></script>
+		<script src="../../js/public.js"></script>
+		<script src="../../js/gui/Validform_v5.3.2_ncr_min.js"></script>
+		<script src="../../js/gui/layer.js"></script>
+		<script src="../../js/gui/cloud.min.js"></script>
+		<script src="../../js/shopping/address.js"></script>
+
+	</body>
+
+</html>

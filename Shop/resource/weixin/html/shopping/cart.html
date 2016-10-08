@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>b2c</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default">
+		<link href="../../css/style.css" rel="stylesheet">
+		<link href="../../css/common.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="wrap">
+			<!--顶部-->
+			<header>
+				<a onclick="javascript:history.back();" class="return"><i>&#xe6d6;</i></a>
+				<div class="header-title">
+					<div class="header-title-center">
+						<em>购物车</em>
+					</div>
+				</div>
+				<a class="cart-edit">编辑全部</a>
+				<a class="header-right"><i>&#xe677;</i></a>
+			</header>
+			<div class="header-h"></div>
+			<!--顶部:over-->
+			<!--购物车列表-->
+			<div class="cart-list">
+				<ul id="cartList">
+					<li>
+						<div class="check">
+							<label><input name="" type="checkbox" value=""></label>
+						</div>
+						<div class="img">
+							<span></span><img src="../../images/pic-hot1.jpg">
+						</div>
+						<div class="info">
+							<a class="edit">编辑</a>
+							<div class="name">
+								<h3>小米手机5 标准版 3GB + 32GB / 3D玻璃 白色 32GB</h3>
+							</div>
+							<div class="sizes">
+								<p>属性：白色</p>
+								<p>规格：1920*1200</p>
+							</div>
+							<div class="price"><span>￥ 1922.00<del>￥2899.00</del></span><em>X 1</em></div>
+							<!--编辑-->
+							<div class="edit-sizes">
+								<span><label>属性：白色</label><label>规格：1920*1200</label></span><i>&#xe6d8;</i>
+							</div>
+							<div class="edit-container">
+								<div class="qty">
+									<button class="disabled"><i>&minus;</i></button><input type="text" value="1" /><button><i>&#43;</i></button>
+								</div>
+								<a class="delect">删除</a>
+							</div>
+							<!--编辑:over-->
+						</div>
+					</li>
+					<li>
+						<div class="check">
+							<label><input name="" type="checkbox" value=""></label>
+						</div>
+						<div class="img">
+							<span></span><img src="../../images/pic-hot2.jpg">
+						</div>
+						<div class="info">
+							<a class="edit">编辑</a>
+							<div class="name">
+								<h3>小米手机5 标准版 3GB + 32GB / 3D玻璃 白色 32GB</h3>
+							</div>
+							<div class="sizes">
+								<p>属性：白色</p>
+								<p>规格：1920*1200</p>
+							</div>
+							<div class="price"><span>￥ 1922.00<del>￥2899.00</del></span><em>X 1</em></div>
+							<!--编辑-->
+							<div class="editBox">
+								<div class="edit-sizes" style="display:block">
+									<span><label>属性：白色</label><label>规格：1920*1200</label></span><i>&#xe6d8;</i>
+								</div>
+								<div class="edit-container" style="display:block">
+									<div class="qty">
+										<button class="disabled"><i>&minus;</i></button><input type="text" value="1" /><button><i>&#43;</i></button>
+									</div>
+									<a class="delect">删除</a>
+								</div>
+							</div>
+							<!--编辑:over-->
+						</div>
+					</li>
+
+				</ul>
+			</div>
+			<!--购物车列表:over-->
+			<!--购买信息弹窗-->
+			<div class="goods-buy" id="buy-light">
+				<div class="goods-buy-info">
+					<div class="img">
+						<span></span><img src="../../images/pic-qg1.jpg">
+					</div>
+					<div class="info">
+						<div class="name">
+							<a href="#">
+								<h3>最新ecshop某某家具家居建材商城模板网站源码 商城模板...</h3></a>
+						</div>
+						<div class="price">
+							<span>￥<strong>2899.00</strong></span><del>￥2899.00</del>
+						</div>
+					</div>
+				</div>
+				<div class="spec">
+					<div class="spec-container">
+						<dl>
+							<dt>规格一</dt>
+							<dd>
+								<label class="active">规格</label><label class="disabled">规格</label>
+							</dd>
+						</dl>
+						<dl>
+							<dt>规格二</dt>
+							<dd>
+								<label class="active">1920*1200</label><label>1600*800</label>
+							</dd>
+						</dl>
+					</div>
+				</div>
+
+				<div class="qty">
+					<div class="qty-container">
+						<span>购买数量</span>
+						<div class="qty-form">
+							<button class="disabled"><i>&minus;</i></button>
+							<input type="text" value="1" />
+							<button><i>&#43;</i></button>
+						</div>
+					</div>
+				</div>
+
+				<button class="btn-full-red" onclick="location.href='cart.html'">确定</button>
+
+			</div>
+			<div class="black" id="buy-black" onClick="buy_hide()"></div>
+
+			<!--购买信息弹窗-->
+			<!--底部-->
+			<div class="cart-bar-h"></div>
+			<!--购物车删除的底部-->
+			<!--<div class="cart-bar-delect">
+				<div class="check-total">
+					<label><i>&#xe61a;</i>全选</label>
+				</div>
+				<button>删除</button>
+			</div>-->
+			<!--购物车结算的底部-->
+			<div class="cart-bar-balance">
+				<div class="check-total">
+					<label><input name="" type="checkbox" value="1" cartlevel="1" />全选</label>
+					<span>合计：<strong id="TotalAmount">￥ 0.0</strong></span>
+				</div>
+				<button onclick="location.href='balance.html'">结算(<span id="selectNum">1</span>)</button>
+			</div>
+			<!--底部:over-->
+			<!--底部导航-->
+			<div class="foot-bar-h"></div>
+			<div class="foot-bar">
+				<ul>
+					<li>
+						<a href="../index.html">
+							<i>&#xe6bb;</i>
+							<p>首页</p>
+						</a>
+					</li>
+					<li>
+						<a href="../goods/category.html">
+							<i>&#xe6b9;</i>
+							<p>分类</p>
+						</a>
+					</li>
+					<li>
+						<a href="cart.html" class="active">
+							<i>&#xe61c;</i>
+							<p>购物车</p>
+						</a>
+					</li>
+					<li>
+						<a href="../user/user-center.html">
+							<i>&#xe646;</i>
+							<p>我</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!--底部导航:over-->
+		</div>
+		<!--script-->
+		<script src="../../js/lib/jquery.min.js"></script>
+		<script src="../../js/public.js?id=111"></script>
+		<script src="../../js/gui/alertPopShow.js"></script>
+		<script src="../../js/shopping/cart.js?id=01"></script>
+		<script src="../../js/shopping/shoppingcart.js"></script>
+	</body>
+
+</html>

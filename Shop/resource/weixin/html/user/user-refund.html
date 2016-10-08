@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>b2c</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default">
+		<link href="../../css/style.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="wrap">
+			<!--顶部-->
+			<header>
+				<a onclick="javascript:history.back();" class="return"><i>&#xe6d6;</i></a>
+				<div class="header-title">
+					<div class="header-title-center">
+						<em>申请退款</em>
+					</div>
+				</div>
+			</header>
+			<div class="header-h"></div>
+			<!--顶部:over-->
+
+			<!--订单列表-->
+			<div class="order-list">
+				<div class="order-item">
+					<div class="order-status">
+						<span>选择退换产品</span>
+					</div>
+					<div class="complete-goods">
+						<ul id="refund_goods">
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--订单列表:over-->
+			<div class="shop-send">
+				<ul>
+					<li>
+						<div class="send-item" id="coupon">
+							<strong>申请原因</strong>
+							<!--<span><label>请选择原因</label><i>&#xe6d5;</i></span>-->
+						</div>
+						<!--<div class="item-show" id="coupon-show">
+							<label class="active">退款原因一</label>
+							<label>退款原因二</label>
+							<label>退款原因三</label>
+							<label>退款原因四</label>
+						</div>-->
+					</li>
+					<li>
+						<textarea class="textarea" placeholder="请输入退款说明" id="refund_text"></textarea>
+					</li>
+				</ul>
+			</div>
+			<!--<div class="up-pics">
+				<a>
+					<i>&#xe6dc;</i><span>上传凭证(选填)</span>
+				</a>
+			</div>-->
+			<button class="btn-blue" id="submit_refund">确定</button>
+
+		</div>
+		<!--script-->
+		<script src="../../js/lib/jquery.min.js"></script>
+		<script src="../../js/gui/cloud.min.js"></script>
+		<script src="../../js/public.js"></script>
+		<script src="../../js/user/user-refund.js"></script>
+
+	</body>
+
+</html>

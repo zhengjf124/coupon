@@ -1,0 +1,22 @@
+[ 2016-08-24T13:44:38+08:00 ] 127.0.0.1 /index.php?m=Home&c=api&a=get_category&parent_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000975s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001058s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `gwshop_goods_category` WHERE ( parent_id = 1 )  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\gwshop\Shop\Application\Home\Controller\ApiController.class.php 第 58 行.
+
+[ 2016-08-24T13:44:39+08:00 ] 127.0.0.1 /index.php?m=Home&c=api&a=get_category&parent_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000729s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000801s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000870s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0203s ]
+SQL: SELECT * FROM `gwshop_goods_category` WHERE ( parent_id = 4 )  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\gwshop\Shop\Application\Home\Controller\ApiController.class.php 第 58 行.
+

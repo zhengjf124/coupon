@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="./jquery.uploadify-3.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./uploadify.css" />
+
+
+    </head>
+
+<input type="file" name="file_upload" id="file_upload" >aaaa
+
+<script>
+    $(function() {
+        $('#file_upload').uploadify({
+            'swf'      : 'uploadify.swf',
+            'uploader' : 'http://gwshop.usrboot.com/Home/user/uploadHeadImg',
+            'fileObjName'     : 'head_img_file',
+            'onUploadError' : function(file, errorCode, errorMsg, errorString) {
+                //alert(file);
+                console.log(errorCode)
+                console.log(errorMsg)
+                console.log(errorString)
+                //alert('The file ' + file.name + ' could not be uploaded: ' + errorString);
+            },//上传出错后的方法
+
+            'onUploadSuccess' : function(file, data, response) {
+                //alert('The file ' + file.name + ' was successfully uploaded with a response of ' + response + ':' + data);
+                //console.log(file)
+                console.log(data)
+
+
+               // console.log(response)
+            }
+            // Put your options here
+        });
+    });
+
+
+
+</script>

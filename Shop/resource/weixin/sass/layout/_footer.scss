@@ -1,0 +1,237 @@
+@charset "UTF-8"; 
+//底部导航
+.foot-bar-h {
+    width: $base-width;
+    height: $base-size * 10;
+    overflow: hidden;
+}
+.foot-bar {
+    max-width: $max-width;
+    min-width: $min-width;
+    @include position-bottom(fixed,0,auto,1001);
+    width: $base-width;
+    height: $base-size * 8;
+    overflow: hidden;
+    border-top: 1px rgba($gray,.5) solid;
+    background-color: $white;
+    ul {
+        width: 102%;
+        li {
+            width: $base-size * 16;
+            height: $base-size * 8;
+            display: block;
+            float: left;
+            a {
+                @extend display-block;
+                position: relative;
+                i {
+                    width: 100%;
+                    @include icon-font($base-font-size*3.6,$gray-dark,$base-size*3.6);
+                    padding-top: $base-size;
+                    text-align: center;
+                    display: block;
+                    margin: 0 auto;
+                }
+                p {
+                    font-size: $base-font-size * 2.2;
+                    color: $gray-dark;
+                    text-align: center;
+                }
+                &.active i {
+                    @include icon-font($base-font-size*3.6,$orange,$base-size*3.6);
+                }
+                &.active p {
+                    color: $orange;
+                }
+            }
+        }
+    }
+}
+//产品内容底部
+.cont-bar-h {
+    width: $base-width;
+    height: $base-size*11;
+    overflow: hidden;
+}
+.cont-bar {
+    @include position-bottom(fixed,0,auto,$zindex-fixed-topbar);
+    width: $base-width;
+    height: $base-size*8.8;
+    max-width: $max-width;
+    min-width: $min-width;
+    overflow: hidden;
+    background-color: $white;
+    ul {
+        width: 102%;
+        height: $base-size*8.8;
+        overflow: hidden;
+        li {
+            width: $base-size*7.9;
+            height: $base-size*8.8;
+            display: block;
+            float: left;
+            @extend border-top;
+            @extend border-right;
+            a {
+                @extend display-block;
+                text-align: center;
+                padding-top: $base-size;
+                i {
+                    @include icon-font($base-font-size*3,$gray-dark,$base-size*3.6);
+                }
+                h6 {
+                    text-align: center;
+                    color: $gray-dark;
+                }
+                &.active i {
+                    color: $orange;
+                }
+                &.active h6 {
+                    color: $orange;
+                }
+            }
+            &:nth-child(3) {
+                border-right: none;
+            }
+            &:nth-child(4) {
+                width: $base-size*20.2;
+                height: $base-size*8.8;
+                overflow: hidden;
+                background-color: $orange;
+                border: none;
+                a {
+                    @extend display-block;
+                    @include text-align(center,$base-size*8.8);
+                    font-size: $base-font-size*2.6;
+                    color: $white;
+                    padding: 0;
+                }
+            }
+            &:nth-child(5) {
+                width: $base-size*20.2;
+                height: $base-size*8.8;
+                overflow: hidden;
+                background-color: $red;
+                border: none;
+                a {
+                    @extend display-block;
+                    @include text-align(center,$base-size*8.8);
+                    font-size: $base-font-size*2.6;
+                    color: $white;
+                    padding: 0;
+                }
+            }
+        }
+        &.group {
+            li {
+                float: left;
+                display: block;
+                width: $base-size*11;
+                height: $base-size*8.8;
+                @extend border-top;
+                @extend border-bottom;
+                a {
+                    @extend display-block;
+                    text-align: center;
+                    padding-top: $base-size;
+                }
+                &:last-child{
+                     width: $base-size*53;
+                     height: $base-size*8.8;
+                     background-color: $red;
+                    a {
+                        @extend display-block;
+                        @include text-align(center,$base-size*8.8);
+                        font-size: $base-font-size*2.6;
+                        color: $white;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+//购物车底部
+.cart-bar-h {
+    width: $base-width;
+    height: $base-size*11;
+    overflow: hidden;
+}
+.cart-bar-delect {
+    width: $base-width;
+    height: $base-size*8;
+    overflow: hidden;
+    @extend border-top;
+    background-color: $white;
+    max-width: $max-width;
+    min-width: $min-width;
+    @include position-bottom(fixed,$base-size*8,auto,$zindex-modal);
+    button {
+        float: right;
+        width: $base-size*18;
+        height: $base-size*8;
+        display: inline-block;
+        border: none;
+        background-color: $red;
+        text-align: center;
+        font-size: $base-font-size*2.6;
+        color: $white;
+    }
+}
+.cart-bar-balance {
+    width: $base-width;
+    height: $base-size*8;
+    overflow: hidden;
+    @extend border-top;
+    background-color: $white;
+    max-width: $max-width;
+    min-width: $min-width;
+    @include position-bottom(fixed,$base-size*8,auto,$zindex-fixed-topbar);
+    .check-total {
+        width: $base-size*44;
+        height: $base-size*8;
+        overflow: hidden;
+        float: left;
+        line-height: $base-size*8;
+        padding: 0 $base-size*2;
+        label {
+            font-size: $base-font-size*2.4;
+            color: rgba($gray-darker,.7);
+            float: left;
+            i {
+                @include icon-font($base-size*3,$gray,$base-size*8);
+                padding-right: $base-size;
+                vertical-align: middle;
+            }
+            &.active {
+                color: $blue;
+                i {
+                    color: $blue;
+                }
+            }
+        }
+        span {
+            float: right;
+            padding-left: $base-size*4;
+            color: $gray-dark;
+            strong {
+                font-size: $base-font-size*2.6;
+                color: $red;
+            }
+        }
+    }
+    button {
+        float: right;
+        width: $base-size*18;
+        height: $base-size*8;
+        display: inline-block;
+        border: none;
+        background-color: $red;
+        text-align: center;
+        font-size: $base-font-size*2.6;
+        color: $white;
+        &.disabled {
+            background-color: $gray;
+        }
+    }
+}

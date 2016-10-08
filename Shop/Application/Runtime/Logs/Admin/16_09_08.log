@@ -1,0 +1,157 @@
+[ 2016-09-08T16:52:09+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-08T16:52:09+08:00 ] 127.0.0.1 /index.php/Admin/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.030002s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.030002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.082005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.082005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-08T16:52:10+08:00 ] 127.0.0.1 /index.php/Admin/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-08T16:52:16+08:00 ] 127.0.0.1 /index.php?m=Admin&c=Login&a=login&t=0.6906852832385548
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `gwshop_admin` INNER JOIN gwshop_admin_role ON gwshop_admin.role_id=gwshop_admin_role.role_id  WHERE `user_name` = 'admin' AND `password` = '1ec6c02ecd57e229429739a521ac6bfa' LIMIT 1   [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin_log` [ RunTime:0.0030s ]
+SQL: INSERT INTO `gwshop_admin_log` (`log_time`,`admin_id`,`log_info`,`log_ip`,`log_url`) VALUES ('1473324736','1','后台登录','127.0.0.1','/index.php/Admin/Login/login') [ RunTime:0.0760s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin` [ RunTime:0.0110s ]
+SQL: UPDATE `gwshop_admin` SET `last_login`='1473324736',`last_ip`='127' WHERE `id` = 1 [ RunTime:0.0430s ]
+
+[ 2016-09-08T16:52:16+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `gwshop_system_module` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `gwshop_system_module` WHERE ( level>1 AND visible=1 ) ORDER BY mod_id ASC  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `gwshop_admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: upgradeMsg E:\xampp\htdocs\gwshop\Shop\Application\Runtime\Cache\Admin\be00a7f6d2195b4dd3e06b8510d61b99.php 第 50 行.
+NOTIC: [8] Undefined variable: upgradeMsg E:\xampp\htdocs\gwshop\Shop\Application\Runtime\Cache\Admin\be00a7f6d2195b4dd3e06b8510d61b99.php 第 53 行.
+NOTIC: [8] Undefined variable: order_amount E:\xampp\htdocs\gwshop\Shop\Application\Runtime\Cache\Admin\be00a7f6d2195b4dd3e06b8510d61b99.php 第 265 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-08T16:52:16+08:00 ] 127.0.0.1 /index.php/Admin/System/login_task.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `gwshop_cart` [ RunTime:0.0050s ]
+ERR: 1054:Unknown column 'add_time' in 'where clause'
+ [ SQL语句 ] : DELETE FROM `gwshop_cart` WHERE ( user_id = 0 and  add_time < 1473321136 )
+ERR: 1054:Unknown column 'add_time' in 'where clause'
+ [ SQL语句 ] : DELETE FROM `gwshop_cart` WHERE ( user_id = 0 and  add_time < 1473321136 )
+
+[ 2016-09-08T16:52:16+08:00 ] 127.0.0.1 /index.php/Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] file_get_contents(./Application/Admin/Conf/version.txt): failed to open stream: No such file or directory E:\xampp\htdocs\gwshop\Shop\Application\Admin\Controller\IndexController.class.php 第 52 行.
+SQL: SELECT VERSION() as version [ RunTime:0.0140s ]
+NOTIC: [8] Undefined index: version E:\xampp\htdocs\gwshop\Shop\Application\Admin\Controller\IndexController.class.php 第 54 行.
+SQL: SHOW COLUMNS FROM `gwshop_order` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_order` WHERE ( add_time>1473238336  ) LIMIT 1   [ RunTime:0.0590s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_order` WHERE ( add_time>1473238336 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_goods` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gwshop_article` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_article` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_user` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_user` WHERE ( last_login>1473238336 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_user` WHERE ( reg_time>1473238336 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gwshop_comments` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_comments` WHERE ( status=0 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: navigate_admin E:\xampp\htdocs\gwshop\Shop\Application\Runtime\Cache\Admin\ca594facc41dd2b99b9e9f758c69c7d0.php 第 67 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-08T16:52:24+08:00 ] 127.0.0.1 /index.php/Admin/Wechat/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `gwshop_wx_user` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `gwshop_wx_user` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW TABLE STATUS WHERE NAME = 'gwshop_wx_menu' [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `gwshop_wx_menu` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `gwshop_wx_menu` WHERE `token` = 'sliyly1470731499' AND `pid` = 0 ORDER BY id ASC  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `gwshop_wx_menu` WHERE `token` = 'sliyly1470731499' AND `pid` > 0 ORDER BY id ASC  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: navigate_admin E:\xampp\htdocs\gwshop\Shop\Application\Runtime\Cache\Admin\159ed417f05455efd48f0c5b3c12df40.php 第 126 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+

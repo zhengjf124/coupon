@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>b2c</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default">
+		<link href="../../css/style.css" rel="stylesheet">
+	</head>
+
+	<body style="background-color: white;">
+		<div class="wrap">
+			<!--顶部-->
+			<header>
+				<a onclick="javascript:history.back();" class="return"><i>&#xe6d6;</i></a>
+				<div class="search">
+					<div class="txt-box" id="txt_search">
+						<i>&#xe6b3;</i>
+						<input type="text" placeholder="搜索关键词" id="word" value="" />
+						<a class="clear-word">&#xe638;</a>
+					</div>
+					<button id="submit_search">搜索</button>
+				</div>
+			</header>
+			<div class="header-h"></div>
+			<!--顶部:over-->
+			<!--排序-->
+			<div class="goods-sort">
+				<a class="sort1 active">综合排序<i>&#xe6d8;</i></a>
+				<a class="sort2 acnone">销量<i>&#xe6d8;</i></a>
+				<a class="sort3 acnone">价格<i>&#xe6d8;</i></a>
+				<!--<a class="sort4"><i>&#xe6d9;</i>筛选</a>-->
+			</div>
+			<!--筛选弹窗-->
+			<!--<div class="screen" id="dialog-screen">
+				<div class="screen-container">
+					<div class="screen-fixed">
+					 <a class="screen-close"><i>&#xe64a;</i></a><span>商品筛选</span><a class="done" id="screen-done">完成</a>
+					</div>
+					<div class="screen-content">
+						<dl>
+							<dt><strong>品牌</strong><span>品牌一</span></dt>
+							<dd>
+								<label class="active">品牌一</label><label>品牌一二</label><label>品牌三</label><label>品牌四五六</label><label>品牌789</label><label>品牌10</label>
+							</dd>
+						</dl>
+						<dl>
+							<dt><strong>价格</strong><span>2000-5000</span></dt>
+							<dd>
+								<label class="active">2000-4999</label><label>5000-9999</label><label>1万-1万5</label><label>1万5-2万</label><label>2万1-2万5</label><label>2万5+</label>
+							</dd>
+						</dl>
+						<dl>
+							<dt><strong>品牌</strong><span>品牌一</span></dt>
+							<dd>
+								<label class="active">品牌一</label><label>品牌一二</label><label>品牌三</label><label>品牌四五六</label><label>品牌789</label><label>品牌10</label>
+							</dd>
+						</dl>
+						<dl>
+							<dt><strong>价格</strong><span>2000-5000</span></dt>
+							<dd>
+								<label class="active">2000-4999</label><label>5000-9999</label><label>1万-1万5</label><label>1万5-2万</label><label>2万1-2万5</label><label>2万5+</label>
+							</dd>
+						</dl>
+						<dl>
+							<dt><strong>品牌</strong><span>品牌一</span></dt>
+							<dd>
+								<label class="active">品牌一</label><label>品牌一二</label><label>品牌三</label><label>品牌四五六</label><label>品牌789</label><label>品牌10</label>
+							</dd>
+						</dl>
+						<dl>
+							<dt><strong>价格</strong><span>2000-5000</span></dt>
+							<dd>
+								<label class="active">2000-4999</label><label>5000-9999</label><label>1万-1万5</label><label>1万5-2万</label><label>2万1-2万5</label><label>2万5+</label>
+							</dd>
+						</dl>
+						<dl>
+							<dt><strong>品牌</strong><span>品牌一</span></dt>
+							<dd>
+								<label class="active">品牌一</label><label>品牌一二</label><label>品牌三</label><label>品牌四五六</label><label>品牌789</label><label>品牌10</label>
+							</dd>
+						</dl>
+						<dl>
+							<dt><strong>价格</strong><span>2000-5000</span></dt>
+							<dd>
+								<label class="active">2000-4999</label><label>5000-9999</label><label>1万-1万5</label><label>1万5-2万</label><label>2万1-2万5</label><label>2万5+</label>
+							</dd>
+						</dl>
+						<dl>
+							<dt><strong>品牌</strong><span>品牌一</span></dt>
+							<dd>
+								<label class="active">品牌一</label><label>品牌一二</label><label>品牌三</label><label>品牌四五六</label><label>品牌789</label><label>品牌10</label>
+							</dd>
+						</dl>
+						<dl>
+							<dt><strong>价格</strong><span>2000-5000</span></dt>
+							<dd>
+								<label class="active">2000-4999</label><label>5000-9999</label><label>1万-1万5</label><label>1万5-2万</label><label>2万1-2万5</label><label>2万5+</label>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>-->
+			<div class="black" id="black-screen"></div>
+			<!--筛选弹窗:over-->
+			<div class="goods-sort-h"></div>
+			<!--排序:over-->
+			<!--列表-->
+			<div class="list-md" id="pull">
+				<div id="scroller">
+					<div id="pullDown">
+						<span class="pullDownIcon"></span><span class="pullDownLabel">正在刷新...</span>
+					</div>
+					<ul id="list">
+
+					</ul>
+					<div id="pullUp">
+						<span class="pullUpIcon"></span><span class="pullUpLabel">正在加载...</span>
+					</div>
+				</div>
+			</div>
+			<!--列表:over-->
+			<!--底部导航-->
+			<div class="foot-bar">
+				<ul>
+					<li>
+						<a href="../index.html" class="active">
+							<i>&#xe6bb;</i>
+							<p>首页</p>
+						</a>
+					</li>
+					<li>
+						<a href="category.html">
+							<i>&#xe6b9;</i>
+							<p>分类</p>
+						</a>
+					</li>
+					<li>
+						<a href="../shopping/cart.html">
+							<i>&#xe61c;</i>
+							<p>购物车</p>
+						</a>
+					</li>
+					<li>
+						<a href="../user/user-center.html">
+							<i>&#xe646;</i>
+							<p>我</p>
+						</a>
+					</li>
+
+				</ul>
+			</div>
+			<!--底部导航:over-->
+		</div>
+		<!--script-->
+		<script src="../../js/lib/jquery.min.js"></script>
+	  <script src="../../js/gui/jquery.cookie.min.js"></script>
+		<script src="../../js/public.js"></script>
+		<script src="../../js/gui/iscroll.js"></script>		
+		<script src="../../js/goods/list.js"></script>
+		<script src="../../js/gui/iscroll-pull.js"></script>
+	</body>
+
+</html>

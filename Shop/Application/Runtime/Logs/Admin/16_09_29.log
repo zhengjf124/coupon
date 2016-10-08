@@ -1,0 +1,21 @@
+[ 2016-09-29T15:06:13+08:00 ] 192.168.1.100 /index.php?m=Admin&c=Login&a=login&t=0.873452412757563
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000711s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin` [ RunTime:0.0363s ]
+SQL: SELECT * FROM `gwshop_admin` INNER JOIN gwshop_admin_role ON gwshop_admin.role_id=gwshop_admin_role.role_id  WHERE `user_name` = 'admin' AND `password` = '1ec6c02ecd57e229429739a521ac6bfa' LIMIT 1   [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin_log` [ RunTime:0.0041s ]
+SQL: INSERT INTO `gwshop_admin_log` (`log_time`,`admin_id`,`log_info`,`log_ip`,`log_url`) VALUES ('1475132773','1','后台登录','192.168.1.100','/index.php/Admin/Login/login') [ RunTime:0.1120s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin` [ RunTime:0.0031s ]
+SQL: UPDATE `gwshop_admin` SET `last_login`='1475132773',`last_ip`='192' WHERE `id` = 1 [ RunTime:0.1014s ]
+
+[ 2016-09-29T15:06:14+08:00 ] 192.168.1.100 /index.php/Admin/System/login_task.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000565s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001110s ]
+SQL: SHOW COLUMNS FROM `gwshop_cart` [ RunTime:0.0470s ]
+ERR: 1054:Unknown column 'add_time' in 'where clause'
+ [ SQL语句 ] : DELETE FROM `gwshop_cart` WHERE ( user_id = 0 and  add_time < 1475129174 )
+ERR: 1054:Unknown column 'add_time' in 'where clause'
+ [ SQL语句 ] : DELETE FROM `gwshop_cart` WHERE ( user_id = 0 and  add_time < 1475129174 )
+

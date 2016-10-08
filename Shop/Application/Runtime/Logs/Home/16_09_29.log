@@ -1,0 +1,1542 @@
+[ 2016-09-29T10:01:40+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.014295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001072s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001159s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T10:01:41+08:00 ] 192.168.1.134 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000726s ]
+
+[ 2016-09-29T10:02:35+08:00 ] 192.168.1.134 /home/login/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000822s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000525s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000574s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T10:02:38+08:00 ] 192.168.1.134 /home/login/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000861s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000947s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001079s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T10:05:07+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000823s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000553s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000605s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T10:22:25+08:00 ] 192.168.1.134 /home/login/login?sign=16cd4826542cb7dc11c71f172e7bffde&parameters%5Bmobile%5D=&parameters%5Bpassword%5D=&parameters%5Btime%5D=1475115745&parameters%5Btoken%5D=coupon1238
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000841s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001485s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 105 行.
+
+[ 2016-09-29T10:25:04+08:00 ] 192.168.1.134 /home/login/login?sign=510e01f89fb1f79e5562eac423ae4568&parameters%5Bmobile%5D=4111&parameters%5Bpassword%5D=1111&parameters%5Btime%5D=1475115903&parameters%5Btoken%5D=coupon1238
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000824s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001266s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001349s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 105 行.
+
+[ 2016-09-29T10:25:05+08:00 ] 192.168.1.134 /home/login/login?sign=a2985f42928b3e97d0d6c65a1166b2ec&parameters%5Bmobile%5D=4111&parameters%5Bpassword%5D=1111&parameters%5Btime%5D=1475115905&parameters%5Btoken%5D=coupon1238
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000479s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000645s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000719s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 105 行.
+
+[ 2016-09-29T10:25:07+08:00 ] 192.168.1.134 /home/login/login?sign=d1fa94f9621bf4f60d844f3905175ebb&parameters%5Bmobile%5D=4111&parameters%5Bpassword%5D=1111&parameters%5Btime%5D=1475115907&parameters%5Btoken%5D=coupon1238
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000704s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000963s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001105s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 105 行.
+
+[ 2016-09-29T10:25:07+08:00 ] 192.168.1.134 /home/login/login?sign=d1fa94f9621bf4f60d844f3905175ebb&parameters%5Bmobile%5D=4111&parameters%5Bpassword%5D=1111&parameters%5Btime%5D=1475115907&parameters%5Btoken%5D=coupon1238
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000360s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000643s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000703s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 105 行.
+
+[ 2016-09-29T10:25:08+08:00 ] 192.168.1.134 /home/login/login?sign=d1fa94f9621bf4f60d844f3905175ebb&parameters%5Bmobile%5D=4111&parameters%5Bpassword%5D=1111&parameters%5Btime%5D=1475115907&parameters%5Btoken%5D=coupon1238
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000779s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001112s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 105 行.
+
+[ 2016-09-29T10:25:08+08:00 ] 192.168.1.134 /home/login/login?sign=c822e71df61f3981f20fe1995594862c&parameters%5Bmobile%5D=4111&parameters%5Bpassword%5D=1111&parameters%5Btime%5D=1475115908&parameters%5Btoken%5D=coupon1238
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000702s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000932s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001041s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 105 行.
+
+[ 2016-09-29T10:25:08+08:00 ] 192.168.1.134 /home/login/login?sign=c822e71df61f3981f20fe1995594862c&parameters%5Bmobile%5D=4111&parameters%5Bpassword%5D=1111&parameters%5Btime%5D=1475115908&parameters%5Btoken%5D=coupon1238
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000652s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000743s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000826s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 105 行.
+
+[ 2016-09-29T10:25:08+08:00 ] 192.168.1.134 /home/login/login?sign=c822e71df61f3981f20fe1995594862c&parameters%5Bmobile%5D=4111&parameters%5Bpassword%5D=1111&parameters%5Btime%5D=1475115908&parameters%5Btoken%5D=coupon1238
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000677s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 105 行.
+
+[ 2016-09-29T10:26:34+08:00 ] 192.168.1.134 /home/login/login?sign=da49cfd77f6a1a674b480ed16aa5734b&parameters%5Bmobile%5D=4111&parameters%5Bpassword%5D=1111&parameters%5Btime%5D=1475115992&parameters%5Btoken%5D=coupon1238
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000504s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000502s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 105 行.
+
+[ 2016-09-29T10:26:34+08:00 ] 192.168.1.134 /home/login/login?sign=5f9f47c559e5291b64d70c8ce6c0138a&parameters%5Bmobile%5D=4111&parameters%5Bpassword%5D=1111&parameters%5Btime%5D=1475115993&parameters%5Btoken%5D=coupon1238
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000299s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000401s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000447s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 105 行.
+
+[ 2016-09-29T10:26:35+08:00 ] 192.168.1.134 /home/login/login?sign=67900caf5e42a78050cbe9758720e5ba&parameters%5Bmobile%5D=4111&parameters%5Bpassword%5D=1111&parameters%5Btime%5D=1475115994&parameters%5Btoken%5D=coupon1238
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000404s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000449s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 105 行.
+
+[ 2016-09-29T10:26:35+08:00 ] 192.168.1.134 /home/login/login?sign=5f9f47c559e5291b64d70c8ce6c0138a&parameters%5Bmobile%5D=4111&parameters%5Bpassword%5D=1111&parameters%5Btime%5D=1475115993&parameters%5Btoken%5D=coupon1238
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000322s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000506s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000550s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 105 行.
+
+[ 2016-09-29T10:26:35+08:00 ] 192.168.1.134 /home/login/login?sign=67900caf5e42a78050cbe9758720e5ba&parameters%5Bmobile%5D=4111&parameters%5Bpassword%5D=1111&parameters%5Btime%5D=1475115994&parameters%5Btoken%5D=coupon1238
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000477s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000495s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 105 行.
+
+[ 2016-09-29T10:26:35+08:00 ] 192.168.1.134 /home/login/login?sign=67900caf5e42a78050cbe9758720e5ba&parameters%5Bmobile%5D=4111&parameters%5Bpassword%5D=1111&parameters%5Btime%5D=1475115994&parameters%5Btoken%5D=coupon1238
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000398s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000447s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 105 行.
+
+[ 2016-09-29T10:27:47+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000446s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001138s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+NOTIC: [2] urldecode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T10:27:52+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000404s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000522s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000586s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+NOTIC: [2] urldecode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T10:27:53+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000722s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000978s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001096s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+NOTIC: [2] urldecode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T10:28:19+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000707s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000982s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001101s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+NOTIC: [2] urldecode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T10:28:29+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000320s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000404s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+NOTIC: [2] urldecode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T10:28:29+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000743s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001010s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001154s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+NOTIC: [2] urldecode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T10:28:30+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000717s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000943s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001059s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+NOTIC: [2] urldecode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T10:28:37+08:00 ] 192.168.1.134 /home/login/login?sign=2e083fc06593032c51e7b8779a2923d4&parameters%5Bmobile%5D=&parameters%5Bpassword%5D=&parameters%5Btime%5D=1475116117&parameters%5Btoken%5D=coupon1238
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000713s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000444s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 105 行.
+
+[ 2016-09-29T10:28:42+08:00 ] 192.168.1.134 /home/login/login?sign=419f8ad314c7507a1e2638fe2497beb8&parameters%5Bmobile%5D=56&parameters%5Bpassword%5D=456&parameters%5Btime%5D=1475116121&parameters%5Btoken%5D=coupon1238
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000601s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000597s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000668s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 105 行.
+
+[ 2016-09-29T10:28:43+08:00 ] 192.168.1.134 /home/login/login?sign=72db2783e324730619129d3e5bdea999&parameters%5Bmobile%5D=56&parameters%5Bpassword%5D=456&parameters%5Btime%5D=1475116122&parameters%5Btoken%5D=coupon1238
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000727s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000965s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001094s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 105 行.
+
+[ 2016-09-29T10:28:51+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000735s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000513s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000577s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+NOTIC: [2] urldecode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T10:28:54+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000734s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000576s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000653s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+NOTIC: [2] urldecode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T10:28:55+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000850s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000457s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+NOTIC: [2] urldecode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T10:34:30+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000406s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000597s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+NOTIC: [2] urldecode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T10:39:41+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000633s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000568s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+NOTIC: [2] urldecode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T10:39:44+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000704s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001504s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001654s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+NOTIC: [2] urldecode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T10:40:15+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000498s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000584s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000661s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+NOTIC: [2] urldecode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T10:40:20+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000457s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000669s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+NOTIC: [2] urldecode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T10:40:32+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000413s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000606s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000695s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+NOTIC: [2] urldecode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T10:50:43+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000484s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000570s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000621s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+NOTIC: [2] urldecode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T10:56:58+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000695s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001111s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+NOTIC: [2] urldecode() expects parameter 1 to be string, array given D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T10:57:25+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000716s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000581s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000657s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T10:58:14+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000712s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001583s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T10:59:06+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000559s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000765s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000850s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T11:02:23+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000659s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000768s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000845s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T11:03:25+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000497s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000852s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000945s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T11:03:37+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000821s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000433s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T11:04:01+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000473s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000601s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000674s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T11:04:03+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000718s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000940s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001051s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T11:04:19+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000465s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000523s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T11:05:16+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000704s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000531s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000609s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T11:05:23+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000712s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000947s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001082s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T11:05:29+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000416s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000633s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000696s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T11:07:06+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000731s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000994s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001116s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T11:07:52+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000476s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000704s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000768s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T11:08:52+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000427s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000534s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000614s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T11:09:06+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000720s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001151s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001720s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T11:09:12+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000367s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000465s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000521s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0448s ]
+SQL: SELECT `user_id`,`password` FROM `gwshop_user` WHERE `mobile` = '15392486456' LIMIT 1   [ RunTime:0.0016s ]
+
+[ 2016-09-29T11:22:37+08:00 ] 192.168.1.100 //home/user/detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000351s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000990s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001108s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T11:22:37+08:00 ] 192.168.1.100 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000305s ]
+
+[ 2016-09-29T11:22:37+08:00 ] 192.168.1.100 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000332s ]
+
+[ 2016-09-29T11:22:40+08:00 ] 192.168.1.100 /home/user/detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000527s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000596s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T11:24:25+08:00 ] 192.168.1.100 /home/user/detail/parameters/%7b%22_passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%7d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000434s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000547s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000617s ]
+NOTIC: [2] preg_match(): Compilation failed: range out of order in character class at offset 7 D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 28 行.
+
+[ 2016-09-29T11:25:11+08:00 ] 192.168.1.100 /home/user/detail/parameters/%7b%22_passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%7d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000675s ]
+NOTIC: [2] preg_match(): Compilation failed: range out of order in character class at offset 7 D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 28 行.
+
+[ 2016-09-29T11:25:58+08:00 ] 192.168.1.100 /home/user/detail/parameters/%7b%22_passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%7d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000436s ]
+NOTIC: [2] preg_match(): Compilation failed: range out of order in character class at offset 7 D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 28 行.
+
+[ 2016-09-29T11:26:12+08:00 ] 192.168.1.100 /home/user/detail/parameters/%7b%22_passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%7d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000384s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000534s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000598s ]
+SQL: SHOW COLUMNS FROM `gwshop_user_passport` [ RunTime:0.0037s ]
+SQL: SELECT `user_id` FROM `gwshop_user_passport` WHERE `passport` = 'd2ab2b971ff0dc34b54c0eaa664873f0' LIMIT 1   [ RunTime:0.0082s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0038s ]
+SQL: SELECT `user_id`,`nick_name`,`mobile`,`headimgurl`,`sex` FROM `gwshop_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2016-09-29T11:26:19+08:00 ] 192.168.1.100 /home/user/detail/parameters/%7b%22_passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%7d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000394s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000477s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000537s ]
+NOTIC: [2] preg_match(): Compilation failed: range out of order in character class at offset 7 D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 28 行.
+
+[ 2016-09-29T11:26:30+08:00 ] 192.168.1.100 /home/user/detail/parameters/%7b%22_passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%7d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000541s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000608s ]
+NOTIC: [2] preg_match(): Compilation failed: range out of order in character class at offset 7 D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 28 行.
+
+[ 2016-09-29T11:26:33+08:00 ] 192.168.1.100 /home/user/detail/parameters/%7b%22_passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%7d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000312s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000500s ]
+NOTIC: [2] preg_match(): Compilation failed: range out of order in character class at offset 7 D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 28 行.
+
+[ 2016-09-29T11:26:36+08:00 ] 192.168.1.100 /home/user/detail/parameters/%7b%22_passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%7d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000402s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000539s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000604s ]
+NOTIC: [2] preg_match(): Compilation failed: range out of order in character class at offset 7 D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 28 行.
+
+[ 2016-09-29T11:27:00+08:00 ] 192.168.1.100 /home/user/detail/parameters/%7b%22_passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%7d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000541s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000460s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000518s ]
+
+[ 2016-09-29T11:27:24+08:00 ] 192.168.1.100 /home/user/detail/parameters/%7b%22_passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%7d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000498s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000740s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000814s ]
+
+[ 2016-09-29T11:27:28+08:00 ] 192.168.1.100 /home/user/detail/parameters/%7b%22_passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%7d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000429s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000660s ]
+SQL: SHOW COLUMNS FROM `gwshop_user_passport` [ RunTime:0.0033s ]
+SQL: SELECT `user_id` FROM `gwshop_user_passport` WHERE `passport` = 'd2ab2b971ff0dc34b54c0eaa664873f0' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0050s ]
+SQL: SELECT `user_id`,`nick_name`,`mobile`,`headimgurl`,`sex` FROM `gwshop_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2016-09-29T11:27:31+08:00 ] 192.168.1.100 /home/user/detail/parameters/%7b%22_passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%7d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000454s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000654s ]
+SQL: SHOW COLUMNS FROM `gwshop_user_passport` [ RunTime:0.0159s ]
+SQL: SELECT `user_id` FROM `gwshop_user_passport` WHERE `passport` = 'd2ab2b971ff0dc34b54c0eaa664873f0' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0388s ]
+SQL: SELECT `user_id`,`nick_name`,`mobile`,`headimgurl`,`sex` FROM `gwshop_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2016-09-29T11:27:32+08:00 ] 192.168.1.100 /home/user/detail/parameters/%7b%22_passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%7d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000541s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000610s ]
+SQL: SHOW COLUMNS FROM `gwshop_user_passport` [ RunTime:0.0029s ]
+SQL: SELECT `user_id` FROM `gwshop_user_passport` WHERE `passport` = 'd2ab2b971ff0dc34b54c0eaa664873f0' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0092s ]
+SQL: SELECT `user_id`,`nick_name`,`mobile`,`headimgurl`,`sex` FROM `gwshop_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2016-09-29T11:27:41+08:00 ] 192.168.1.100 /home/user/detail/parameters/%7B%22_passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f01%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000495s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000501s ]
+
+[ 2016-09-29T11:27:44+08:00 ] 192.168.1.100 /home/user/detail/parameters/%7B%22_passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f1%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000310s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000369s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000412s ]
+SQL: SHOW COLUMNS FROM `gwshop_user_passport` [ RunTime:0.0029s ]
+SQL: SELECT `user_id` FROM `gwshop_user_passport` WHERE `passport` = 'd2ab2b971ff0dc34b54c0eaa664873f1' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2016-09-29T11:27:48+08:00 ] 192.168.1.100 /home/user/detail/parameters/%7B%22_passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000474s ]
+SQL: SHOW COLUMNS FROM `gwshop_user_passport` [ RunTime:0.0028s ]
+SQL: SELECT `user_id` FROM `gwshop_user_passport` WHERE `passport` = 'd2ab2b971ff0dc34b54c0eaa664873f0' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0104s ]
+SQL: SELECT `user_id`,`nick_name`,`mobile`,`headimgurl`,`sex` FROM `gwshop_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2016-09-29T11:27:54+08:00 ] 192.168.1.100 /home/user/detail/parameters/%7B%22_passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000556s ]
+SQL: SHOW COLUMNS FROM `gwshop_user_passport` [ RunTime:0.0033s ]
+SQL: SELECT `user_id` FROM `gwshop_user_passport` WHERE `passport` = 'd2ab2b971ff0dc34b54c0eaa664873f0' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0097s ]
+SQL: SELECT `user_id`,`nick_name`,`mobile`,`headimgurl`,`sex` FROM `gwshop_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2016-09-29T11:29:12+08:00 ] 192.168.1.100 /home/user/detail/parameters/%7B%22_passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000387s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000495s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000555s ]
+SQL: SHOW COLUMNS FROM `gwshop_user_passport` [ RunTime:0.0035s ]
+SQL: SELECT `user_id` FROM `gwshop_user_passport` WHERE `passport` = 'd2ab2b971ff0dc34b54c0eaa664873f0' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0088s ]
+SQL: SELECT `user_id`,`nick_name`,`mobile`,`headimgurl`,`sex` FROM `gwshop_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2016-09-29T11:29:30+08:00 ] 192.168.1.100 /home/user/detail/parameters/%7B%22_passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000528s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000579s ]
+SQL: SHOW COLUMNS FROM `gwshop_user_passport` [ RunTime:0.0027s ]
+SQL: SELECT `user_id` FROM `gwshop_user_passport` WHERE `passport` = 'd2ab2b971ff0dc34b54c0eaa664873f0' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0047s ]
+SQL: SELECT `user_id`,`nick_name`,`mobile`,`headimgurl`,`sex` FROM `gwshop_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2016-09-29T11:29:46+08:00 ] 192.168.1.100 /home/user/detail/parameters/%7B%22_passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000399s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000576s ]
+SQL: SHOW COLUMNS FROM `gwshop_user_passport` [ RunTime:0.0032s ]
+SQL: SELECT `user_id` FROM `gwshop_user_passport` WHERE `passport` = 'd2ab2b971ff0dc34b54c0eaa664873f0' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0084s ]
+SQL: SELECT `user_id`,`nick_name`,`mobile`,`headimgurl`,`sex` FROM `gwshop_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2016-09-29T11:31:14+08:00 ] 192.168.1.100 /home/user/detail/parameters/%7B%22_passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000386s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000660s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000755s ]
+
+[ 2016-09-29T11:31:17+08:00 ] 192.168.1.100 /home/user/detail/parameters/%7B%22_passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000306s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000427s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000508s ]
+
+[ 2016-09-29T11:31:41+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000552s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000764s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000834s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T11:39:51+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000889s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000634s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T12:00:59+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000871s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001272s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001390s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T13:40:13+08:00 ] 192.168.1.100 /user/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000439s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000668s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T13:40:30+08:00 ] 192.168.1.100 /user/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000301s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000481s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T13:40:35+08:00 ] 192.168.1.100 /user/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000453s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000692s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000785s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T13:40:38+08:00 ] 192.168.1.100 /user/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000461s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T13:41:31+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000330s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000459s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.021969s ]
+INFO: [ app_end ] --END-- [ RunTime:0.022030s ]
+
+[ 2016-09-29T13:44:59+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000498s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000568s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0034s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 't.id= g.cat_id' at line 1
+ [ SQL语句 ] : SELECT * FROM gwshop_goods g INNER JOIN gwshop_goods_category t t.id= g.cat_id   
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 't.id= g.cat_id' at line 1
+ [ SQL语句 ] : SELECT * FROM gwshop_goods g INNER JOIN gwshop_goods_category t t.id= g.cat_id   
+
+[ 2016-09-29T13:45:26+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000469s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0037s ]
+SQL: SELECT * FROM gwshop_goods g INNER JOIN gwshop_goods_category t ON t.id= g.cat_id    [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000607s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000650s ]
+
+[ 2016-09-29T13:45:34+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000461s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000525s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0046s ]
+SQL: SELECT * FROM gwshop_goods g INNER JOIN gwshop_goods_category t ON t.id= g.cat_id    [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000603s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000653s ]
+
+[ 2016-09-29T13:45:58+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000491s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0033s ]
+SQL: SELECT * FROM gwshop_goods g INNER JOIN gwshop_goods_category t ON t.id= g.cat_id    [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000737s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000812s ]
+
+[ 2016-09-29T13:45:59+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000462s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000516s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0054s ]
+SQL: SELECT * FROM gwshop_goods g INNER JOIN gwshop_goods_category t ON t.id= g.cat_id    [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001013s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001109s ]
+
+[ 2016-09-29T13:46:35+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000885s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000485s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0037s ]
+SQL: SELECT g.id FROM gwshop_goods g INNER JOIN gwshop_goods_category t ON t.id= g.cat_id    [ RunTime:0.0023s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000562s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000605s ]
+
+[ 2016-09-29T13:46:53+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000677s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000772s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0034s ]
+SQL: SELECT g.id,t.id as tid FROM gwshop_goods g INNER JOIN gwshop_goods_category t ON t.id= g.cat_id    [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000536s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000583s ]
+
+[ 2016-09-29T13:48:05+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000412s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000838s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000920s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0042s ]
+SQL: SELECT g.id,t.id as tid FROM gwshop_goods g INNER JOIN gwshop_goods_category t ON t.id= 1    [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000727s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000778s ]
+
+[ 2016-09-29T13:48:34+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000374s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000482s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000552s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0039s ]
+ERR: 1054:Unknown column '' in 'field list'
+ [ SQL语句 ] : SELECT g.id,g.goods_name,t.id as tid,`` FROM gwshop_goods g INNER JOIN gwshop_goods_category t ON t.id= 1   
+ERR: 1054:Unknown column '' in 'field list'
+ [ SQL语句 ] : SELECT g.id,g.goods_name,t.id as tid,`` FROM gwshop_goods g INNER JOIN gwshop_goods_category t ON t.id= 1   
+
+[ 2016-09-29T13:49:03+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000536s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0037s ]
+ERR: 1054:Unknown column '' in 'field list'
+ [ SQL语句 ] : SELECT g.id,t.id as tid,`` FROM gwshop_goods g INNER JOIN gwshop_goods_category t ON t.id= 1   
+ERR: 1054:Unknown column '' in 'field list'
+ [ SQL语句 ] : SELECT g.id,t.id as tid,`` FROM gwshop_goods g INNER JOIN gwshop_goods_category t ON t.id= 1   
+
+[ 2016-09-29T13:49:04+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000540s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000667s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000750s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0040s ]
+ERR: 1054:Unknown column '' in 'field list'
+ [ SQL语句 ] : SELECT g.id,t.id as tid,`` FROM gwshop_goods g INNER JOIN gwshop_goods_category t ON t.id= 1   
+ERR: 1054:Unknown column '' in 'field list'
+ [ SQL语句 ] : SELECT g.id,t.id as tid,`` FROM gwshop_goods g INNER JOIN gwshop_goods_category t ON t.id= 1   
+
+[ 2016-09-29T13:49:13+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000450s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000626s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000712s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0039s ]
+ERR: 1054:Unknown column '' in 'field list'
+ [ SQL语句 ] : SELECT g.id,t.id as tid,`` FROM gwshop_goods g INNER JOIN gwshop_goods_category t ON t.id= 1  
+ERR: 1054:Unknown column '' in 'field list'
+ [ SQL语句 ] : SELECT g.id,t.id as tid,`` FROM gwshop_goods g INNER JOIN gwshop_goods_category t ON t.id= 1  
+
+[ 2016-09-29T13:49:13+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000325s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000489s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0037s ]
+ERR: 1054:Unknown column '' in 'field list'
+ [ SQL语句 ] : SELECT g.id,t.id as tid,`` FROM gwshop_goods g INNER JOIN gwshop_goods_category t ON t.id= 1  
+ERR: 1054:Unknown column '' in 'field list'
+ [ SQL语句 ] : SELECT g.id,t.id as tid,`` FROM gwshop_goods g INNER JOIN gwshop_goods_category t ON t.id= 1  
+
+[ 2016-09-29T13:49:22+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000322s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000454s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000521s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0034s ]
+SQL: SELECT g.id,t.id as tid FROM gwshop_goods g INNER JOIN gwshop_goods_category t ON t.id= g.cat_id    [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000574s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000626s ]
+
+[ 2016-09-29T13:49:32+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000487s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000553s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0041s ]
+SQL: SELECT g.id,t.id as tid FROM gwshop_goods g INNER JOIN gwshop_goods_category t ON t.id= 1    [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000598s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000648s ]
+
+[ 2016-09-29T13:49:34+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000359s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000474s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000534s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0036s ]
+SQL: SELECT g.id,t.id as tid FROM gwshop_goods g INNER JOIN gwshop_goods_category t ON t.id= 1    [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000894s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000973s ]
+
+[ 2016-09-29T13:49:35+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000443s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000631s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000711s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0033s ]
+SQL: SELECT g.id,t.id as tid FROM gwshop_goods g INNER JOIN gwshop_goods_category t ON t.id= 1    [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000637s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000685s ]
+
+[ 2016-09-29T13:49:47+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000301s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000482s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0040s ]
+SQL: SELECT g.id,t.id as tid,g.goods_name FROM gwshop_goods g INNER JOIN gwshop_goods_category t ON t.id= 1    [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000689s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000738s ]
+
+[ 2016-09-29T13:50:04+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000300s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000395s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000441s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0031s ]
+SQL: SELECT g.id,t.id as tid,g.goods_name,t.type_name FROM gwshop_goods g INNER JOIN gwshop_goods_category t ON t.id= 1    [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000540s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000584s ]
+
+[ 2016-09-29T13:50:55+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000583s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000641s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0032s ]
+SQL: SELECT g.id,t.id as tid,g.goods_name,t.type_name FROM gwshop_goods g INNER JOIN gwshop_goods_category t ON t.id= g.cat_id   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000628s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000671s ]
+
+[ 2016-09-29T13:51:20+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000626s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000703s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0048s ]
+SQL: SELECT g.id,g.cat_id,g.goods_name,t.type_name FROM gwshop_goods g INNER JOIN gwshop_goods_category t ON t.id= g.cat_id   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000606s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000665s ]
+
+[ 2016-09-29T13:54:23+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000562s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000617s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0033s ]
+SQL: SELECT g.id,g.cat_id,g.goods_name,t.type_name FROM gwshop_goods g,gwshop_goods_category t WHERE ( t.id= g.cat_id )  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000928s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001020s ]
+
+[ 2016-09-29T13:54:25+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000498s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0033s ]
+SQL: SELECT g.id,g.cat_id,g.goods_name,t.type_name FROM gwshop_goods g,gwshop_goods_category t WHERE ( t.id= g.cat_id )  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000701s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000775s ]
+
+[ 2016-09-29T13:54:33+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000635s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000707s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0034s ]
+SQL: SELECT g.id,g.cat_id,g.goods_name,t.type_name FROM gwshop_goods g,gwshop_goods_category t WHERE ( t.id= g.cat_id )  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000558s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000602s ]
+
+[ 2016-09-29T13:54:34+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000359s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000526s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0033s ]
+SQL: SELECT g.id,g.cat_id,g.goods_name,t.type_name FROM gwshop_goods g,gwshop_goods_category t WHERE ( t.id= g.cat_id )  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000595s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000637s ]
+
+[ 2016-09-29T14:02:54+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000482s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000894s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000972s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0044s ]
+SQL: SELECT `goods_name`,max(sort_order) FROM `gwshop_goods` GROUP BY id  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000658s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000702s ]
+
+[ 2016-09-29T14:05:17+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000649s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0044s ]
+SQL: SELECT `goods_name`,max(sort_order) FROM `gwshop_goods` GROUP BY cat_id  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000738s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000802s ]
+
+[ 2016-09-29T14:10:29+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000482s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000673s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0034s ]
+SQL: SELECT `goods_name`,max(sort_order) FROM `gwshop_goods` GROUP BY cat_id  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000758s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000817s ]
+
+[ 2016-09-29T14:11:02+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000432s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000851s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000944s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0285s ]
+SQL: SELECT `goods_name`,max(sort_order) FROM `gwshop_goods` GROUP BY cat_id  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000521s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000563s ]
+
+[ 2016-09-29T14:11:05+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000651s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000743s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0032s ]
+SQL: SELECT `goods_name`,max(sort_order) FROM `gwshop_goods` GROUP BY cat_id  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000838s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000920s ]
+
+[ 2016-09-29T14:11:12+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000365s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000466s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000523s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0037s ]
+SQL: SELECT `goods_name`,max(sort_order) FROM `gwshop_goods` GROUP BY cat_id  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000610s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000662s ]
+
+[ 2016-09-29T14:12:13+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000435s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0041s ]
+SQL: SELECT `goods_name`,max(sort_order) as sort_order FROM `gwshop_goods` GROUP BY cat_id  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000530s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000576s ]
+
+[ 2016-09-29T14:18:04+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000396s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000598s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0033s ]
+ERR: Think\Model:hiving方法不存在！
+
+[ 2016-09-29T14:18:21+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000452s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000510s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0045s ]
+SQL: SELECT `goods_name`,max(sort_order) as sort_order FROM `gwshop_goods` GROUP BY cat_id HAVING count(id) > 3  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000672s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000730s ]
+
+[ 2016-09-29T14:18:29+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000317s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000474s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0032s ]
+SQL: SELECT `goods_name`,max(sort_order) as sort_order FROM `gwshop_goods` GROUP BY cat_id HAVING count(id) > 2  [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000626s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000688s ]
+
+[ 2016-09-29T14:18:32+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000399s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000546s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000614s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0031s ]
+SQL: SELECT `goods_name`,max(sort_order) as sort_order FROM `gwshop_goods` GROUP BY cat_id HAVING count(id) > 1  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000521s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000564s ]
+
+[ 2016-09-29T14:18:35+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000613s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000460s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000514s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0039s ]
+SQL: SELECT `goods_name`,max(sort_order) as sort_order FROM `gwshop_goods` GROUP BY cat_id HAVING count(id) > 0  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000575s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000622s ]
+
+[ 2016-09-29T14:18:41+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000465s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0032s ]
+SQL: SELECT `goods_name`,max(sort_order) as sort_order FROM `gwshop_goods` GROUP BY cat_id HAVING count(id) > 3  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000921s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001002s ]
+
+[ 2016-09-29T14:18:46+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000466s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000555s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0032s ]
+SQL: SELECT `goods_name`,max(sort_order) as sort_order FROM `gwshop_goods` GROUP BY cat_id HAVING count(id) > 20  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000750s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000840s ]
+
+[ 2016-09-29T14:18:49+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000596s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000666s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000754s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0042s ]
+SQL: SELECT `goods_name`,max(sort_order) as sort_order FROM `gwshop_goods` GROUP BY cat_id HAVING count(id) > 20  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000552s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000597s ]
+
+[ 2016-09-29T14:18:54+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000409s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000650s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0052s ]
+SQL: SELECT `goods_name`,max(sort_order) as sort_order FROM `gwshop_goods` GROUP BY cat_id HAVING count(id) < 20  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000732s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000797s ]
+
+[ 2016-09-29T14:18:56+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000611s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000631s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0033s ]
+SQL: SELECT `goods_name`,max(sort_order) as sort_order FROM `gwshop_goods` GROUP BY cat_id HAVING count(id) < 2  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000681s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000743s ]
+
+[ 2016-09-29T14:19:00+08:00 ] 192.168.1.100 /index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000502s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000597s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000688s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0032s ]
+SQL: SELECT `goods_name`,max(sort_order) as sort_order FROM `gwshop_goods` GROUP BY cat_id HAVING count(id) < 3  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000564s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000607s ]
+
+[ 2016-09-29T14:37:05+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000354s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000510s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000555s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T14:38:17+08:00 ] 192.168.1.134 /home/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000569s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000584s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000656s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 101 行.
+
+[ 2016-09-29T14:50:54+08:00 ] 192.168.1.100 /home/user/detail/parameters/%7B%22_passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000615s ]
+SQL: SHOW COLUMNS FROM `gwshop_user_passport` [ RunTime:0.0034s ]
+SQL: SELECT `user_id` FROM `gwshop_user_passport` WHERE `passport` = 'd2ab2b971ff0dc34b54c0eaa664873f0' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0088s ]
+SQL: SELECT `user_id`,`nick_name`,`mobile`,`headimgurl`,`sex` FROM `gwshop_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2016-09-29T14:50:59+08:00 ] 192.168.1.100 /home/user/detail/parameters/%7B%22_passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000905s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000998s ]
+SQL: SHOW COLUMNS FROM `gwshop_user_passport` [ RunTime:0.0031s ]
+SQL: SELECT `user_id` FROM `gwshop_user_passport` WHERE `passport` = 'd2ab2b971ff0dc34b54c0eaa664873f0' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0106s ]
+SQL: SELECT `user_id`,`nick_name`,`mobile`,`headimgurl`,`sex` FROM `gwshop_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2016-09-29T14:51:02+08:00 ] 192.168.1.100 /home/user/detail/parameters/%7B%22_passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f01%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000318s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000469s ]
+
+[ 2016-09-29T14:51:05+08:00 ] 192.168.1.100 /home/user/detail/parameters/%7B%22_passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000402s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000461s ]
+SQL: SHOW COLUMNS FROM `gwshop_user_passport` [ RunTime:0.0034s ]
+SQL: SELECT `user_id` FROM `gwshop_user_passport` WHERE `passport` = 'd2ab2b971ff0dc34b54c0eaa664873f0' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0116s ]
+SQL: SELECT `user_id`,`nick_name`,`mobile`,`headimgurl`,`sex` FROM `gwshop_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2016-09-29T14:51:36+08:00 ] 192.168.1.100 /home/user/detail/parameters/%7B%22_passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000443s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000498s ]
+SQL: SHOW COLUMNS FROM `gwshop_user_passport` [ RunTime:0.0047s ]
+SQL: SELECT `user_id` FROM `gwshop_user_passport` WHERE `passport` = 'd2ab2b971ff0dc34b54c0eaa664873f0' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0086s ]
+SQL: SELECT `user_id`,`nick_name`,`mobile`,`headimgurl`,`sex` FROM `gwshop_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2016-09-29T14:51:37+08:00 ] 192.168.1.100 /home/user/detail/parameters/%7B%22_passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000589s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000659s ]
+SQL: SHOW COLUMNS FROM `gwshop_user_passport` [ RunTime:0.0033s ]
+SQL: SELECT `user_id` FROM `gwshop_user_passport` WHERE `passport` = 'd2ab2b971ff0dc34b54c0eaa664873f0' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0032s ]
+SQL: SELECT `user_id`,`nick_name`,`mobile`,`headimgurl`,`sex` FROM `gwshop_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2016-09-29T14:51:46+08:00 ] 192.168.1.100 /home/user/detail/parameters/%7B%22_passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000427s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000454s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000524s ]
+SQL: SHOW COLUMNS FROM `gwshop_user_passport` [ RunTime:0.0027s ]
+SQL: SELECT `user_id` FROM `gwshop_user_passport` WHERE `passport` = 'd2ab2b971ff0dc34b54c0eaa664873f0' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0110s ]
+SQL: SELECT `user_id`,`nick_name`,`mobile`,`headimgurl`,`sex` FROM `gwshop_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2016-09-29T14:54:01+08:00 ] 192.168.1.100 /home/user/detail/parameters/%7B%22_passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000386s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000608s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000677s ]
+SQL: SHOW COLUMNS FROM `gwshop_user_passport` [ RunTime:0.0028s ]
+SQL: SELECT `user_id` FROM `gwshop_user_passport` WHERE `passport` = 'd2ab2b971ff0dc34b54c0eaa664873f0' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0107s ]
+SQL: SELECT `user_id`,`nick_name`,`mobile`,`headimgurl`,`sex` FROM `gwshop_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2016-09-29T14:54:02+08:00 ] 192.168.1.100 /home/user/detail/parameters/%7B%22_passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000682s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000467s ]
+SQL: SHOW COLUMNS FROM `gwshop_user_passport` [ RunTime:0.0032s ]
+SQL: SELECT `user_id` FROM `gwshop_user_passport` WHERE `passport` = 'd2ab2b971ff0dc34b54c0eaa664873f0' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0086s ]
+SQL: SELECT `user_id`,`nick_name`,`mobile`,`headimgurl`,`sex` FROM `gwshop_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0009s ]
+

@@ -1,0 +1,1436 @@
+@charset "UTF-8";
+.cart-none {
+    width: $base-width;
+    padding: 1rem 0.2rem;
+    i {
+        @include icon-font(1.5rem,$gray,1);
+        display: block;
+        margin-bottom: 0.2rem;
+    }
+    h4 {
+        color: $gray;
+    }
+}
+.cart-link {
+    width: 2.62rem;
+    height: 0.52rem;
+    margin: 0 auto;
+    a {
+        width: 1.3rem;
+        height: 0.52rem;
+        display: block;
+        text-align: center;
+        line-height: 0.52rem;
+        background-color: #f4f4f4;
+        float: left;
+        font-size: 0.22rem;
+        color: $gray-darker;
+        &:nth-child(2) {
+            background-color: $primary;
+            color: $white;
+        }
+    }
+}
+//购物车列表
+.cart-list {
+    width: $base-width;
+    overflow: hidden;
+    background-color: $white;
+    ul {
+        width: $base-width;
+        overflow: hidden;
+        li {
+            width: $base-width;
+            padding: $base-size*2;
+            display: block;
+            overflow: hidden;
+            @extend border-bottom;
+            .check {
+                width: $base-size*3.2;
+                height: $base-size*18;
+                overflow: hidden;
+                float: left;
+                label {
+                    width: 100%;
+                    height: $base-size*18;
+                    display: block;
+                    overflow: hidden;
+                    @include align(100%,$base-size*18,center,middle);
+                    i {
+                        @include icon-font($base-size*3,$gray,$base-size*18);
+                    }
+                    &.active i {
+                        color: $blue;
+                    }
+                }
+            }
+            .img {
+                width: $base-size*18;
+                height: $base-size*18;
+                float: left;
+                @extend center;
+                span {
+                    @extend span-center;
+                }
+                img {
+                    @include img-center;
+                }
+            }
+            .info {
+                width: $base-size*38;
+                height: $base-size*18;
+                overflow: hidden;
+                float: right;
+                position: relative;
+                .edit {
+                    width: $base-size*6.6;
+                    height: $base-size*2.8;
+                    display: inline-block;
+                    @include position-top-right(absolute,$base-size*.2,0,10);
+                    border-left: 1px solid rgba($gray,.8);
+                    text-align: right;
+                    color: rgba($gray-darker,.7);
+                }
+                .name {
+                    width: $base-size*30;
+                    overflow: hidden;
+                    h3 {
+                        line-height: $base-size*2.8;
+                    }
+                }
+                .sizes {
+                    width: 100%;
+                    overflow: hidden;
+                    font-size: $base-size*2.4;
+                    color: $gray-dark;
+                    line-height: $base-size*3.4;
+                    padding-top: $base-size*.5;
+                }
+                .price {
+                    width: 100%;
+                    overflow: hidden;
+                    span {
+                        float: left;
+                        color: $red;
+                        del {
+                            padding-left: $base-size;
+                            color: $gray;
+                        }
+                    }
+                    em {
+                        float: right;
+                        font-size: $base-size*2.4;
+                        color: $gray-darker;
+                    }
+                }
+                .num {
+                    width: 1.6rem;
+                    height: 0.55rem;
+                    overflow: hidden;
+                    border: 1px #eee solid;
+                    background-color: #fff;
+                    position: relative;
+                    margin-top: 0.1rem;
+                    button {
+                        width: 0.53rem;
+                        height: 0.53rem;
+                        border: none;
+                        background-color: #f4f4f4;
+                        font-size: 0.4rem;
+                        line-height: 0.53rem;
+                        color: #999999;
+                        @include position-top(absolute,0,0,5);
+                        &:nth-child(3) {
+                            @include position-top-right(absolute,0,0,5);
+                            left: auto;
+                        }
+                    }
+                    .txt {
+                        width: 0.6rem;
+                        height: 0.53rem;
+                        display: block;
+                        overflow: hidden;
+                        margin: 0 auto;
+                        text-align: center;
+                        border: none;
+                        font-size: 0.24rem;
+                    }
+                }
+                .editBox {
+                    @include position-bottom-right(absolute,0,0,10);
+                    width: 100%;
+                    background-color: $white;
+                }
+                .edit-sizes {
+                    width: 100%;
+                    height: $base-size*5;
+                    overflow: hidden;
+                    background-color: $white;
+                    span {
+                        float: left;
+                        display: inline-block;
+                        width: $base-size*34;
+                        height: $base-size*5;
+                        overflow: hidden;
+                        label {
+                            padding-right: $base-size;
+                            font-size: $base-size*2.4;
+                            color: $gray-dark;
+                            line-height: $base-size*4;
+                        }
+                    }
+                    i {
+                        float: right;
+                        @include icon-font($base-size*2.2,$gray-dark,$base-size*4);
+                    }
+                }
+                .edit-container {
+                    width: 100%;
+                    height: $base-size*5;
+                    background-color: $white;
+                    overflow: hidden;
+                    .qty {
+                        width: $base-size*26;
+                        height: $base-size*5;
+                        border: 1px solid $gray;
+                        border-radius: $small-radius;
+                        float: left;
+                        button {
+                            width: $base-size*5;
+                            height: $base-size*5;
+                            display: inline-block;
+                            float: left;
+                            background: none;
+                            border: none;
+                            border-right: 1px solid rgba($gray,.6);
+                            text-align: center;
+                            i {
+                                font-size: $base-size*4;
+                                color: $gray-darker;
+                                line-height: $base-size*5;
+                            }
+                            &.disabled i {
+                                color: $gray;
+                            }
+                            &:last-child {
+                                border: none;
+                            }
+                        }
+                        input {
+                            width: $base-size*15.2;
+                            height: $base-size*5;
+                            display: inline-block;
+                            float: left;
+                            background: none;
+                            border: none;
+                            border-right: 1px solid rgba($gray,.6);
+                            text-align: center;
+                            font-size: $base-size*3;
+                            color: $gray-darker;
+                        }
+                    }
+                    .delect {
+                        width: $base-size*10;
+                        height: $base-size*5;
+                        background-color: $red;
+                        border-radius: $small-radius;
+                        float: right;
+                        text-align: center;
+                        line-height: $base-size*5;
+                        font-size: $base-size*2.4;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+//确认订单
+.select-address {
+    width: $base-width;
+    height: $base-size*13.8;
+    background: url("#{$img-url}address-line.jpg") no-repeat;
+    background-size: $base-width $base-size*.7;
+    @include align($base-width,$base-size*13.8,left,middle);
+    background-color: $white;
+    padding: 0 $base-size*3 0 $base-size*7.6;
+    position: relative;
+    cursor: pointer;
+    @extend border-bottom;
+    em {
+        @include position(absolute,50%,$base-size*2.4,10,auto,$base-size*10);
+        @include icon-font($base-size*3,$blue,$base-size*10);
+    }
+    h4 {
+        color: $gray-darker;
+        font-weight: bold;
+    }
+    p {
+        color: #666;
+        &.warn {
+            color: $orange;
+        }
+    }
+    i {
+        @include position-top-right(absolute,50%,0,10);
+        margin-top: -($base-size*10)/2;
+        @include icon-font($base-size*2.2,$gray-dark,$base-size*10);
+    }
+}
+.pay-type {
+    width: $base-width;
+    overflow: hidden;
+    border-bottom: 0.18rem solid $gray-light;
+    background-color: $white;
+    label {
+        width: 5.7rem;
+        height: 0.8rem;
+        display: block;
+        overflow: hidden;
+        margin: 0 auto;
+        border-bottom: 1px solid $gray-light;
+        img {
+            width: 0.45rem;
+            height: 0.45rem;
+            float: left;
+            margin: 0.17rem 0.17rem 0 0;
+        }
+        span {
+            float: left;
+            font-size: 0.24rem;
+            color: $gray-darker;
+            line-height: 0.8rem;
+        }
+        i {
+            float: right;
+            @include icon-font(.32rem,$gray,.8rem);
+        }
+        &:last-child {
+            border-bottom: none;
+        }
+        &.active i {
+            color: $primary;
+        }
+    }
+}
+.shop-send {
+    width: $base-width;
+    overflow: hidden;
+    margin-top: $base-size*1.8;
+    background-color: $white;
+    @extend border-top;
+    @extend border-bottom;
+    ul {
+        width: $base-width;
+        overflow: hidden;
+        li {
+            width: $base-width;
+            display: block;
+            overflow: hidden;
+            @extend border-bottom;
+            padding: 0 $base-size*3;
+            .send-item {
+                width: 100%;
+                height: 0.75rem;
+                overflow: hidden;
+                strong {
+                    float: left;
+                    font-size: 0.24rem;
+                    line-height: 0.75rem;
+                    font-weight: normal;
+                }
+                span {
+                    float: right;
+                    text-align: right;
+                    font-size: 0.24rem;
+                    color: rgba($gray-darker,.7);
+                    line-height: 0.75rem;
+                    label {
+                        padding-right: $base-size;
+                        &.active {
+                            i {
+                                color: $blue;
+                            }
+                        }
+                    }
+                    i {
+                        @include icon-font(.24rem,rgba($gray-darker,.7),.75rem);
+                        padding-left: 0.2rem;
+                        text-align: center;
+                    }
+                }
+                .txt {
+                    float: right;
+                    margin-top: $base-size*.8;
+                    width: $base-size*16;
+                    height: $base-size*6;
+                    border: none;
+                    background-color: $gray-light;
+                    border-radius: $small-radius;
+                    padding: 0 $base-size*1.5;
+                }
+            }
+            .textarea {
+                width: $base-size*58.2;
+                height: $base-size*8;
+                margin: $base-size*1.8 auto;
+                border: none;
+                background-color: $gray-light;
+                padding: $base-size $base-size*2;
+                overflow: hidden;
+                border-radius: $small-radius;
+                resize: none;
+            }
+            .item-show {
+                width: 100%;
+                overflow: hidden;
+                display: none;
+                label {
+                    padding: 0.18rem 0.26rem;
+                    display: inline-block;
+                    background-color: $white;
+                    border: 1px solid $gray;
+                    font-size: 0.24rem;
+                    color: $gray-darker;
+                    margin: 0 0.1rem 0.1rem 0;
+                    &.active {
+                        border-color: $primary;
+                        color: $primary;
+                    }
+                }
+            }
+            .formSingle {
+                width: 100%;
+                height: 0.6rem;
+                overflow: hidden;
+                margin-bottom: 0.2rem;
+                display: none;
+                .txt {
+                    width: 4.6rem;
+                    height: 0.6rem;
+                    border: 1px solid $gray-light;
+                    float: left;
+                    padding: 0 0.26rem;
+                }
+                .btn {
+                    width: 0.98rem;
+                    height: 0.6rem;
+                    border: 1px solid $gray-light;
+                    float: right;
+                }
+            }
+            .coupon {
+                width: 100%;
+                height: 0.75rem;
+                font-size: 0.24rem;
+                color: $gray-dark;
+                line-height: 0.75rem;
+            }
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}
+.coupon-show {
+    width: $base-width;
+    padding: $base-size*2;
+    margin: 0 auto;
+    overflow: hidden;
+    h2 {
+        text-align: center;
+        color: $gray-darker;
+    }
+    ul {
+        display: block;
+        width: 100%;
+        margin: $base-size 0;
+        overflow: hidden;
+        li {
+            display: block;
+            position: relative;
+            width: 100%;
+            padding: $base-size*2 0;
+            @extend border-bottom;
+            h3 {
+                color: $gray-darker;
+            }
+            p {
+                font-size: $base-size*2.2;
+                color: $gray-dark;
+            }
+            i {
+                @include position-top-right(absolute,50%,0,10);
+                width: $base-size*3.6;
+                height: $base-size*3.6;
+                margin-top: - ($base-size*1.8);
+                @include icon-font($base-size*2.6,$gray-dark,$base-size*3.6);
+                text-align: center;
+            }
+            &.active > i {
+                color: $blue;
+            }
+        }
+    }
+}
+.shop-goods {
+    width: $base-width;
+    overflow: hidden;
+    background-color: $white;
+    @extend border-top;
+    @extend border-bottom;
+    margin-top: $base-size*1.8;
+    ul {
+        overflow: hidden;
+        li {
+            width: $base-width;
+            display: block;
+            overflow: hidden;
+            @extend border-bottom;
+            &:last-child {
+                border-bottom: none;
+            }
+            a {
+                @extend display-block;
+                padding: $base-size*2 $base-size*3;
+                .img {
+                    width: $base-size*16;
+                    height: $base-size*16;
+                    float: left;
+                    @extend center;
+                    span {
+                        @extend span-center;
+                    }
+                    img {
+                        @include img-center(100%,100%,top);
+                    }
+                }
+                .info {
+                    width: $base-size*40;
+                    overflow: hidden;
+                    float: right;
+                    .name {
+                        width: 100%;
+                        overflow: hidden;
+                        h3 {
+                            color: rgba($gray-darker,.7);
+                        }
+                    }
+                    .sizes {
+                        margin-top: $base-size;
+                        width: 100%;
+                        overflow: hidden;
+                        h4 {
+                            color: $gray-dark;
+                        }
+                    }
+                    .price {
+                        width: 100%;
+                        overflow: hidden;
+                        margin-top: $base-size;
+                        span {
+                            float: left;
+                            color: $red;
+                            del {
+                                padding-left: $base-size;
+                                color: $gray-dark;
+                            }
+                        }
+                        em {
+                            float: right;
+                            color: $gray-darker;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.total-pay {
+    width: $base-width;
+    overflow: hidden;
+    background-color: $white;
+    margin-top: $base-size*1.8;
+    @extend border-top;
+    @extend border-bottom;
+    padding: $base-size*2 $base-size*3;
+    .total {
+        width: 100%;
+        overflow: hidden;
+        @extend border-bottom;
+        padding: $base-size 0;
+        dl {
+            width: 100%;
+            height: $base-size*4;
+            display: block;
+            color: rgba($gray-darker,.7);
+            dt {
+                float: left;
+            }
+            dd {
+                float: right;
+            }
+        }
+    }
+    .pay {
+        width: 100%;
+        overflow: hidden;
+        h3 {
+            text-align: center;
+            color: rgba($gray-darker,.7);
+            padding: $base-size*3 0;
+            span {
+                color: $red;
+            }
+        }
+    }
+}
+.address-form {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $base-size*2;
+    overflow: hidden;
+    p {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: $base-size*8;
+        overflow: hidden;
+        @extend border-bottom;
+        span {
+            width: $base-size*12;
+            height: $base-size*8;
+            display: inline-block;
+            line-height: $base-size*8;
+        }
+        .txt {
+            width: $base-size*45;
+            height: $base-size*8;
+            padding-left: $base-size*1;
+            border: none;
+        }
+        i {
+            @include position-top-right(absolute,0,0,10);
+            @include icon-font($base-size*2.2,$gray-dark,$base-size*8);
+        }
+        &:last-child {
+            border-bottom: none;
+            height: auto;
+            padding: $base-size*2 0;
+        }
+    }
+}
+.address-list {
+    width: $base-width;
+    overflow: hidden;
+    padding: 0 $base-size*3;
+    @extend border-bottom;
+    background-color: $white;
+    ul {
+        width: 100%;
+        overflow: hidden;
+        li {
+            position: relative;
+            display: block;
+            width: 100%;
+            padding: $base-size*2 0;
+            overflow: hidden;
+            @extend border-bottom;
+            .address-cont {
+                width: $base-size*48;
+                overflow: hidden;
+                h3 {
+                    color: rgba($gray-darker,.8);
+                    span {
+                        padding-right: $base-size;
+                    }
+                }
+                h4 {
+                    padding-top: $base-size;
+                    color: $gray-dark;
+                }
+            }
+            .address-edit {
+                @include position-top-right(absolute,50%,0,10);
+                margin-top: -($base-size*2);
+                @include icon-font($base-size*4,$gray-dark,$base-size*4);
+            }
+            .address-delect {
+                @include position-top-right(absolute,50%,$base-size*5.5,10);
+                margin-top: -($base-size*2);
+                @include icon-font($base-size*4,$gray-dark,$base-size*4);
+            }
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}
+.address-space {
+    width: $base-width;
+    height: $base-size*2.8;
+    @extend border-bottom;
+    background-color: $body-bg-color;
+}
+//付款完成详情
+.pay-success {
+    width: $base-width;
+    padding: $base-size*2 $base-size*2.5;
+    overflow: hidden;
+    background-color: $white;
+    h3 {
+        color: rgba($gray-darker,.7);
+    }
+    button {
+        display: block;
+        height: $base-size*5;
+        padding: 0 $base-size*3;
+        margin: $base-size*3 auto $base-size;
+        border: 1px solid $gray-dark;
+        border-radius: $base-radius;
+        background-color: $white;
+        font-size: $base-font-size*2.6;
+        color: rgba($gray-darker,.7);
+    }
+}
+.complete-motif {
+    width: $base-width;
+    height: $base-size*20;
+    overflow: hidden;
+    background-color: $blue;
+    padding: 0 $base-size*4;
+    .font {
+        width: $base-size*26;
+        height: $base-size*20;
+        overflow: hidden;
+        float: left;
+        .font-center {
+            @include align($base-size*26,$base-size*20,left,middle);
+            font-size: $base-size*2.8;
+            color: $white;
+        }
+    }
+    .img {
+        width: $base-size*29;
+        height: $base-size*20;
+        overflow: hidden;
+        float: right;
+        @extend center;
+        span {
+            @extend span-center;
+        }
+        img {
+            @include img-center(100%,90%,middle);
+        }
+    }
+}
+.complete-address {
+    width: $base-width;
+    height: $base-size*13.8;
+    background-size: $base-width $base-size*.7;
+    @include align($base-width,$base-size*13.8,left,middle);
+    background-color: $white;
+    padding: 0 $base-size*3 0 $base-size*7.7;
+    position: relative;
+    @extend border-bottom;
+    em {
+        @include position(absolute,50%,$base-size*2.4,10,auto,$base-size*10);
+        @include icon-font($base-size*3,$blue,$base-size*10);
+    }
+    h4 {
+        color: $gray-darker;
+        font-weight: bold;
+    }
+    p {
+        color: #666;
+        &.warn {
+            color: $orange;
+        }
+    }
+    i {
+        @include position-top-right(absolute,50%,0,10);
+        margin-top: -($base-size*10)/2;
+        @include icon-font($base-size*2.4,$gray-dark,$base-size*10);
+    }
+}
+.complete-goods {
+    width: $base-width;
+    overflow: hidden;
+    margin-top: $base-size*1.8;
+    background-color: $white;
+    @extend border-top;
+    @extend border-bottom;
+    ul {
+        width: 100%;
+        overflow: hidden;
+        li {
+            width: 100%;
+            display: block;
+            overflow: hidden;
+            padding: $base-size*1.8 $base-size*2.4;
+            border-bottom: 1px $gray-light solid;
+            .check {
+                width: $base-size*4;
+                height: $base-size*18;
+                overflow: hidden;
+                float: left;
+                label {
+                    width: 100%;
+                    height: $base-size*18;
+                    display: block;
+                    overflow: hidden;
+                    @include align(100%,$base-size*18,left,middle);
+                    i {
+                        @include icon-font($base-size*3,$gray,$base-size*18);
+                    }
+                    &.active i {
+                        color: $blue;
+                    }
+                }
+            }
+            .img {
+                width: $base-size*16;
+                height: $base-size*16;
+                float: left;
+                @extend center;
+                span {
+                    @extend span-center;
+                }
+                img {
+                    @include img-center;
+                }
+            }
+            .info {
+                width: $base-size*42;
+                overflow: hidden;
+                float: right;
+                position: relative;
+                .name {
+                    width: $base-size*27.6;
+                    overflow: hidden;
+                    h4 {
+                        color: rgba($gray-darker,.7);
+                        line-height: 1.2;
+                    }
+                }
+                .sizes {
+                    width: $base-size*27.6;
+                    overflow: hidden;
+                    margin-top: $base-size;
+                    h4 {
+                        color: $gray-dark;
+                    }
+                }
+                .price {
+                    width: $base-size*14.2;
+                    overflow: hidden;
+                    @include position-top-right(absolute,0,0,10);
+                    text-align: right;
+                    line-height: 1.5;
+                    h4 {
+                        color: $red;
+                    }
+                    h3 {
+                        color: $gray-dark;
+                    }
+                }
+            }
+            .info-refund {
+                width: $base-size*38;
+                overflow: hidden;
+                float: right;
+                position: relative;
+                .name {
+                    width: $base-size*27.6;
+                    overflow: hidden;
+                    h3 {
+                        color: rgba($gray-darker,.7);
+                    }
+                }
+                .sizes {
+                    width: $base-size*27.6;
+                    overflow: hidden;
+                    margin-top: $base-size;
+                    h4 {
+                        color: $gray-dark;
+                    }
+                }
+                .price {
+                    width: $base-size*14.2;
+                    overflow: hidden;
+                    @include position-top-right(absolute,0,0,10);
+                    text-align: right;
+                    line-height: 1.5;
+                    h4 {
+                        color: $red;
+                    }
+                    h3 {
+                        color: $gray-dark;
+                    }
+                }
+            }
+        }
+    }
+    .handle {
+        width: $base-width;
+        overflow: hidden;
+        padding:0 $base-size*2.4;
+        text-align: right;
+        button {
+            @include btns(auto,$base-size*5,$white,1px solid $gray,inline-block,0,$base-size*2.4 0 $base-size*2.4 $base-size*1.5,0 $base-size*3,$base-radius,$base-size*2.4,rgba($gray-darker,.7));
+        }
+    }
+}
+.complete-total {
+    width: $base-width;
+    overflow: hidden;
+    padding: $base-size $base-size*2;
+    background-color: $white;
+    @extend border-bottom;
+    h6 {
+        color: rgba($gray-darker,.7);
+        span {
+            float: right;
+        }
+    }
+    h4 {
+        color: rgba($gray-darker,.7);
+        span {
+            float: right;
+            color: $red;
+        }
+    }
+}
+.complete-contact {
+    width: $base-width;
+    overflow: hidden;
+    background-color: $white;
+    padding: $base-size*2 0;
+    @extend border-bottom;
+    a {
+        width: 50%;
+        height: $base-size*4.8;
+        border: none;
+        display: block;
+        float: left;
+        border-right: 1px solid rgba($gray,.5);
+        text-align: center;
+        color: rgba($gray-darker,.7);
+        i {
+            @include icon-font($base-size*3.2,$blue,$base-size*4.8);
+            padding-right: $base-size*2;
+        }
+        &:last-child {
+            border: none;
+        }
+    }
+}
+.complete-time {
+    width: $base-width;
+    padding: $base-size*2;
+    overflow: hidden;
+    margin-top: $base-size*1.8;
+    @extend border-top;
+    @extend border-bottom;
+    background-color: $white;
+    h5 {
+        color: $gray-dark;
+    }
+}
+//交易成功
+.success-name {
+    width: $base-width;
+    height: $base-size*10;
+    overflow: hidden;
+    padding: 0 $base-size*2;
+    background-color: $white;
+    .success-name-container {
+        width: 100%;
+        height: $base-size*10;
+        overflow: hidden;
+        padding: $base-size*.5 0;
+        @extend border-bottom;
+        i {
+            float: left;
+            display: block;
+            width: $base-size*5;
+            height: $base-size*10;
+            text-align: center;
+            @include icon-font($base-size*3,$blue,$base-size*10);
+        }
+        .name {
+            float: left;
+            width: $base-size*50;
+            height: $base-size*10;
+            overflow: hidden;
+            margin-left: $base-size;
+            .name-center {
+                @include align($base-size*50,$base-size*10,left,middle);
+                h4 {
+                    color: $yellow;
+                }
+                h5 {
+                    color: $gray-dark;
+                }
+            }
+        }
+    }
+}
+.success-bill {
+    width: $base-width;
+    padding: $base-size $base-size*3;
+    overflow: hidden;
+    @extend border-bottom;
+    background-color: $white;
+    h4 {
+        color: rgba($gray-darker,.7);
+    }
+}
+.success-count {
+    width: $base-width;
+    padding: 0 $base-size*2;
+    overflow: hidden;
+    background-color: $white;
+    .success-count-container {
+        width: 100%;
+        padding: $base-size 0;
+        overflow: hidden;
+        @extend border-bottom;
+        dl {
+            display: block;
+            width: 100%;
+            height: $base-size*3.6;
+            overflow: hidden;
+            line-height: $base-size*3.6;
+            font-size: $base-size*2.2;
+            color: rgba($gray-darker,.7);
+            dt {
+                float: left;
+            }
+            dd {
+                float: right;
+            }
+        }
+    }
+}
+.success-point {
+    width: $base-width;
+    height: $base-size*8;
+    padding: 0 $base-size*2;
+    margin-top: $base-size*2;
+    overflow: hidden;
+    line-height: $base-size*8;
+    @extend border-top;
+    @extend border-bottom;
+    background-color: $white;
+    h4 {
+        color: rgba($gray-darker,.7);
+        span {
+            color: $red;
+        }
+    }
+}
+//订单列表
+.order-menu {
+    display: none;
+    @include position-top(fixed,$base-size*7.6,auto,$zindex-fixed-topbar);
+    width: 100%;
+    max-width: $max-width;
+    min-width: $min-width;
+    padding: $base-size*2 0;
+    background-color: $white;
+    a {
+        display: inline-block;
+        width: $base-size*18.2;
+        height: $base-size*6;
+        margin: $base-size*1.5 0 $base-size*1.5 $base-size*2.3;
+        overflow: hidden;
+        border: 1px solid $gray-dark;
+        border-radius: $base-radius;
+        font-size: $base-font-size*2.4;
+        color: rgba($gray-darker,.8);
+        text-align: center;
+        line-height: $base-size*6;
+        &.active {
+            border-color: $blue;
+            color: $blue;
+        }
+    }
+}
+.order-menu-black {
+    display: none;
+    @include position-top(fixed,0,auto,$zindex-fixed-topbar - 1);
+    width: 100%;
+    height: 100%;
+    max-width: $max-width;
+    min-width: $min-width;
+    background-color: rgba($black,.4);
+}
+.order-list {
+    width: $base-width;
+    overflow: hidden;
+    .order-item {
+        width: 100%;
+        margin-top: $base-size*2;
+        overflow: hidden;
+        background-color: $white;
+        .order-status {
+            width: 100%;
+            height: $base-size*6.6;
+            padding: 0 $base-size*2.5;
+            margin-bottom: - ($base-size*1.8);
+            @extend border-top;
+            overflow: hidden;
+            line-height: $base-size*6.6;
+            span {
+                float: left;
+                font-size: $base-font-size*2.4;
+                color: rgba($gray-darker,.8);
+            }
+            strong {
+                float: right;
+                font-size: $base-font-size*2.4;
+                color: $red;
+                font-weight: normal;
+            }
+            em {
+                float: right;
+                font-size: $base-size*2.2;
+                color: $gray-dark;
+            }
+        }
+    }
+}
+//评价中心
+.comment-mune-h {
+    width: $base-width;
+    height: $base-size*7.6;
+    overflow: hidden;
+}
+.comment-mune {
+    display: flex;
+    flex-wrap: nowrap;
+    @include position-top(fixed,$base-size*7.6,auto,$zindex-fixed-topbar -3);
+    width: $base-width;
+    height: $base-size*7.6;
+    background-color: $white;
+    a {
+        flex: 1;
+        height: $base-size*7.6;
+        @extend border-bottom;
+        font-size: $base-size*2.4;
+        color: rgba($gray-darker,.8);
+        @include text-align(center,$base-size*7.6);
+        &.active {
+            border-bottom: 3px solid $blue;
+            color: $blue;
+        }
+    }
+}
+.comment-box {
+    width: $base-width;
+    margin-top: $base-size*2.4;
+    overflow: hidden;
+    @extend border-top;
+    @extend border-bottom;
+    background-color: $white;
+    .box-top {
+        width: $base-size*58;
+        overflow: hidden;
+        padding: $base-size*1.8;
+        margin: 0 auto;
+        @extend border-bottom;
+        .img {
+            float: left;
+            width: $base-size*10;
+            height: $base-size*10;
+            span {
+                @extend span-center;
+            }
+            img {
+                @include img-center(100%,100%,center);
+            }
+        }
+        .name {
+            float: left;
+            width: $base-size*42;
+            height: $base-size*10;
+            margin-left: $base-size*2;
+            .name-center {
+                @include align($base-size*42,$base-size*10,left,middle);
+                h3 {
+                    color: rgba($gray-darker,.8);
+                }
+            }
+        }
+    }
+    .box-middle {
+        width: 100%;
+        padding: 0 $base-size*3;
+        margin-bottom: $base-size*2;
+        overflow: hidden;
+        .textarea {
+            width: 100%;
+            height: $base-size*18;
+            padding: $base-size*2 0;
+            overflow: hidden;
+            border: none;
+            background-color: none;
+            resize: none;
+        }
+        ul {
+            position: relative;
+            width: 105%;
+            overflow: hidden;
+            .uploadify-button{
+                top: 0;
+                bottom: 0;
+            }
+            .uploadify-button{
+                height: 100%;
+            }
+            li {
+                display: block;
+                float: left;
+                width: $base-size*10.4;
+                height: $base-size*10.4;
+                margin: 0 $base-size $base-size 0;
+                border: 1px solid $gray;
+                background-color: $gray-light;
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+                &.add-img {
+                    a {
+                        @extend display-block;
+                        font-size: $base-font-size*9;
+                        color: $gray-dark;
+                        @include text-align(center,$base-size*10.4);
+                    }
+                }
+            }
+        }
+    }
+    @at-root {
+        .box-bottom {
+            width: $base-width;
+            height: $base-size*8;
+            padding: 0 $base-size*3;
+            overflow: hidden;
+            @extend border-top;
+            line-height: $base-size*8;
+            &:nth-child(2) {
+                border: none;
+            }
+            strong {
+                float: left;
+                font-size: $base-font-size*2.6;
+                color: rgba($gray-darker,.8);
+                font-weight: normal;
+            }
+            span {
+                float: right;
+                i {
+                    @include icon-font($base-font-size*3.6,$gray,$base-size*8);
+                    margin: 0 $base-size*.5;
+                    &.active {
+                        color: $red;
+                    }
+                }
+                label {
+                    display: inline-block;
+                    width: $base-size*5;
+                    height: $base-size*3.6;
+                    @include text-align(center,$base-size*8);
+                    vertical-align: top;
+                }
+            }
+        }
+    }
+}
+.comment-last {
+    width: $base-width;
+    padding: 0 0 $base-size*5;
+    margin-top: $base-size*3;
+    @extend border-bottom;
+    background-color: $white;
+    overflow: hidden;
+}
+.up-pics {
+    display: block;
+    width: $base-size*60;
+    padding: $base-size*1.8;
+    margin: $base-size*3 auto 0;
+    overflow: hidden;
+    border: 1px dashed rgba($gray-dark,.7);
+    a {
+        @extend display-block;
+    }
+    i {
+        float: left;
+        @include icon-font($base-font-size*3.4,rgba($gray-dark,.7),$base-size*3.4);
+    }
+    span {
+        float: right;
+        font-size: $base-font-size*2.2;
+        color: $gray-dark;
+        line-height: $base-size*3.4;
+    }
+}
+//优惠券
+.coupon-list {
+    width: $base-width;
+    overflow: hidden;
+    ul {
+        display: block;
+        width: 100%;
+        margin: $base-size*2 0;
+        overflow: hidden;
+        @extend border-top;
+        li {
+            display: block;
+            width: 100%;
+            padding: $base-size*2;
+            overflow: hidden;
+            @extend border-bottom;
+            background-color: $white;
+            .img {
+                float: left;
+                width: $base-size*9;
+                height: $base-size*8;
+                margin-top: $base-size*.7;
+                @extend center;
+                span {
+                    @extend span-center;
+                }
+                img {
+                    @include img-center(100%,100%,middle);
+                }
+            }
+            .name {
+                float: left;
+                width: $base-size*32;
+                height: $base-size*9.4;
+                margin-left: $base-size*1.8;
+                .name-center {
+                    @include align($base-size*32,$base-size*9.4,left,middle);
+                    h3 {
+                        color: $gray-darker;
+                    }
+                    p {
+                        font-size: $base-size*2;
+                        color: $gray-dark;
+                    }
+                }
+            }
+            .info {
+                float: right;
+                position: relative;
+                width: $base-size*15;
+                height: $base-size*9.4;
+                overflow: hidden;
+                background-color: $yellow-dark;
+                &.used {
+                    background-color: $gray;
+                    .icon-used {
+                        display: block;
+                    }
+                }
+                .round-left {
+                    @include position-top(absolute,50%,- ($base-size*.8),5);
+                    width: $base-size*1.6;
+                    height: $base-size*1.6;
+                    margin-top: - ($base-size*.8);
+                    border-radius: 100%;
+                    background-color: $white;
+                }
+                .round-right {
+                    @include position-top-right(absolute,50%,- ($base-size*.8),5);
+                    width: $base-size*1.6;
+                    height: $base-size*1.6;
+                    margin-top: - ($base-size*.8);
+                    border-radius: 100%;
+                    background-color: $white;
+                }
+                h4 {
+                    display: block;
+                    width: $base-size*12;
+                    height: $base-size*5;
+                    margin: 0 auto;
+                    border-bottom: 1px dashed $white;
+                    color: $white;
+                    text-align: center;
+                    span {
+                        font-size: $base-font-size*3.6;
+                    }
+                }
+                h5 {
+                    display: block;
+                    width: 100%;
+                    height: $base-size*4.4;
+                    color: $white;
+                    text-align: center;
+                    line-height: $base-size*4.4;
+                }
+                .icon-used {
+                    display: none;
+                    @include position-top(absolute,50%,50%,10);
+                    width: $base-size*8.2;
+                    height: $base-size*8.2;
+                    margin-top: - ($base-size*3.5);
+                    margin-left: - ($base-size*3.5);
+                    background-size: 100% 100%;
+                    background: url("#{$img-url}icon-used.png") no-repeat;
+                }
+            }
+        }
+    }
+}
+.logistics {
+    width: $base-width;
+    overflow: hidden;
+    padding: 0 $base-size*2;
+    background-color: $white;
+    .logistics-container {
+        width: 100%;
+        overflow: hidden;
+        padding: $base-size*.5 0;
+        i {
+            float: left;
+            display: block;
+            width: $base-size*5;
+            height: $base-size*10;
+            text-align: center;
+            @include icon-font($base-size*3,$blue,$base-size*10);
+        }
+        .content {
+            float: left;
+            width: $base-size*50;
+            overflow: hidden;
+            margin-left: $base-size;
+            .item {
+                width: 100%;
+                display: block;
+                padding: $base-size*.5 0;
+                overflow: hidden;
+                @extend border-bottom;
+                &:last-child {
+                    border-bottom: none;
+                }
+                &:first-child {
+                    h4 {
+                        color: $yellow;
+                    }
+                }
+                h4 {
+                    color: $gray-darker;
+                }
+                h5 {
+                    color: $gray-dark;
+                }
+            }
+        }
+    }
+}

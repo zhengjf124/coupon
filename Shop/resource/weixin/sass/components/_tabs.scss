@@ -1,0 +1,66 @@
+@charset "utf-8"; //滑动触发的选项卡
+.tabBox-hd-h {
+    width: 100%;
+    height: 0.8rem;
+    overflow: hidden;
+}
+.tabBox {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    padding-bottom: 0.2rem;
+    .hd {
+        width: 100%;
+        height: 0.8rem;
+        border-bottom: 1px solid #dddddd;
+        background-color: $white;
+        @include position-top(fixed,0.75rem,auto,5);
+        max-width: $max-width;
+        min-width: $min-width;
+        ul {
+            widows: 100%;
+            li {
+                width: 25%;
+                height: 0.8rem;
+                display: block;
+                float: left;
+                a {
+                    width: 99%;
+                    height: 0.8rem;
+                    display: block;
+                    text-align: center;
+                    line-height: 0.8rem;
+                    margin: 0.1rem 0;
+                    font-size: 0.22rem;
+                    color: $gray-darker;
+                }
+                &.on {
+                    height: 0.8rem;
+                    border-bottom: 1px $primary solid;
+                    a {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+    .bd {
+        width: 100%;
+        ul {
+            width: 100;
+            li {
+                width: 100%;
+                display: block;
+                overflow: hidden;
+                margin-top: 0.1rem;
+                background-color: $white;
+                border-bottom: 1px $gray-light solid;
+                a {
+                    @extend display-block;                    
+                    
+                }
+                
+            }
+        }
+    }
+}

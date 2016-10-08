@@ -1,0 +1,694 @@
+[ 2016-08-24T13:40:34+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008604s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.011439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011505s ]
+
+[ 2016-08-24T13:40:34+08:00 ] 127.0.0.1 /index.php/Admin/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001081s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.151597s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.151642s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.013085s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.013125s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006124s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006167s ]
+
+[ 2016-08-24T13:40:35+08:00 ] 127.0.0.1 /index.php/Admin/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000631s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000628s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000725s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000787s ]
+
+[ 2016-08-24T13:40:43+08:00 ] 127.0.0.1 /index.php?m=Admin&c=Login&a=login&t=0.08102303207851946
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000321s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000614s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000662s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin` [ RunTime:0.0692s ]
+SQL: SELECT * FROM `gwshop_admin` INNER JOIN gwshop_admin_role ON gwshop_admin.role_id=gwshop_admin_role.role_id  WHERE `user_name` = 'admin' AND `password` = '1ec6c02ecd57e229429739a521ac6bfa' LIMIT 1   [ RunTime:0.0102s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin_log` [ RunTime:0.0275s ]
+SQL: INSERT INTO `gwshop_admin_log` (`log_time`,`admin_id`,`log_info`,`log_ip`,`log_url`) VALUES ('1472017243',NULL,'后台登录','127.0.0.1','/index.php/Admin/Login/login') [ RunTime:0.0545s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin` [ RunTime:0.0140s ]
+SQL: UPDATE `gwshop_admin` SET `last_login`='1472017243',`last_ip`='127' WHERE `id` = null [ RunTime:0.0007s ]
+
+[ 2016-08-24T13:40:45+08:00 ] 127.0.0.1 /index.php?m=Admin&c=Login&a=verify&r=70
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000321s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000635s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000651s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000699s ]
+
+[ 2016-08-24T13:40:48+08:00 ] 127.0.0.1 /index.php?m=Admin&c=Login&a=login&t=0.5005022112745792
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000316s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000643s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin` [ RunTime:0.0277s ]
+SQL: SELECT * FROM `gwshop_admin` INNER JOIN gwshop_admin_role ON gwshop_admin.role_id=gwshop_admin_role.role_id  WHERE `user_name` = 'admin' AND `password` = '1ec6c02ecd57e229429739a521ac6bfa' LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin_log` [ RunTime:0.0149s ]
+SQL: INSERT INTO `gwshop_admin_log` (`log_time`,`admin_id`,`log_info`,`log_ip`,`log_url`) VALUES ('1472017247',NULL,'后台登录','127.0.0.1','/index.php/Admin/Login/login') [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin` [ RunTime:0.0181s ]
+SQL: UPDATE `gwshop_admin` SET `last_login`='1472017247',`last_ip`='127' WHERE `id` = null [ RunTime:0.0005s ]
+
+[ 2016-08-24T13:40:49+08:00 ] 127.0.0.1 /index.php?m=Admin&c=Login&a=verify&r=99
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000418s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000605s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000650s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000641s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000688s ]
+
+[ 2016-08-24T13:40:52+08:00 ] 127.0.0.1 /index.php?m=Admin&c=Login&a=verify&r=51
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000743s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000757s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000818s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000633s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000680s ]
+
+[ 2016-08-24T13:40:55+08:00 ] 127.0.0.1 /index.php?m=Admin&c=Login&a=login&t=0.28812571056187153
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000315s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000548s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin` [ RunTime:0.0322s ]
+SQL: SELECT * FROM `gwshop_admin` INNER JOIN gwshop_admin_role ON gwshop_admin.role_id=gwshop_admin_role.role_id  WHERE `user_name` = 'admin' AND `password` = '1ec6c02ecd57e229429739a521ac6bfa' LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin_log` [ RunTime:0.0120s ]
+SQL: INSERT INTO `gwshop_admin_log` (`log_time`,`admin_id`,`log_info`,`log_ip`,`log_url`) VALUES ('1472017255',NULL,'后台登录','127.0.0.1','/index.php/Admin/Login/login') [ RunTime:0.0458s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin` [ RunTime:0.0074s ]
+SQL: UPDATE `gwshop_admin` SET `last_login`='1472017255',`last_ip`='127' WHERE `id` = null [ RunTime:0.0004s ]
+
+[ 2016-08-24T13:41:00+08:00 ] 127.0.0.1 /index.php?m=Admin&c=Login&a=verify&r=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000349s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000595s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000641s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000743s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000797s ]
+
+[ 2016-08-24T13:41:03+08:00 ] 127.0.0.1 /index.php?m=Admin&c=Login&a=login&t=0.8207710105925798
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000322s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000637s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin` [ RunTime:0.0280s ]
+SQL: SELECT * FROM `gwshop_admin` INNER JOIN gwshop_admin_role ON gwshop_admin.role_id=gwshop_admin_role.role_id  WHERE `user_name` = 'admin' AND `password` = '1ec6c02ecd57e229429739a521ac6bfa' LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin_log` [ RunTime:0.0204s ]
+SQL: INSERT INTO `gwshop_admin_log` (`log_time`,`admin_id`,`log_info`,`log_ip`,`log_url`) VALUES ('1472017263',NULL,'后台登录','127.0.0.1','/index.php/Admin/Login/login') [ RunTime:0.0361s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin` [ RunTime:0.0133s ]
+SQL: UPDATE `gwshop_admin` SET `last_login`='1472017263',`last_ip`='127' WHERE `id` = null [ RunTime:0.0007s ]
+
+[ 2016-08-24T13:41:05+08:00 ] 127.0.0.1 /index.php?m=Admin&c=Login&a=verify&r=73
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000316s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000632s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000631s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000676s ]
+
+[ 2016-08-24T13:41:08+08:00 ] 127.0.0.1 /index.php?m=Admin&c=Login&a=login&t=0.4243591274134815
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000315s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000653s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin` [ RunTime:0.0302s ]
+SQL: SELECT * FROM `gwshop_admin` INNER JOIN gwshop_admin_role ON gwshop_admin.role_id=gwshop_admin_role.role_id  WHERE `user_name` = 'admin' AND `password` = '1ec6c02ecd57e229429739a521ac6bfa' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin_log` [ RunTime:0.0103s ]
+SQL: INSERT INTO `gwshop_admin_log` (`log_time`,`admin_id`,`log_info`,`log_ip`,`log_url`) VALUES ('1472017268',NULL,'后台登录','127.0.0.1','/index.php/Admin/Login/login') [ RunTime:0.0422s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin` [ RunTime:0.0077s ]
+SQL: UPDATE `gwshop_admin` SET `last_login`='1472017268',`last_ip`='127' WHERE `id` = null [ RunTime:0.0004s ]
+
+[ 2016-08-24T13:41:18+08:00 ] 127.0.0.1 /index.php?m=Admin&c=Login&a=verify&r=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000645s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000622s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000666s ]
+
+[ 2016-08-24T13:41:21+08:00 ] 127.0.0.1 /index.php?m=Admin&c=Login&a=login&t=0.3784974883310497
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000522s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000566s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin` [ RunTime:0.0292s ]
+SQL: SELECT * FROM `gwshop_admin` INNER JOIN gwshop_admin_role ON gwshop_admin.role_id=gwshop_admin_role.role_id  WHERE `user_name` = 'admin' AND `password` = 'c3284d0f94606de1fd2af172aba15bf3' LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin_log` [ RunTime:0.0146s ]
+SQL: INSERT INTO `gwshop_admin_log` (`log_time`,`admin_id`,`log_info`,`log_ip`,`log_url`) VALUES ('1472017280','1','后台登录','127.0.0.1','/index.php/Admin/Login/login') [ RunTime:0.0368s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin` [ RunTime:0.0085s ]
+SQL: UPDATE `gwshop_admin` SET `last_login`='1472017280',`last_ip`='127' WHERE `id` = 1 [ RunTime:0.0345s ]
+
+[ 2016-08-24T13:41:22+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000405s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000937s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001032s ]
+SQL: SHOW COLUMNS FROM `gwshop_system_module` [ RunTime:0.0457s ]
+SQL: SELECT * FROM `gwshop_system_module` WHERE ( level>1 AND visible=1 ) ORDER BY mod_id ASC  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin` [ RunTime:0.0081s ]
+SQL: SELECT * FROM `gwshop_admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000102s ]
+NOTIC: [8] Undefined variable: upgradeMsg D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\dd7bd0a51e0e8b8957633ac011e4d216.php 第 50 行.
+NOTIC: [8] Undefined variable: upgradeMsg D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\dd7bd0a51e0e8b8957633ac011e4d216.php 第 53 行.
+NOTIC: [8] Undefined variable: order_amount D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\dd7bd0a51e0e8b8957633ac011e4d216.php 第 265 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.299127s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.299173s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000402s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000431s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000712s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000759s ]
+
+[ 2016-08-24T13:41:24+08:00 ] 127.0.0.1 /index.php/Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000471s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000468s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000515s ]
+NOTIC: [2] file_get_contents(./Application/Admin/Conf/version.txt): failed to open stream: No such file or directory D:\phpStudy\WWW\gwshop\Shop\Application\Admin\Controller\IndexController.class.php 第 52 行.
+SQL: SELECT VERSION() as version [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: version D:\phpStudy\WWW\gwshop\Shop\Application\Admin\Controller\IndexController.class.php 第 54 行.
+SQL: SHOW COLUMNS FROM `gwshop_order` [ RunTime:0.1006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_order` WHERE ( add_time>1471930884  ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_order` WHERE ( add_time>1471930884 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0697s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_goods` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `gwshop_article` [ RunTime:0.0417s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_article` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0280s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_user` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_user` WHERE ( last_login>1471930884 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_user` WHERE ( reg_time>1471930884 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_comments` [ RunTime:0.0391s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_comments` WHERE ( status=0 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000120s ]
+NOTIC: [8] Undefined variable: navigate_admin D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\b206b2d962c82ebabe07f8d6e310530c.php 第 67 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.099138s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.099184s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000431s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000463s ]
+
+[ 2016-08-24T13:41:25+08:00 ] 127.0.0.1 /index.php/Admin/System/login_task.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000841s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000904s ]
+SQL: SHOW COLUMNS FROM `gwshop_cart` [ RunTime:0.0499s ]
+ERR: 1054:Unknown column 'add_time' in 'where clause'
+ [ SQL语句 ] : DELETE FROM `gwshop_cart` WHERE ( user_id = 0 and  add_time < 1472013684 )
+ERR: 1054:Unknown column 'add_time' in 'where clause'
+ [ SQL语句 ] : DELETE FROM `gwshop_cart` WHERE ( user_id = 0 and  add_time < 1472013684 )
+
+[ 2016-08-24T13:41:30+08:00 ] 127.0.0.1 /index.php/Admin/Goods/goodsList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000318s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000646s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0281s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0289s ]
+SQL: SELECT `id`,`type_name`,`parent_id`,`level` FROM `gwshop_goods_category`  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: brandList D:\phpStudy\WWW\gwshop\Shop\Application\Admin\Controller\GoodsController.class.php 第 93 行.
+SQL: SHOW COLUMNS FROM `gwshop_active` [ RunTime:0.0351s ]
+SQL: SELECT `end_time` FROM `gwshop_active` WHERE `type` = 'limit_goods' LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+NOTIC: [8] Undefined variable: navigate_admin D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\c0182a4fc20333c5763b00047591ca1f.php 第 70 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.118011s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.118067s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000450s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001079s ]
+
+[ 2016-08-24T13:41:32+08:00 ] 127.0.0.1 /index.php?m=Admin&c=goods&a=ajaxGoodsList&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000651s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0281s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_goods` WHERE (  1 = 1  and gtype=0 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT `id`,`goods_name`,`cat_id`,`goods_sn`,`goods_price`,`sort_order`,`store_count`,`is_recommend`,`is_hot`,`is_new`,`is_on_sale`,`gtype` FROM `gwshop_goods` WHERE (  1 = 1  and gtype=0 ) LIMIT 0,10   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0124s ]
+SQL: SELECT * FROM `gwshop_goods_category`  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000117s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000195s ]
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 84 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 86 行.
+NOTIC: [8] Undefined index: goods_id D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 86 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 84 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 86 行.
+NOTIC: [8] Undefined index: goods_id D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 86 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 84 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 86 行.
+NOTIC: [8] Undefined index: goods_id D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 86 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 84 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 86 行.
+NOTIC: [8] Undefined index: goods_id D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 86 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 59 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 84 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 86 行.
+NOTIC: [8] Undefined index: goods_id D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 86 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 59 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 84 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 86 行.
+NOTIC: [8] Undefined index: goods_id D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 86 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 84 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 86 行.
+NOTIC: [8] Undefined index: goods_id D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 86 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.073864s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.073923s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000641s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000865s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000912s ]
+
+[ 2016-08-24T13:44:36+08:00 ] 127.0.0.1 /index.php/Admin/Goods/addEditGoods/id/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000710s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000522s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0092s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0048s ]
+NOTIC: [8] Undefined index: goods_id D:\phpStudy\WWW\gwshop\Shop\Application\Admin\Controller\GoodsController.class.php 第 121 行.
+NOTIC: [8] Undefined index: goods_id D:\phpStudy\WWW\gwshop\Shop\Application\Admin\Controller\GoodsController.class.php 第 122 行.
+NOTIC: [8] Undefined index: is_ajax D:\phpStudy\WWW\gwshop\Shop\Application\Admin\Controller\GoodsController.class.php 第 124 行.
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0074s ]
+SQL: SELECT * FROM `gwshop_goods_category` WHERE ( parent_id = 0 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_type` [ RunTime:0.0340s ]
+SQL: SELECT * FROM `gwshop_goods_type`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `gwshop_goods` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`parent_id`,`level` FROM `gwshop_goods_category`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_images` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `gwshop_goods_images` WHERE ( goods_id =5 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000213s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000268s ]
+NOTIC: [8] Undefined variable: URL_home D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 84 行.
+NOTIC: [8] Use of undefined constant is_promote - assumed 'is_promote' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 153 行.
+NOTIC: [8] Undefined variable: navigate_admin D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 160 行.
+NOTIC: [8] Undefined variable: level_cat2 D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 246 行.
+NOTIC: [8] Undefined index: name D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 246 行.
+NOTIC: [8] Undefined index: name D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 246 行.
+NOTIC: [8] Undefined index: name D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 247 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 272 行.
+NOTIC: [8] Undefined index: name D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 272 行.
+NOTIC: [8] Undefined index: name D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 272 行.
+NOTIC: [8] Undefined index: name D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 272 行.
+NOTIC: [8] Undefined variable: brandList D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 283 行.
+NOTIC: [8] Undefined index: cost_price D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 306 行.
+NOTIC: [8] Undefined index: commission D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 313 行.
+NOTIC: [8] Undefined index: weight D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 332 行.
+NOTIC: [8] Use of undefined constant is_free_shipping - assumed 'is_free_shipping' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 340 行.
+NOTIC: [8] Undefined index: is_free_shipping D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 340 行.
+NOTIC: [8] Use of undefined constant is_free_shipping - assumed 'is_free_shipping' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 341 行.
+NOTIC: [8] Undefined index: is_free_shipping D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 341 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 347 行.
+NOTIC: [8] Undefined index: give_integral D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 357 行.
+NOTIC: [8] Undefined index: is_free_shipping D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 369 行.
+NOTIC: [8] Undefined index: keywords D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 385 行.
+NOTIC: [8] Undefined index: imgage_url D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 411 行.
+NOTIC: [8] Undefined index: imgage_url D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 411 行.
+NOTIC: [8] Use of undefined constant spec_type - assumed 'spec_type' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 435 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 435 行.
+NOTIC: [8] Use of undefined constant spec_type - assumed 'spec_type' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 435 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 435 行.
+NOTIC: [8] Use of undefined constant spec_type - assumed 'spec_type' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 435 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 435 行.
+NOTIC: [8] Use of undefined constant spec_type - assumed 'spec_type' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 435 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 435 行.
+NOTIC: [8] Use of undefined constant goods_type - assumed 'goods_type' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 453 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 453 行.
+NOTIC: [8] Use of undefined constant goods_type - assumed 'goods_type' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 453 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 453 行.
+NOTIC: [8] Use of undefined constant goods_type - assumed 'goods_type' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 453 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 453 行.
+NOTIC: [8] Use of undefined constant goods_type - assumed 'goods_type' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 453 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 453 行.
+NOTIC: [8] Undefined variable: level_cat2 D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 589 行.
+NOTIC: [8] Undefined variable: level_cat2 D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\1a2c079354e0e52f0ea0a0a3d0b20369.php 第 591 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.193490s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.193533s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000348s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000377s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001332s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001429s ]
+
+[ 2016-08-24T13:44:40+08:00 ] 127.0.0.1 /index.php/admin/Goods/ajaxGetSpecSelect.html?goods_id=5&spec_type=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000436s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000810s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000879s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0213s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec` [ RunTime:0.0468s ]
+SQL: SELECT * FROM `gwshop_spec` WHERE ( type_id = 3 ) ORDER BY `order` desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec_item` [ RunTime:0.0290s ]
+SQL: SELECT `id`,`item` FROM `gwshop_spec_item` WHERE ( spec_id = 2 )  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`item` FROM `gwshop_spec_item` WHERE ( spec_id = 1 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec_goods_price` [ RunTime:0.0132s ]
+SQL: SELECT GROUP_CONCAT(`key` SEPARATOR '_') AS items_id FROM `gwshop_spec_goods_price` WHERE ( goods_id = 5 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec_image` [ RunTime:0.0116s ]
+SQL: SELECT `spec_image_id`,`src` FROM `gwshop_spec_image` WHERE ( goods_id = 5 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\f6a261a032fdd138a133b963285259fb.php 第 6 行.
+NOTIC: [8] Use of undefined constant spec_item - assumed 'spec_item' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\f6a261a032fdd138a133b963285259fb.php 第 8 行.
+NOTIC: [8] Use of undefined constant spec_item - assumed 'spec_item' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\f6a261a032fdd138a133b963285259fb.php 第 8 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\f6a261a032fdd138a133b963285259fb.php 第 8 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\f6a261a032fdd138a133b963285259fb.php 第 8 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\f6a261a032fdd138a133b963285259fb.php 第 8 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\f6a261a032fdd138a133b963285259fb.php 第 6 行.
+NOTIC: [8] Use of undefined constant spec_item - assumed 'spec_item' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\f6a261a032fdd138a133b963285259fb.php 第 8 行.
+NOTIC: [8] Use of undefined constant spec_item - assumed 'spec_item' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\f6a261a032fdd138a133b963285259fb.php 第 8 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\f6a261a032fdd138a133b963285259fb.php 第 8 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\f6a261a032fdd138a133b963285259fb.php 第 8 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062541s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062579s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000425s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000451s ]
+
+[ 2016-08-24T13:44:41+08:00 ] 127.0.0.1 /index.php/admin/Goods/ajaxGetSpecInput/goods_id/5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000852s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000948s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0083s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec` [ RunTime:0.0063s ]
+SQL: SELECT `id`,`name` FROM `gwshop_spec`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec_item` [ RunTime:0.0061s ]
+SQL: SELECT `id`,`item`,`spec_id` FROM `gwshop_spec_item`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec_goods_price` [ RunTime:0.0065s ]
+SQL: SELECT `key`,`key_name`,`price`,`store_count`,`bar_code` FROM `gwshop_spec_goods_price` WHERE ( goods_id = 5 )  [ RunTime:0.0005s ]
+NOTIC: [8] Use of undefined constant item - assumed 'item' D:\phpStudy\WWW\gwshop\Shop\Application\Admin\Logic\GoodsLogic.class.php 第 340 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' D:\phpStudy\WWW\gwshop\Shop\Application\Admin\Logic\GoodsLogic.class.php 第 340 行.
+NOTIC: [8] Use of undefined constant price - assumed 'price' D:\phpStudy\WWW\gwshop\Shop\Application\Admin\Logic\GoodsLogic.class.php 第 347 行.
+NOTIC: [8] Use of undefined constant store_count - assumed 'store_count' D:\phpStudy\WWW\gwshop\Shop\Application\Admin\Logic\GoodsLogic.class.php 第 348 行.
+NOTIC: [8] Use of undefined constant price - assumed 'price' D:\phpStudy\WWW\gwshop\Shop\Application\Admin\Logic\GoodsLogic.class.php 第 349 行.
+NOTIC: [8] Use of undefined constant store_count - assumed 'store_count' D:\phpStudy\WWW\gwshop\Shop\Application\Admin\Logic\GoodsLogic.class.php 第 350 行.
+NOTIC: [8] Use of undefined constant bar_code - assumed 'bar_code' D:\phpStudy\WWW\gwshop\Shop\Application\Admin\Logic\GoodsLogic.class.php 第 351 行.
+
+[ 2016-08-24T13:46:09+08:00 ] 127.0.0.1 /index.php?m=Admin&c=goods&a=ajaxGoodsList&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000659s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000727s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0291s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_goods` WHERE (  1 = 1  and gtype=0 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT `id`,`goods_name`,`cat_id`,`goods_sn`,`goods_price`,`sort_order`,`store_count`,`is_recommend`,`is_hot`,`is_new`,`is_on_sale`,`gtype` FROM `gwshop_goods` WHERE (  1 = 1  and gtype=0 ) LIMIT 0,10   [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0218s ]
+SQL: SELECT * FROM `gwshop_goods_category`  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 84 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 86 行.
+NOTIC: [8] Undefined index: goods_id D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 86 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 84 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 86 行.
+NOTIC: [8] Undefined index: goods_id D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 86 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 84 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 86 行.
+NOTIC: [8] Undefined index: goods_id D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 86 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 84 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 86 行.
+NOTIC: [8] Undefined index: goods_id D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 86 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 59 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 84 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 86 行.
+NOTIC: [8] Undefined index: goods_id D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 86 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 59 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 84 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 86 行.
+NOTIC: [8] Undefined index: goods_id D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 86 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 84 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 86 行.
+NOTIC: [8] Undefined index: goods_id D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\fbd9df881f82eb12ac01667d258848bf.php 第 86 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018074s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018135s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000635s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000683s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001542s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001660s ]
+
+[ 2016-08-24T13:46:11+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000430s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000555s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000609s ]
+SQL: SHOW COLUMNS FROM `gwshop_system_module` [ RunTime:0.0287s ]
+SQL: SELECT * FROM `gwshop_system_module` WHERE ( level>1 AND visible=1 ) ORDER BY mod_id ASC  [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin` [ RunTime:0.0219s ]
+SQL: SELECT * FROM `gwshop_admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000147s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000225s ]
+NOTIC: [8] Undefined variable: upgradeMsg D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\dd7bd0a51e0e8b8957633ac011e4d216.php 第 50 行.
+NOTIC: [8] Undefined variable: upgradeMsg D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\dd7bd0a51e0e8b8957633ac011e4d216.php 第 53 行.
+NOTIC: [8] Undefined variable: order_amount D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\dd7bd0a51e0e8b8957633ac011e4d216.php 第 265 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.088763s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.088843s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000369s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000826s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000898s ]
+
+[ 2016-08-24T13:46:12+08:00 ] 127.0.0.1 /index.php/Admin/System/login_task.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000481s ]
+SQL: SHOW COLUMNS FROM `gwshop_cart` [ RunTime:0.0316s ]
+ERR: 1054:Unknown column 'add_time' in 'where clause'
+ [ SQL语句 ] : DELETE FROM `gwshop_cart` WHERE ( user_id = 0 and  add_time < 1472013971 )
+ERR: 1054:Unknown column 'add_time' in 'where clause'
+ [ SQL语句 ] : DELETE FROM `gwshop_cart` WHERE ( user_id = 0 and  add_time < 1472013971 )
+
+[ 2016-08-24T13:46:13+08:00 ] 127.0.0.1 /index.php/Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000422s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000843s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000918s ]
+NOTIC: [2] file_get_contents(./Application/Admin/Conf/version.txt): failed to open stream: No such file or directory D:\phpStudy\WWW\gwshop\Shop\Application\Admin\Controller\IndexController.class.php 第 52 行.
+SQL: SELECT VERSION() as version [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: version D:\phpStudy\WWW\gwshop\Shop\Application\Admin\Controller\IndexController.class.php 第 54 行.
+SQL: SHOW COLUMNS FROM `gwshop_order` [ RunTime:0.0214s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_order` WHERE ( add_time>1471931173  ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_order` WHERE ( add_time>1471931173 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0124s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_goods` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `gwshop_article` [ RunTime:0.0169s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_article` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0125s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_user` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_user` WHERE ( last_login>1471931173 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_user` WHERE ( reg_time>1471931173 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `gwshop_comments` [ RunTime:0.0181s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_comments` WHERE ( status=0 ) LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000198s ]
+NOTIC: [8] Undefined variable: navigate_admin D:\phpStudy\WWW\gwshop\Shop\Application\Runtime\Cache\Admin\b206b2d962c82ebabe07f8d6e310530c.php 第 67 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062545s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062629s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000620s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000663s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000708s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000755s ]
+

@@ -1,0 +1,115 @@
+@charset "UTF-8"; //----------------------------------------------------- 
+// setting scss
+//----------------------------------------------------- 
+// 开关设置
+//----------------------------------------------------- 
+$lte7: false !default; //是否兼容ie6-7
+$filter: false !default; //是否为ie6-8开启css3滤镜兼容，常用于渐变背景 
+$print-style-switch: false !default; //是否开启打印样式
+$img-url:"../images/";
+$font-url:"../fonts/";
+//根元素大小
+@for $client from 300px through 768px {
+    @each $client-width in $client {
+        @media screen and (width: $client-width) {
+            html {
+                font-size: $client-width/6.4;
+            }
+        }
+    }
+}
+@media screen and (min-width:769px) {
+            html {
+                font-size: 120px;
+            }
+}
+// font相关
+//----------------------------------------------------- 
+$base-font-size: .1rem !default;
+$base-size: .1rem !default;
+$base-line-height: 1.42857 !default;
+$base-font-family: "Helvetica Neue", Helvetica, Tahoma, sans-serif !default;
+$font-cn: "SimSun"; //宋体
+$font-yaHei: "Microsoft Yahei"; //微软雅黑
+$font-heiTi: "SimHei"; //黑体
+// 元素上下间距
+//----------------------------------------------------- 
+$base-gap: .24rem !default;
+// 基本颜色
+// color function : http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
+// lighten($color, $amount)
+// darken($color, $amount)
+// opacify($color, $amount)
+// mix($color1, $color2[, $amount])
+//----------------------------------------------------- 
+$black: #000 !default;
+$gray-darker: #383838 !default;
+$gray-dark: #9c9c9c !default;
+$gray: #c8c8c8 !default;
+$gray-light: #f5f5f5 !default;
+$white: #fff !default;
+
+
+$red-dark: #cc3300 !default;
+$red: #ff0000 !default;
+$red-light: #ff696a !default;
+
+$blue-darker: #007eba !default;
+$blue-dark: #0064cd !default;
+$blue: #0092d8 !default;
+$blue-light: #62a4eb !default;
+
+$orange: #ff6600 !default;
+$orange-light: #ffa846 !default;
+
+$green-dark:#09bb07 !default;
+$green: #51B148 !default;
+$green-light: #1bce8d !default;
+
+$yellow-dark:#e8b949 !default;
+$yellow: #ffa721 !default;
+
+$cyan: #21b4c5 !default;
+
+$pink: #c3325f !default;
+
+$purple: #7a43b6 !default;
+$primary: #ff5722 !default; //主色
+// link
+//----------------------------------------------------- 
+// 如果只有一个值则滑过的值为这个值的darken 5%，如果
+// 有两个值则第二个值为滑过的值
+$link-color: #08c !default;
+// scaffolding
+//----------------------------------------------------- 
+$body-bg-color: #f4f4f4 !default;
+$text-color: $gray-darker !default;
+// placeholder
+//----------------------------------------------------- 
+// 变量分别为：是否输出表单的占位符placeholder样式，文本色
+$placeholder: true $gray-dark !default;
+// 交互配色
+// 警告，错误，成功，提示
+//----------------------------------------------------- 
+// 每个变量都有三个颜色值，分别为：文本色，背景色，边框色
+$warning-color: #514721 #FFF6BF #FFD324 !default;
+$error-color: #8A1F11 #FBE3E4 #FBC2C4 !default;
+$success-color: #264409 #E6EFC2 #C6D880 !default;
+$info-color: #205791 #D5EDF8 #92CAE4 !default;
+// radius
+//----------------------------------------------------- 
+$base-radius: 5px !default;
+$small-radius: 3px !default;
+// z-index
+//----------------------------------------------------- 
+$zindex-dropdown: 1000 !default;
+$zindex-fixed-topbar: 1010 !default;
+$zindex-tool-tip: 1020 !default;
+$zindex-alert: 1030 !default;
+$zindex-black: 1040 !default;
+$zindex-modal: 1100 !default;
+
+$max-width:768px;
+$min-width:300px;
+$base-width:$base-size*64;
+

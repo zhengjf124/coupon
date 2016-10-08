@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>b2c</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default">
+		<link href="../css/style.css" rel="stylesheet">
+	</head>
+
+	<body style="background-color: white;">
+		<div class="wrap">
+			<!--顶部-->
+			<header>
+				<a onclick="javascript:history.back();" class="return"><i>&#xe6d6;</i></a>
+				<div class="search">
+					<div class="txt-box">
+						<i>&#xe6b3;</i>
+						<input type="text" placeholder="搜索关键词" id="word" value="" />
+						<a class="clear-word">&#xe638;</a>
+					</div>
+					<button id="submit_search">搜索</button>
+				</div>
+			</header>
+			<div class="header-h"></div>
+			<!--顶部:over-->
+			<!--搜索关键词-->
+			<div class="search-newly">
+				<div class="search-newly-title">
+					<strong>最近搜索</strong><a><i id="del_search">&#xe6a6;</i></a>
+				</div>
+				<div class="search-newly-list" id="search_list"></div>
+			</div>
+		  <!--搜索关键词:over-->
+			
+		</div>
+		<!--script-->
+		<script src="../js/lib/jquery.min.js"></script>
+		<script src="../js/public.js"></script>
+		<script src="../js/gui/cloud.min.js"></script>
+		<!-- <script type="text/javascript" src="../js/gui/alertPopShow.js"></script> -->
+	    <script src="../js/gui/jquery.cookie.min.js"></script>
+		<script src="../js/search.js"></script>
+	</body>
+
+</html>

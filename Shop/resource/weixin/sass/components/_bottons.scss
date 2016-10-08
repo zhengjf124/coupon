@@ -1,0 +1,54 @@
+@charset "UTF-8";
+.btn-primary {
+    @include btns();
+}
+.btn-green {
+    @include btns(4.8rem,.76rem,$green,.26rem,$white,none,block,auto,.12rem auto,0);
+}
+.btn-buy {
+    @include btns(4.8rem,.76rem,$primary,.26rem,$white,none,block,auto,.12rem auto,5px);
+}
+.btn-pay {
+    @include btns(3.2rem,.9rem,$primary,.26rem,$white,none,block,right,0,0);
+}
+.btn-cart-gray {
+    @include btns(2.12rem,.9rem,#f4f4f4,.26rem,$gray-darker,none,block,right,0,0);
+}
+.btn-cart-yellow {
+    @include btns(2.12rem,.9rem,$primary,.26rem,$white,none,block,right,0,0);
+}
+.btn-address-add {
+    @include btns($base-size*18,$base-size*7,$blue,0,inline-block,auto,0 0 0 $base-radius*2,0,$base-radius,$base-size*2.4,$white);
+}
+.btn-address-choose {
+    @include btns($base-size*18,$base-size*7,$green,0,inline-block,auto,0 0 0 $base-radius*2,0,$base-radius,$base-size*2.4,$white);
+}
+.btn-lg {
+    @include btns(5.8rem,.8rem,$primary,.26rem,$white,none,block,auto,.3rem auto 0,5px);
+}
+.btn-verify {
+    @include btns(2rem,.6rem,$gray,.24rem,$white,none,inline-block,right,.06rem -.14rem 0 0,3px);
+}
+.btn-auto-gray {
+    @include btns(auto,$base-size*6,none,1px solid $gray,inline-block,none,$base-size*2 auto,0 $base-size*8,$small-radius,$base-size*2.4,$gray-dark);
+}
+.btn-full-red {
+    @include btns($base-width,$base-size*8.8,$red,none,block,none,0,0,0,$base-size*2.6,$white);
+}
+.btn-full-green {
+    @include btns(100%,$base-size*7.2,$green-dark,none,block,none,0,0,$base-radius,$base-size*2.6,$white);
+}
+.btn-confirm {
+    @include btn(auto,block,100%,$base-size*7.5,0,$base-size*5 auto 0,0,$base-radius,$blue,$base-size*2.6,$white);
+}
+.btn-blue {
+    display: block;
+    width: $base-size*60;
+    height: $base-size*7.6;
+    margin: $base-size*3 auto;
+    border: none;
+    border-radius: $base-radius;
+    background-color: $blue;
+    font-size: $base-size*2.6;
+    color: $white;
+}

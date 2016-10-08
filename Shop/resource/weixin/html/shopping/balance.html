@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>b2c</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default">
+		<link href="../../css/style.css" rel="stylesheet">
+        <link href="../../css/common.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="wrap">
+			<!--顶部-->
+			<header>
+				<a onclick="javascript:history.back();" class="return"><i>&#xe6d6;</i></a>
+				<div class="header-title">
+					<div class="header-title-center">
+						<em>确认订单</em>
+					</div>
+				</div>
+			</header>
+			<div class="header-h"></div>
+			<!--顶部:over-->
+			<div class="select-address" onclick="location.href='address.html'">
+				<em>&#xe6e2;</em>
+				<h4>添加收货地址</h4>
+				<p class="warn">(您选择的地址可能造成订单的价格变化，请确认后再付款)</p>
+				<i>&#xe6d5;</i>
+				<!--<em>&#xe6e2;</em>
+				<h4>某客户&nbsp;&nbsp;135****1486</h4>
+				<p>福建 福州市 台江区 五一中路状元楼B座205</p>
+				<i>&#xe6d5;</i>-->
+			</div>
+			<div class="shop-goods">
+				<ul id="cartList">
+					<li>
+						<a href="#">
+							<div class="img"><span></span><img src="../../images/pic-hot1.jpg"></div>
+							<div class="info">
+								<div class="name">
+									<h3>最新ecshop某某家具家居建材商城模板网站源码</h3></div>
+								<div class="sizes">
+									<h4>颜色: 白色</h4>
+									<h4>规格: 1920*1200</h4>
+								</div>
+								<div class="price">
+									<span>￥ 1922.00<del>￥2899.00</del></span>
+									<em>X 1</em>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="img"><span></span><img src="../../images/pic-hot2.jpg"></div>
+							<div class="info">
+								<div class="name">
+									<h3>最新ecshop某某家具家居建材商城模板网站源码</h3></div>
+								<div class="sizes">
+									<h4>颜色: 白色</h4>
+									<h4>规格: 1920*1200</h4>
+								</div>
+								<div class="price">
+									<span>￥ 1922.00<del>￥2899.00</del></span>
+									<em>X 1</em>
+								</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="shop-send">
+				<ul>
+					<li>
+						<div class="send-item"><strong>配送方式</strong><span>快递（免运费）</span></div>
+					</li>
+				</ul>
+			</div>
+			<div class="shop-send">
+				<ul>
+					<li>
+						<div class="send-item" id="coupon">
+							<strong id="couponsTitle">优惠券(无可用优惠券)</strong>
+							<span><i>&#xe6d5;</i></span>
+						</div>
+					</li>
+					<li>
+						<div class="send-item" id="user_credit">
+							<strong>最高可用10积分</strong>
+							<span>可抵扣0.1元 <label class="active"><input name="" type="checkbox" value=""></label></span>
+						</div>
+					</li>
+					<li>
+						<div class="send-item" id="bill">
+							<strong>发票信息</strong>
+							<span><label>电子发票</label><i>&#xe6d5;</i></span>
+						</div>
+						<div class="item-show" id="bill-show">
+							<label class="active">电子发票</label>
+							<label>个人发票</label>
+							<label>单位发票</label>
+						</div>
+						<div class="formSingle" id="bill-form">
+                        	<input type="text" class="txt" placeholder="请填写单位名称" />
+							<!--<form action="" method="">
+								<input type="text" class="txt" placeholder="请填写单位名称" />
+								<input type="submit" class="btn" value="确定" />
+							</form>-->
+						</div>
+					</li>
+					<li>
+						<textarea class="textarea" placeholder="选填：对本次交易补充说明"></textarea>
+					</li>
+				</ul>
+			</div>
+			<div class="total-pay">
+				<div class="total">
+					<dl>
+						<dt>商品金额：</dt>
+						<dd>￥<span id="total_money">1200.00</span></dd>
+					</dl>
+					<dl>
+						<dt>运费：</dt>
+						<dd>+￥0.00</dd>
+					</dl>
+					<dl>
+						<dt>优惠券：</dt>
+						<dd>-￥<span id="total_coupons">0.00</span></dd>
+					</dl>
+					<dl>
+						<dt>积分抵现：</dt>
+						<dd>-￥<span id="total_credit">0.00</span></dd>
+					</dl>
+				</div>
+				<div class="pay">
+					<h3>合计：<span>￥</span><span id="total_pay_money">1200.00</span></h3>
+                    <!--<button class="btn-full-green" onclick="location.href='pay-success.html'">微信支付</button>-->
+					<button class="btn-full-green">微信支付</button>
+				</div>
+			</div>
+			<!--优惠券弹窗-->
+			<div class="white-bottom" id="coupon-light">		
+        <div class="coupon-show">
+        	<h2>选择优惠券</h2>
+        	<ul id="coupons">
+        		<li class="active">
+        			<h3>立钱10元:满200立减10元</h3>
+        			<p>使用期限   2016.01.10-2016.02.01</p>
+        			<i>&#xe619;</i>
+        		</li>
+        		<li>
+        			<h3>立钱10元:满200立减10元</h3>
+        			<p>使用期限   2016.01.10-2016.02.01</p>
+        			<i>&#xe61a;</i>
+        		</li>
+        		<li>
+        			<h3>立钱10元:满200立减10元</h3>
+        			<p>使用期限   2016.01.10-2016.02.01</p>
+        			<i>&#xe61a;</i>
+        		</li>
+        		<li>
+        			<h3>不使用优惠券</h3>
+        			<i>&#xe61a;</i>
+        		</li>
+        	</ul>
+        </div>
+				<button class="btn-full-red">确定</button>
+
+			</div>
+			<div class="black" id="coupon-black"></div>
+			<!--优惠券弹窗:over-->
+		</div>
+        <!--script-->
+		<script src="../../js/lib/jquery.min.js"></script>
+        
+        <script type="text/javascript" src="../../js/gui/alertPopShow.js"></script>
+		<script src="../../js/shop.js"></script>
+        
+		<script src="../../js/shopping/balance.js"></script>
+        <!--<script src="../../js/global.js"></script>	-->
+		<script src="../../js/public.js"></script>
+	</body>
+
+</html>

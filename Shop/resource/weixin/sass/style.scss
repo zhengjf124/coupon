@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+//基础
+@import "base/variables";
+@import "base/iconfont";
+@import "base/normalize";
+@import "base/base";
+
+//辅助
+@import "helps/mixins";
+@import "helps/swiper";
+
+//布局
+@import "layout/header";
+@import "layout/layout";
+@import "layout/footer";
+@import "layout/sidbar";
+
+
+//组件
+@import "components/h5uploadify";
+@import "components/bottons";
+@import "components/cloud";
+@import "components/alert";
+@import "components/focus";
+@import "components/layer";
+@import "components/form";
+@import "components/tabs";
+@import "components/area";
+
+
+//页面
+@import "pages/index";
+@import "pages/search";
+@import "pages/goods";
+@import "pages/shop";
+@import "pages/member";
+

@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>b2c</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default">
+		<link href="../../css/style.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="wrap">
+			<!--顶部-->
+			<header>
+				<a onclick="javascript:history.back();" class="return"><i>&#xe6d6;</i></a>
+				<div class="header-title">
+					<div class="header-title-center">
+						<span id="shangpin" class="active">商品</span>
+						<span id="xiangqing">详情</span>
+						<span id="pingjia">评价</span>
+					</div>
+				</div>
+				<a href="../index.html" class="header-right"><i>&#xe6bb;</i></a>
+			</header>
+			<div class="header-h"></div>
+			<!--顶部:over-->
+			<div id="shangpin-show" class="gradual">
+				<!--商品评价-->
+				<div class="goods-judge">
+					<div class="judge-top">
+						<strong>商品评价</strong><i>&#xe6d5;</i>
+					</div>
+					<div class="judge-bottom">
+						<div class="judge-menu">
+							<a href="#">产品整体好(165)</a>
+							<a href="#">产品功能齐全(165)</a>
+							<a href="#">服务态度好(165)</a>
+							<a href="#" class="bad">产品一般(165)</a>
+							<a href="#" class="bad">服务一般(165)</a>
+							<a href="#" class="bad">产品真的很差的(165)</a>
+						</div>
+						<div class="judge-list">
+							<ul>
+								<li>
+									<div class="name">
+										<img src="../../images/pic-tx.jpg"><strong>广为网络</strong><span>2016-06-20</span>
+									</div>
+									<div class="brief">
+										<h5>宝贝很好！设计简单大气，整体很不错，服务态度也十分好...总之就是一次满意的购物！</h5>
+									</div>
+									<div class="imgs">
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="judge-more">
+						<a href="#">查看全部1205条评价 ></a>
+					</div>
+				</div>
+				<!--商品评价:over-->
+				<center><button class="btn-auto-gray">点击查看图文详情</button></center>
+			</div>
+			<!--你可能喜欢-->
+			<section id="likes"></section>
+			<!--你可能喜欢:over-->
+			<!--详情-->
+			<section id="xiangqing-show" class="gradual"></section>
+			<!--详情:over-->
+			<!--评价-->
+			<section id="pingjia-show" class="gradual">
+				<div id="scroller">
+					<div id="pullDown">
+						<span class="pullDownIcon"></span><span class="pullDownLabel">正在刷新...</span>
+					</div>
+					<div class="judge-bottom">
+						<div class="judge-score">
+							<h3>总体评分</h3>
+							<p><i class="active">&#xe62d;</i><i class="active">&#xe62d;</i><i class="active">&#xe62d;</i><i class="active">&#xe62d;</i><i>&#xe62d;</i></p>
+						</div>
+						<div class="judge-menu">
+							<h3>用户印象</h3>
+							<a href="#">产品整体好(165)</a>
+							<a href="#">产品功能齐全(165)</a>
+							<a href="#">服务态度好(165)</a>
+							<a href="#" class="bad">产品一般(165)</a>
+							<a href="#" class="bad">服务一般(165)</a>
+							<a href="#" class="bad">产品真的很差的(165)</a>
+						</div>
+						<div class="judge-list">
+							<h3>商品评价</h3>
+							<ul>
+								<li>
+									<div class="name">
+										<img src="../../images/pic-tx.jpg"><strong>广为网络</strong><span>2016-06-20</span>
+									</div>
+									<div class="brief">
+										<h5>宝贝很好！设计简单大气，整体很不错，服务态度也十分好...总之就是一次满意的购物！</h5>
+									</div>
+									
+								</li>
+								<li>
+									<div class="name">
+										<img src="../../images/pic-tx.jpg"><strong>广为网络</strong><span>2016-06-20</span>
+									</div>
+									<div class="brief">
+										<h5>宝贝很好！设计简单大气，整体很不错，服务态度也十分好...总之就是一次满意的购物！</h5>
+									</div>
+								</li>
+								<li>
+									<div class="name">
+										<img src="../../images/pic-tx.jpg"><strong>广为网络</strong><span>2016-06-20</span>
+									</div>
+									<div class="brief">
+										<h5>宝贝很好！设计简单大气，整体很不错，服务态度也十分好...总之就是一次满意的购物！</h5>
+									</div>
+								</li>
+								<li>
+									<div class="name">
+										<img src="../../images/pic-tx.jpg"><strong>广为网络</strong><span>2016-06-20</span>
+									</div>
+									<div class="brief">
+										<h5>宝贝很好！设计简单大气，整体很不错，服务态度也十分好...总之就是一次满意的购物！</h5>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div id="pullUp">
+						<span class="pullUpIcon"></span><span class="pullUpLabel">正在加载...</span>
+					</div>
+				</div>
+
+			</section>
+			<!--评价:over-->
+			<!--购物车信息弹窗-->
+			<div class="goods-buy" id="cart-light"></div>
+			<div class="black" id="cart-black"></div>
+			<!--购买信息弹窗:over-->
+			<!--购买信息弹窗-->
+			<div class="goods-buy" id="buy-light"></div>
+			<div class="black" id="buy-black"></div>
+			<!--购买信息弹窗:over-->
+			<!--底部导航-->
+			<div class="cont-bar-h"></div>
+			<div class="cont-bar">
+				<ul>
+					<li>
+						<a href="#">
+							<i>&#xe647;</i>
+							<h6>客服</h6>
+						</a>
+					</li>
+					<li>
+						<a id="collect">
+							<i>&#xe67e;</i>
+							<h6>收藏</h6>
+						</a>
+					</li>
+					<li>
+						<a href="../shopping/cart.html">
+							<i>&#xe61c;</i>
+							<h6>购物车</h6>
+						</a>
+					</li>
+					<li>
+						<a id="addToCart">加入购物车</a>
+					</li>
+					<li>
+						<a id="buyNow">立即购买</a>
+					</li>
+				</ul>
+			</div>
+			<!--底部导航:over-->
+		</div>
+		<!--script-->
+		<script src="../../js/lib/jquery.min.js"></script>
+		<script src="../../js/lib/idangerous.swiper-1.9.1.min.js"></script>
+		<script src="../../js/gui/alertPopShow.js"></script>
+		<script src="../../js/public.js"></script>
+		<script src="../../js/goods/cont.js"></script>
+	</body>
+
+</html>

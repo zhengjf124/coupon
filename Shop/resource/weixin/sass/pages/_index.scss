@@ -1,0 +1,305 @@
+@charset "UTF-8";
+
+.icons {
+    width: $base-width;
+    overflow: hidden;
+    ul {
+        width: 102%;
+        border-top: 1px solid rgba($gray,.5);
+        li {
+            width: $base-size * 16;
+            height: $base-size * 20.2;
+            display: block;
+            float: left;
+            border-right: 1px solid rgba($gray,.5);
+            border-bottom: 1px solid rgba($gray,.5);
+            background-color: $white;
+            a {
+                @extend display-block;
+                text-align: center;
+                img {
+                    width: $base-size * 7.6;
+                    height: $base-size * 7.6;
+                    display: block;
+                    margin: $base-size * 4.5 auto 0;
+                }
+                p {
+                    padding-top: $base-size * 2;
+                    font-size: $base-font-size * 2.4;
+                    color: $gray-darker;
+                }
+            }
+            &:nth-child(n+4) {
+                border-right: 0;
+            }
+        }
+    }
+}
+.flash-sale {
+    width: $base-width;
+    overflow: hidden;
+    background-color: $white;
+    margin-top: $base-size * 2.5;
+    border-top: 1px solid rgba($gray,.5);
+    border-bottom: 1px solid rgba($gray,.5);
+    .sale-top {
+        width: $base-width;
+        height: $base-size * 8.8;
+        overflow: hidden;
+        padding: 0 $base-size * 2;
+        strong {
+            float: left;
+            font-size: $base-font-size * 3.2;
+            line-height: $base-size * 8.8;
+        }
+        .time {
+            float: right;
+            line-height: $base-size * 8.8;
+            text-align: right;
+            font-size: $base-font-size * 2;
+            font-weight: bold;
+            a {
+                font-size: $base-font-size * 2.4;
+                color: $orange;
+                padding-right: $base-size;
+                font-weight: normal;
+            }
+            span {
+                width: $base-size * 3.6;
+                height: $base-size * 3.6;
+                @include text-align(center,$base-size * 3.6);
+                display: inline-block;
+                background-color: $gray-darker;
+                color: $white;
+                margin: 0 $base-size * 0.5;
+                border-radius: $small-radius;
+                font-weight: bold;
+            }
+        }
+    }
+    .sale-list {
+        width: $base-width;
+        overflow: hidden;
+        margin: $base-size * 2 0;
+        ul {
+            width: $base-width;
+            li {
+                width: $base-size * 18;
+                display: block;
+                float: left;
+                margin-left: $base-size * 2.4;
+                a {
+                    @extend display-block;
+                    .img {
+                        width: 100%;
+                        height: $base-size * 14;
+                        overflow: hidden;
+                        span {
+                            @extend span-center;
+                        }
+                        img {
+                            @include img-center;
+                        }
+                    }
+                    .info {
+                        width: 100%;
+                        overflow: hidden;
+                        margin-top: $base-size;
+                        .name {
+                            width: 100%;
+                            height: $base-size * 3.8;
+                            overflow: hidden;
+                            line-height: $base-size * 3.8;
+                            h3 {
+                                font-size: $base-font-size * 2.4;
+                                color: rgba($gray-darker,.6);
+                                line-height: $base-size*3.8;
+                            }
+                        }
+                        .price {
+                            width: 100%;
+                            height: $base-size * 5.8;
+                            h4 {
+                                width: 100%;
+                                height: $base-size * 2.6;
+                                display: block;
+                                overflow: hidden;
+                                font-size: $base-font-size * 2;
+                                line-height: $base-size * 2.6;
+                                color: $orange;
+                                strong {
+                                    font-size: $base-font-size * 2.4;
+                                }
+                            }
+                            del {
+                                font-size: $base-size * 2.2;
+                                color: $gray;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.list-lg {
+    width: $base-width;
+    overflow: hidden;
+    ul {
+        width: $base-width;
+        overflow: hidden;
+        li {
+            width: 100%;
+            display: block;
+            overflow: hidden;
+            border-bottom: 1px solid rgba($gray,.5);
+            margin-top: $base-size * 3;
+            background-color: $white;
+            .img {
+                width: $base-width;
+                @extend center;
+                img {
+                    width: 100%;
+                    display: block;
+                }
+            }
+            .info {
+                width: $base-width;
+                overflow: hidden;
+                padding: $base-size * 2;
+                .name {
+                    width: 100%;
+                    overflow: hidden;
+                    a {
+                        @extend display-block;
+                        h3 {
+                            color: $gray-darker;
+                            line-height: 1.2;
+                            padding-bottom: $base-size*.5;
+                        }
+                        h4 {
+                            color: $gray-dark;
+                        }
+                    }
+                }
+                .price {
+                    width: 100%;
+                    overflow: hidden;
+                    margin-top: $base-size;
+                    strong {
+                        float: left;
+                        font-size: $base-size * 2.8;
+                        font-weight: normal;
+                        color: $orange;
+                    }
+                    span {
+                        float: right;
+                        text-align: right;
+                        a {
+                            padding-right: $base-size * 2;
+                            font-size: $base-font-size * 2.4;
+                            color: rgba($gray-dark,.7);
+                            i {
+                                @include icon-font($base-size * 2.8,rgba($gray-dark,.7),$base-size * 3);
+                                padding-right: $base-size;
+                            }
+                            &.active i {
+                                color: $orange;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.hot-sale {
+    width: $base-width;
+    overflow: hidden;
+    margin-top: $base-size * 3;
+    @extend border-top;
+    background-color: $white;
+    .hot-sale-title {
+        width: $base-width;
+        height: $base-size * 8.8;
+        padding-left: $base-size * 2.6;
+        line-height: $base-size * 8.8;
+        i {
+            width: $base-size * 4.2;
+            height: $base-size * 4.2;
+            display: inline-block;
+            background-color: $orange;
+            border-radius: 100%;
+            @include icon-font($base-size * 2.2,$white,$base-size * 4.2);
+            @include text-align(center,$base-size * 4.5);
+        }
+        strong {
+            font-size: $base-size * 2.6;
+            color: $gray-darker;
+            padding-left: $base-size;
+        }
+    }
+}
+.list-sm {
+    width: $base-width;
+    overflow: hidden;
+    ul {
+        width: 102%;
+        overflow: hidden;
+        border-top: 1px solid rgba($gray,.5);
+        li {
+            width: $base-size * 32;
+            height: $base-size * 45;
+            display: block;
+            float: left;
+            background-color: $white;
+            border-right: 1px solid rgba($gray,.5);
+            border-bottom: 1px solid rgba($gray,.5);
+            a {
+                @extend display-block;
+                position: relative;
+                .img {
+                    width: $base-size * 32;
+                    height: $base-size * 32;
+                    overflow: hidden;
+                    position: relative;
+                    @extend center;
+                    i {
+                        @include tags($base-size*9,$base-size*4.2,$orange,0,$base-font-size*2.4,$white);
+                        @include position-top-right(absolute,0,0,5);
+                    }
+                    span {
+                        @extend span-center;
+                    }
+                    img {
+                        @include img-center(100%,100%,bottom);
+                    }
+                }
+                .info {
+                    width: $base-size * 32;
+                    overflow: hidden;
+                    padding: 0 $base-size * 2.4;
+                    .name {
+                        width: 100%;
+                        height: $base-size * 6.3;
+                        overflow: hidden;
+                        margin-top: $base-size;
+                        h4 {
+                            color: $gray-darker;
+                            line-height: $base-size * 3.2;
+                        }
+                    }
+                    .price {
+                        padding-top: $base-size;
+                        h4 {
+                            color: $orange;
+                        }
+                    }
+                }
+            }
+            &:nth-child(2n) {
+                border-right: none;
+            }
+        }
+    }
+}

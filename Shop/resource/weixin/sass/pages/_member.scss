@@ -1,0 +1,1072 @@
+@charset "UTF-8"; //登录
+.loginLogo {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin: 1rem auto 0.3rem;
+    img {
+        @extend display-block;
+    }
+}
+.loginForm {
+    width: $base-width;
+    overflow: hidden;
+    margin-top: 0.2rem;
+}
+.loginFont {
+    width: $base-width;
+    text-align: center;
+    font-size: 0.32rem;
+    color: $gray-darker;
+}
+.otherLogin {
+    width: 5.8rem;
+    overflow: hidden;
+    margin: 0.3rem auto 0;
+    .title {
+        width: 5.8rem;
+        height: 0.4rem;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        hr {
+            width: 5.8rem;
+            height: 1px;
+            display: block;
+            background-color: #e0e0e0;
+            position: absolute;
+            top: 0.1rem;
+            left: 0;
+            z-index: -1;
+            border: none;
+        }
+        span {
+            height: 0.4rem;
+            display: inline-block;
+            background-color: $white;
+            font-size: 0.2rem;
+            color: $gray-dark;
+            padding: 0 0.05rem;
+            line-height: 0.4rem;
+        }
+    }
+    .loginList {
+        width: 5.8rem;
+        overflow: hidden;
+        text-align: center;
+        margin-top: 0.1rem;
+        a {
+            width: 0.32rem;
+            height: 0.32rem;
+            display: inline-block;
+            margin: 0 0.05rem;
+            background-color: $gray-dark;
+            border-radius: 100%;
+            text-align: center;
+            i {
+                @include icon-font(.24rem,$white,.32rem);
+            }
+        }
+    }
+}
+.loginLink {
+    width: 5.8rem;
+    overflow: hidden;
+    margin: 0.3rem auto 0;
+    text-align: center;
+    span {
+        font-size: 0.2rem;
+        color: $gray;
+        vertical-align: top;
+    }
+    a {
+        font-size: 0.22rem;
+        color: #666;
+        padding: 0.1rem;
+    }
+}
+//注册
+.reg-check {
+    width: 5.8rem;
+    overflow: hidden;
+    margin: 0.15rem auto 0;
+    font-size: 0.22rem;
+    color: $gray-dark;
+    line-height: 0.3rem;
+    label {
+        i {
+            @include icon-font(.24rem,$gray,.3rem);
+            margin-right: 0.05rem;
+        }
+        &.active i {
+            @include icon-font(.24rem,$primary,.3rem);
+            margin-right: 0.05rem;
+        }
+    }
+    a {
+        font-size: 0.22rem;
+        color: $primary;
+    }
+}
+.member-info {
+    position: relative;
+    width: $base-width;
+    height: $base-size*17;
+    overflow: hidden;
+    background-color: $blue;
+    .info {
+        float: left;
+        height: $base-size*9;
+        margin: $base-size*4 0 0 $base-size*3;
+        line-height: $base-size*9;
+        img {
+            float: left;
+            width: $base-size*9;
+            height: $base-size*9;
+            margin: 0 $base-size*2.4 $base-size 0;
+            border-radius: 100%;
+            vertical-align: middle;
+        }
+        span {
+            font-size: $base-font-size*2.6;
+            color: $white;
+        }
+        .info-integral {
+            float: left;
+            margin-left: $base-size*2;
+            margin-top: - $base-size;
+            font-size: $base-font-size*2.4;
+            color: $white;
+            p {
+                strong {
+                    font-size: $base-font-size*5.6;
+                    font-weight: normal;
+                }
+                label {
+                    display: inline-block;
+                    height: $base-size*3.4;
+                    padding: 0 $base-size*2;
+                    border-radius: $base-size*3.4;
+                    background-color: $blue-darker;
+                    font-size: $base-size*2.2;
+                    color: $white;
+                    line-height: $base-size*3.4;
+                }
+                &:nth-child(1) {
+                    line-height: $base-size*2.4;
+                }
+                &:nth-child(2) {
+                    line-height: $base-size*6;
+                }
+                &:last-child {
+                    line-height: $base-size*3.4;
+                    margin-top: - $base-size;
+                }
+            }
+        }
+    }
+    .talk {
+        display: block;
+        @include position-top-right(absolute,$base-size*1.5,$base-size*1.5,10);
+        width: $base-size*5;
+        height: $base-size*5;
+        text-align: center;
+        i {
+            @include icon-font($base-size*3,$white,$base-size*5);
+        }
+    }
+    .sign {
+        display: inline-block;
+        @include position-top-right(absolute,$base-size*8.5,0,10);
+        height: $base-size*4;
+        padding: 0 $base-size*1.5;
+        border-radius: $base-size*4 0 0 $base-size*4;
+        background-color: $blue-darker;
+        color: $white;
+        i {
+            padding-right: $base-size;
+            @include icon-font($base-font-size*2.4,$white,$base-size*4);
+        }
+    }
+}
+.member-order-column {
+    width: $base-width;
+    margin-top: $base-size*2.5;
+    overflow: hidden;
+    @extend border-top;
+    @extend border-bottom;
+    background-color: $white;
+    .title {
+        width: $base-width;
+        height: $base-size*7;
+        overflow: hidden;
+        @extend border-bottom;
+        a {
+            display: block;
+            width: 100%;
+            height: $base-size*7;
+            padding: 0 $base-size*2.5;
+            strong {
+                float: left;
+                font-size: $base-font-size*2.4;
+                color: $gray-darker;
+                line-height: $base-size*7;
+                font-weight: normal;
+            }
+            span {
+                float: right;
+                line-height: $base-size*7;
+                color: $gray-dark;
+                i {
+                    padding-left: $base-size*1.5;
+                    @include icon-font($base-font-size*2.4,$gray-dark,$base-size*7);
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+    .items {
+        width: $base-width;
+        height: $base-size*13.8;
+        overflow: hidden;
+        ul {
+            width: 100%;
+            overflow: hidden;
+            li {
+                float: left;
+                display: block;
+                width: 20%;
+                a {
+                    @extend display-block;
+                    padding: $base-size*3 0;
+                    text-align: center;
+                    i {
+                        display: block;
+                        padding-bottom: $base-size;
+                        @include icon-font($base-font-size*3.6,$gray-darker,$base-size*3.6);
+                    }
+                    h5 {
+                        text-align: center;
+                        color: rgba($gray-darker,.8);
+                    }
+                }
+            }
+        }
+    }
+}
+.member-other {
+    width: $base-width;
+    margin-top: $base-size*2.5;
+    overflow: hidden;
+    @extend border-top;
+    @extend border-bottom;
+    background-color: $white;
+    ul {
+        width: 100%;
+        overflow: hidden;
+        li {
+            float: left;
+            display: block;
+            width: 25%;
+            overflow: hidden;
+            a {
+                display: block;
+                width: 100%;
+                padding: $base-size*3 0;
+                h5 {
+                    color: $gray-darker;
+                    text-align: center;
+                    span {
+                        font-size: $base-font-size*3;
+                    }
+                }
+                h6 {
+                    color: rgba($gray-darker,.8);
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+.member-bar {
+    width: $base-width;
+    overflow: hidden;
+    ul {
+        display: block;
+        width: 100%;
+        margin-top: 0.25rem;
+        overflow: hidden;
+        @extend border-top;
+        @extend border-bottom;
+        background-color: $white;
+        li {
+            display: block;
+            width: 101%;
+            height: 0.7rem;
+            overflow: hidden;
+            a {
+                @extend display-block;
+                em {
+                    float: left;
+                    display: block;
+                    width: $base-size*8.8;
+                    height: $base-size*7;
+                    background-color: $white;
+                    i {
+                        display: block;
+                        width: $base-size*4;
+                        height: $base-size*4;
+                        margin: $base-size*1.5 auto 0;
+                        border-radius: $small-radius;
+                        @include icon-font($base-font-size*2.4,$white,$base-size*4);
+                        text-align: center;
+                        &.green-light {
+                            background-color: $green-light;
+                        }
+                        &.orange {
+                            background-color: $orange;
+                        }
+                        &.blue {
+                            background-color: $blue;
+                        }
+                        &.green {
+                            background-color: $green;
+                        }
+                        &.red {
+                            background-color: $red;
+                        }
+                    }
+                }
+            }
+            h3 {
+                float: left;
+                display: block;
+                width: $base-size*55.2;
+                height: $base-size*7;
+                @extend border-bottom;
+                line-height: $base-size*7;
+                strong {
+                    float: left;
+                    color: $gray-darker;
+                    font-weight: normal;
+                }
+                span {
+                    float: right;
+                    color: $gray-dark;
+                    i {
+                        padding: 0 $base-size*2 0 $base-size*1.8;
+                        @include icon-font($base-font-size*2.4,rgba($gray-dark,.7),$base-size*7);
+                        vertical-align: middle;
+                    }
+                }
+            }
+            &:last-child {
+                a {
+                    h3 {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+    }
+}
+.user-info-form {
+    width: $base-width;
+    overflow: hidden;
+    ul {
+        display: block;
+        width: 100%;
+        margin-top: 0.25rem;
+        padding-left: $base-size*3;
+        overflow: hidden;
+        @extend border-top;
+        @extend border-bottom;
+        background-color: $white;
+        li {
+            display: block;
+            width: 100%;
+            height: $base-size*8;
+            @extend border-bottom;
+            &:last-child {
+                border-bottom: none;
+            }
+            strong {
+                float: left;
+                font-size: $base-size*2.4;
+                color: rgba($gray-darker,.8);
+                line-height: $base-size*8;
+                font-weight: normal;
+            }
+            span {
+                float: right;
+                color: $gray-dark;
+                text-align: right;
+                line-height: $base-size*8;
+                i {
+                    padding: 0 $base-size*2 0 $base-size*1.8;
+                    @include icon-font($base-font-size*2.4,rgba($gray-dark,.7),$base-size*7);
+                    vertical-align: middle;
+                }
+                .txt {
+                    width: $base-size*40;
+                    height: $base-size*8;
+                    border: none;
+                    background: none;
+                    text-align: right;
+                    font-size: $base-size*2.4;
+                    color: $gray-darker;
+                }
+                .sel {
+                    display: inline-block;
+                    width: $base-size*40;
+                    height: $base-size*8;
+                    -webkit-appearance: none;
+                    appearance: none;
+                    border: none;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+                    background: none;
+                    border-radius: 4px;
+                    font-size: $base-size*2.4;
+                    color: $gray-darker;
+                    text-align: right;
+                    border: none;
+                    direction: rtl;
+                }
+            }
+        }
+        &:first-child {
+            li {
+                &:first-child {
+                    width: 100%;
+                    height: $base-size*12.6;
+                    strong {
+                        float: left;
+                        font-size: $base-size*2.4;
+                        color: rgba($gray-darker,.8);
+                        line-height: $base-size*12.6;
+                        font-weight: normal;
+                    }
+                    em {
+                        display: block;
+                        width: $base-size*40;
+                        height: $base-size*12.6;
+                        float: right;
+                        img {
+                            float: right;
+                            margin: $base-size*1.8 $base-size*2.6 0 0;
+                            width: $base-size*9;
+                            height: $base-size*9;
+                            border-radius: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.user-set {
+    width: $base-width;
+    overflow: hidden;
+    ul {
+        display: block;
+        width: 100%;
+        margin-top: 0.25rem;
+        padding-left: $base-size*3;
+        overflow: hidden;
+        @extend border-top;
+        @extend border-bottom;
+        background-color: $white;
+        li {
+            display: block;
+            width: 100%;
+            height: $base-size*8;
+            @extend border-bottom;
+            &:last-child {
+                border-bottom: none;
+            }
+            a {
+                @extend display-block;
+            }
+            strong {
+                float: left;
+                color: rgba($gray-darker,.8);
+                line-height: $base-size*8;
+                font-weight: normal;
+            }
+            span {
+                float: right;
+                color: $gray-dark;
+                text-align: right;
+                line-height: $base-size*8;
+                i {
+                    padding: 0 $base-size*2 0 $base-size*1.8;
+                    @include icon-font($base-font-size*2.4,rgba($gray-dark,.7),$base-size*7);
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
+//消息中心
+.messages {
+    width: $base-width;
+    overflow: hidden;
+    background-color: $white;
+    ul {
+        width: 100%;
+        overflow: hidden;
+        li {
+            display: block;
+            width: 100%;
+            height: $base-size*10.8;
+            padding: 0 $base-size*2;
+            @extend border-bottom;
+            &:last-child {
+                border-bottom: none;
+            }
+            a {
+                @extend display-block;
+            }
+            i {
+                display: block;
+                float: left;
+                width: $base-size*7.6;
+                height: $base-size*7.6;
+                margin: $base-size*1.6 0 0 $base-size*2;
+                border-radius: $base-radius;
+                text-align: center;
+                @include icon-font($base-font-size*3.8,$white,$base-size*7.6);
+            }
+            .info {
+                float: right;
+                width: $base-size*48;
+                height: $base-size*7.6;
+                margin-top: $base-size*1.6;
+                overflow: hidden;
+                .name {
+                    width: 100%;
+                    height: $base-size*3.8;
+                    overflow: hidden;
+                    line-height: $base-size*3.8;
+                    strong {
+                        float: left;
+                        font-size: $base-font-size*2.4;
+                        color: $gray-darker;
+                        font-weight: normal;
+                    }
+                    span {
+                        float: right;
+                        color: $gray-dark;
+                    }
+                }
+                .brief {
+                    width: 100%;
+                    height: $base-size*3.8;
+                    overflow: hidden;
+                    color: rgba($gray-darker,.7);
+                    line-height: $base-size*3.8;
+                }
+            }
+            &:nth-child(1) {
+                i {
+                    background-color: $green;
+                }
+            }
+            &:nth-child(2) {
+                i {
+                    background-color: $red-light;
+                }
+            }
+            &:nth-child(3) {
+                i {
+                    background-color: $blue-light;
+                }
+            }
+            &:nth-child(4) {
+                i {
+                    background-color: $orange-light;
+                }
+            }
+        }
+    }
+}
+//订单通知
+.order-notice {
+    width: $base-width;
+    padding: 0 $base-size*2.4;
+    overflow: hidden;
+    ul {
+        width: 100%;
+        padding-bottom: $base-size*2;
+        overflow: hidden;
+        li {
+            display: block;
+            width: 100%;
+            overflow: hidden;
+            .time {
+                width: 100%;
+                padding: $base-size*2.8 0 $base-size*2;
+                color: $gray-dark;
+                text-align: center;
+            }
+            .box {
+                width: 100%;
+                padding: $base-size*2;
+                border: 1px solid rgba($gray,.7);
+                border-radius: $base-radius;
+                background-color: $white;
+                overflow: hidden;
+                a {
+                    @extend display-block;
+                }
+                h4 {
+                    padding-bottom: $base-size;
+                    color: $gray-darker;
+                }
+                .content {
+                    width: 100%;
+                    overflow: hidden;
+                    color: rgba($gray-darker,.7);
+                    line-height: $base-size*3;
+                    img {
+                        float: left;
+                        width: $base-size*9;
+                        margin: 0 $base-size*2 $base-size*1.5 0;
+                    }
+                }
+            }
+        }
+    }
+}
+//客服助手
+.service-aide {
+    width: $base-width;
+    @extend border-bottom;
+    background-color: $white;
+    ul {
+        width: 100%;
+        overflow: hidden;
+        li {
+            display: block;
+            width: 102%;
+            height: $base-size*10.8;
+            overflow: hidden;
+            a {
+                @extend display-block;
+            }
+            em {
+                display: block;
+                float: left;
+                width: $base-size*12.2;
+                height: $base-size*10.8;
+                i {
+                    display: block;
+                    width: $base-size*7;
+                    height: $base-size*7;
+                    margin: $base-size*1.9 0 0 $base-size*3;
+                    border-radius: 100%;
+                    background-color: $blue;
+                    text-align: center;
+                    @include icon-font($base-font-size*4,$white,$base-size*7);
+                }
+            }
+            .info {
+                float: left;
+                position: relative;
+                width: $base-size*51.8;
+                height: $base-size*10.8;
+                padding-right: $base-size*2;
+                @extend border-bottom;
+                .name {
+                    width: 100%;
+                    height: $base-size*3.6;
+                    margin-top: $base-size*1.8;
+                    overflow: hidden;
+                    line-height: $base-size*3.6;
+                    strong {
+                        float: left;
+                        color: $gray-darker;
+                        font-weight: normal;
+                    }
+                    span {
+                        float: right;
+                        color: $gray-dark;
+                    }
+                }
+                .brief {
+                    width: 100%;
+                    height: $base-size*3.6;
+                    overflow: hidden;
+                    line-height: $base-size*3.6;
+                    color: $gray-dark;
+                }
+            }
+            &:last-child {
+                .content {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+//我的分销
+.distribution-wallet {
+    width: $base-width;
+    height: $base-size*13.2;
+    padding: $base-size*2;
+    overflow: hidden;
+    @extend border-bottom;
+    background-color: $white;
+    .wallet-total {
+        float: left;
+        width: $base-size*25;
+        height: 100%;
+        overflow: hidden;
+        @extend border-right;
+        h3 {
+            color: $gray-dark;
+        }
+        p {
+            font-size: $base-font-size*5;
+            color: $blue;
+            line-height: $base-size*6;
+        }
+    }
+    .wallet-can {
+        float: right;
+        position: relative;
+        width: $base-size*31.6;
+        height: 100%;
+        h3 {
+            color: $gray-dark;
+        }
+        p {
+            font-size: $base-font-size*5;
+            color: rgba($gray-darker,.8);
+            line-height: $base-size*6;
+        }
+        .withdraw {
+            @include position-bottom-right(absolute,0,0,10);
+            height: $base-size*5;
+            border: 1px solid rgba($gray-dark,.7);
+            border-radius: $base-radius;
+            background-color: $white;
+            font-size: $base-font-size*2.4;
+            color: $gray-darker;
+        }
+    }
+}
+.distribution-menu {
+    width: 100%;
+    margin-top: $base-size*3;
+    overflow: hidden;
+    background-color: $white;
+    @extend border-top;
+    @extend border-bottom;
+    ul {
+        width: 100%;
+        padding-left: $base-size*3;
+        overflow: hidden;
+        li {
+            display: block;
+            width: 100%;
+            height: $base-size*8.2;
+            border-bottom: 1px solid rgba($gray-dark,.4);
+            &:last-child {
+                border-bottom: none;
+            }
+            a {
+                @extend display-block;
+            }
+            strong {
+                float: left;
+                font-size: $base-font-size*2.6;
+                color: rgba($gray-darker,.7);
+                line-height: $base-size*8.2;
+                font-weight: normal;
+            }
+            i {
+                float: right;
+                margin-right: $base-size;
+                @include icon-font($base-font-size*2.4,rgba($gray-dark,.7),$base-size*8.2);
+            }
+        }
+    }
+}
+//提现记录
+.withdraw-record {
+    width: $base-width;
+    margin-top: $base-size*3;
+    overflow: hidden;
+    background-color: $white;
+    @extend border-top;
+    @extend border-bottom;
+    .heading {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+        height: $base-size*8.2;
+        overflow: hidden;
+        @extend border-bottom;
+        strong {
+            flex: 0.8;
+            font-size: $base-font-size*2.4;
+            color: $blue;
+            font-weight: normal;
+            @include text-align(center,$base-size*8.2);
+            &:first-child {
+                flex: 1.4;
+            }
+        }
+    }
+    ul {
+        width: 100%;
+        overflow: hidden;
+        li {
+            display: flex;
+            flex-wrap: nowrap;
+            width: 100%;
+            height: $base-size*7.6;
+            overflow: hidden;
+            @extend border-bottom;
+            &:last-child {
+                border-bottom: none;
+            }
+            span {
+                @include text-align(center,$base-size*7.6);
+                color: $gray-dark;
+                &:nth-child(1) {
+                    flex: 1.4;
+                }
+                &:nth-child(2) {
+                    flex: 0.8;
+                    font-size: $base-size*2.4;
+                    color: rgba($gray-darker,.8);
+                }
+                &:nth-child(3) {
+                    flex: 0.8;
+                    font-size: $base-size*2.4;
+                    color: $red;
+                }
+            }
+        }
+    }
+}
+//下级列表
+.lowers {
+    width: $base-width;
+    margin-top: $base-size*3;
+    overflow: hidden;
+    background-color: $white;
+    @extend border-top;
+    @extend border-bottom;
+    .heading {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+        height: $base-size*8.2;
+        overflow: hidden;
+        @extend border-bottom;
+        strong {
+            flex: 1;
+            font-size: $base-font-size*2.6;
+            color: $blue;
+            font-weight: normal;
+            @include text-align(center,$base-size*8.2);
+        }
+    }
+    ul {
+        width: 100%;
+        overflow: hidden;
+        li {
+            display: flex;
+            flex-wrap: nowrap;
+            width: 100%;
+            height: $base-size*7.6;
+            overflow: hidden;
+            @extend border-bottom;
+            &:last-child {
+                border-bottom: none;
+            }
+            span {
+                flex: 1;
+                @include text-align(center,$base-size*7.6);
+                font-size: $base-font-size*2.4;
+                color: $gray-dark;
+            }
+        }
+    }
+}
+//兑换积分列表
+.integral-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: $base-width;
+    margin-top: $base-size*2;
+    overflow: hidden;
+    .item {
+        width: $base-size*29;
+        height: $base-size*37;
+        margin: 0 0 $base-size*2 $base-size*2;
+        background-color: $white;
+        a {
+            @extend display-block;
+        }
+        .img {
+            width: 100%;
+            height: $base-size*24;
+            margin-top: $base-size*1.5;
+            @extend center;
+            span {
+                @extend span-center;
+            }
+            img {
+                @include img-center(90%,90%,middle);
+            }
+        }
+        .name {
+            width: 100%;
+            padding: 0 $base-size*1.5;
+            overflow: hidden;
+            text-align: center;
+            h2 {
+                color: $gray-darker;
+            }
+            h4 {
+                color: $gray-dark;
+            }
+        }
+    }
+}
+.integral-task {
+    width: $base-width;
+    margin-top: $base-size*2;
+    overflow: hidden;
+    background-color: $white;
+    ul {
+        width: 100%;
+        overflow: hidden;
+        @extend border-top;
+        li {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            align-items: center;
+            align-content: flex-start;
+            width: 100%;
+            height: $base-size*12;
+            padding: 0 $base-size*2.5;
+            @extend border-bottom;
+            i {
+                display: inline-block;
+                width: $base-size*6;
+                height: $base-size*6;
+                border: 1px solid transparent;
+                border-radius: 100%;
+                text-align: center;
+                @include icon-font($base-font-size*2.6,$orange,$base-size*6);
+            }
+            span {
+                display: inline-block;
+                font-size: $base-size*2.6;
+                color: $gray-darker;
+                &:nth-child(2) {
+                    width: $base-size*30;
+                    padding: 0 $base-size*2;
+                }
+                &:nth-child(3) {
+                    width: $base-size*15;
+                    padding: 0 $base-size*3;
+                    text-align: right;
+                }
+            }
+            a {
+                display: inline-block;
+                width: $base-size*8.4;
+                height: $base-size*5;
+                border: 1px solid rgba($gray-dark,.5);
+                border-radius: $small-radius;
+                font-size: $base-font-size*2.4;
+                color: rgba($gray-darker,.7);
+                @include text-align(center,$base-size*5);
+            }
+            &:nth-child(1) {
+                i {
+                    padding-left: $base-size*1.2;
+                    border-color: $orange;
+                    color: $orange;
+                }
+            }
+            &:nth-child(2) {
+                i {
+                    border-color: $green;
+                    color: $green;
+                }
+            }
+            &:nth-child(3) {
+                i {
+                    border-color: $cyan;
+                    color: $cyan;
+                }
+            }
+            &:nth-child(4) {
+                i {
+                    border-color: $blue-darker;
+                    color: $blue-darker;
+                }
+            }
+            &:nth-child(5) {
+                i {
+                    border-color: $blue;
+                    color: $blue;
+                }
+            }
+        }
+    }
+}
+.integral-detail {
+    width: $base-width;
+    margin-top: $base-size*2;
+    overflow: hidden;
+    background-color: $white;
+    ul {
+        width: 100%;
+        overflow: hidden;
+        @extend border-top;
+        li {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            align-items: center;
+            align-content: flex-start;
+            width: 100%;
+            height: $base-size*11;
+            padding: 0 $base-size*2.5;
+            @extend border-bottom;
+            .item {
+                height: $base-size*6;
+                h2 {
+                    color: $gray-darker;
+                    line-height: 1.2;
+                }
+                p {
+                    font-size: $base-size*2.2;
+                    color: $gray-dark;
+                }
+                &:nth-child(1) {
+                    width: $base-size*8.2;
+                    @extend border-right;
+                }
+                &:nth-child(2) {
+                    width: $base-size*40;
+                    padding: 0 $base-size*3;
+                }
+                &:nth-child(3) {
+                    width: $base-size*12;
+                    text-align: right;
+                }
+            }
+        }
+    }
+}

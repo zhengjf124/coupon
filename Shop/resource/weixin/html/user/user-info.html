@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>b2c</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default">
+		<link href="../../css/style.css" rel="stylesheet">
+	</head>
+
+	<body class="hidden">
+		<div class="wrap">
+			<!--顶部-->
+			<header>
+				<a onclick="javascript:history.back();" class="return"><i>&#xe6d6;</i></a>
+				<div class="header-title">
+					<div class="header-title-center">
+						<em>个人信息</em>
+					</div>
+				</div>
+			</header>
+			<div class="header-h"></div>
+			<!--顶部:over-->
+
+			<div class="user-info-form">
+
+				<form method="post" action="http://gwshop.usrboot.com/Home/Comments/uploadCommentImg" enctype="multipart/form-data" id="info-form">
+					<ul>
+						<li class="camera-area">
+							<strong>头像</strong><label id="upload"><em><img src="" id="avatar"></em></label>
+							<!--<input type="file" id="file" name="file" accept="image/*" capture="camera">-->
+							<!--<strong>头像</strong><label><input type="file" name="tpm_name" class="fileToUpload" accept="image/*" capture="camera" hidden="" />
+								<em class="thumb"></em></label>-->
+							<!--<a class="camera-area"><input type="file" name="fileToUpload" class="fileToUpload" accept="image/*" capture="camera" />
+				<div class="upload-progress"><span></span></div>
+								<strong>头像</strong><img src="../../images/img-tx.jpg">
+							</a>-->
+						</li>
+						<li>
+							<strong>昵称</strong>
+							<span><input type="text" id="nickName" name="nickName" datatype="*" nullmsg="请输入昵称！" errormsg="请输入正确昵称！"  class="txt" placeholder="未设置"><i>&#xe6d5;</i></span>
+						</li>
+						<li>
+							<strong>性别</strong>
+							<span><select class="sel" id="sex"><option value="0">保密</option><option value="1">男</option><option value="2">女</option></select><i>&#xe6d5;</i></span>
+						</li>
+						<li>
+							<strong>生日</strong>
+							<span><input type="date" id="birthday" datatype="*" nullmsg="请选择生日" errormsg="请选择正确的生日！"  class="txt"><i>&#xe6d5;</i></span>
+						</li>
+					</ul>
+					<button class="btn-blue" id="submit_info">保存</button>
+					<!--<ul>
+						<li><a href="user-safe.html">
+							<strong>账户安全</strong>
+							<span>可修改密码<i>&#xe6d5;</i></span>
+							</a>
+						</li>
+					</ul>-->
+				</form>
+
+			</div>
+
+		</div>
+		<!--script-->
+		<script src="../../js/lib/jquery.min.js"></script>
+		<script src="../../js/gui/jquery.h5uploadify.js"></script>
+		<script src="../../js/public.js"></script>
+		<script src="../../js/gui/Validform_v5.3.2_ncr_min.js"></script>
+		<script src="../../js/gui/layer.js"></script>
+		<script src="../../js/gui/cloud.min.js"></script>
+		<script src="../../js/user/user-info.js"></script>
+	</body>
+
+</html>

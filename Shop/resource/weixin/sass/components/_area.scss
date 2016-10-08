@@ -1,0 +1,165 @@
+@charset "utf-8";
+/*表格样式开始  */
+.tablestyle {
+    border: 0 solid #dedede; /*表格边框  */
+    font-family: Arial;
+    color: #383e4b;
+    /*border-collapse:collapse; 边框重叠   */
+    background-color: none; /*表格背景色   */
+    font-size: 14px;
+}
+.tablestyle a,
+.tablestyle a:link {
+    color: #2F496E;
+    text-decoration: none;
+}
+.tablestyle a:hover {
+    text-decoration: underline;
+}
+.tablestyle th {
+    border: 1px solid #2ed0d5; /*行名称边框   */
+    border-collapse: collapse; /*边框重叠   */
+    background: #2ed0d5;
+    height: 30px;
+    line-height: 30px;
+    /* background-color:#4bacff;  行名称背景色 */
+    color: #02574e;
+    /*行名称颜色    */
+    padding-left: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.tablestyle .trstyle {
+    border: 1px solid #2ed0d5; /*行名称边框   */
+    background: url("../smwp-image/index/table_title_bg.gif") repeat-x;
+    height: 20px;
+    line-height: 20px;
+    /* background-color:#4bacff;  行名称背景色 */
+    color: #383e4b;
+    /*行名称颜色    */
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+.tablestyle td {
+    border: 1px solid #dedede;
+    /*单元格边框   */
+    padding: 6px 10px;
+    table-layout: fixed;
+    word-wrap: break-word; /* 文本自动换行   */
+    background: #fff;
+}
+.tablestyle tr:hover {
+    background-color: #ECF5FF;
+}
+/* 鼠标经过的颜色   */
+.tablestyle tr.altrow {
+    background-color: #c7e5ff;
+    /* 隔行变色   */
+}
+/*表格样式结束  */
+/*表单表格样式开始  */
+.table1 tr th {
+    background: url("../images/th.gif") repeat-x;
+    height: 34px;
+    line-height: 34px;
+    border-bottom: solid 1px #b6cad2;
+    text-indent: 11px;
+    text-align: left;
+}
+.table1 {
+    margin: 15px 0;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ddd #ddd #fff #fff;
+    text-shadow: 0 1px 0 #FFFFFF;
+    border-collapse: separate;
+}
+.table1 td {
+    padding: 5px 10px;
+    margin: 15px 0;
+    line-height: 24px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #fff #fff #ddd #ddd;
+}
+.table1 thead td {
+    text-align: center;
+}
+.table1 tbody tr:hover {
+    background: #fff;
+}
+/*表单表格样式结束  */
+.sheng_box {
+    @include position-top(absolute,0,0,$zindex-modal);
+    width: 100%;
+    height: 100%;
+    background: $white;
+    overflow-y: auto;
+}
+.sheng_box li {
+    list-style: none;
+    line-height: 45px;
+    border-bottom: 1px solid #dedede;
+}
+.sheng_box li:hover {
+    background: #F6F6F6;
+}
+.city_box {
+    @include position-top(absolute,0,0,($zindex-modal + 5));
+    width: 100%;
+    height: 100%;
+    background: $white;
+    overflow-y: auto;
+}
+.city_box li {
+    list-style: none;
+    line-height: 45px;
+    border-bottom: 1px solid #dedede;
+}
+.district_box {
+    @include position-top(absolute,0,0,($zindex-modal + 10));
+    width: 100%;
+    height: 100%;
+    background: $white;
+    overflow-y: auto;
+}
+.district_box li {
+    list-style: none;
+    line-height: 45px;
+    border-bottom: 1px solid #dedede;
+}
+.sheng_box li:hover,
+.city_box li:hover,
+.district_box li:hover {
+    background: #F6F6F6;
+}
+.sheng_box li,
+.city_box li,
+.district_box li {
+    padding-left: 15px;
+}
+.sheng_box,
+.city_box,
+.district_box {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.titleWrap {
+    height: 45px;
+    margin-bottom: 2px;
+    line-height: 45px;
+    border-bottom: 1px solid #dedede;
+    padding-left: 15px;
+}
+.titleWrap h2 {
+    font-size: $base-font-size*3.2;
+    line-height: 45px;
+    width: 150px;
+    float: left;
+}
+.titleWrap .back {
+    float: right;
+    margin-right: 30px;
+}

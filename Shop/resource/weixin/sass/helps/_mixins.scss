@@ -1,0 +1,127 @@
+@charset "UTF-8";
+//字体图标
+@mixin icon-font($iconSize:$base-size*2.4, $iconColor:$white, $iconHeight:1) {
+    font-family: "iconfont" !important;
+    font-size: $iconSize;
+    color: $iconColor;
+    line-height: $iconHeight;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+//固定悬浮
+@mixin position($position:fixed, $top:50%, $left:50%, $z-index:1, $width:12rem, $height:12rem) {
+    position: $position;
+    top: $top;
+    z-index: $z-index;
+    margin-top: -($height/2);
+    left: $left;
+    margin-left: -($width/2);
+}
+@mixin position-top($position:fixed, $top:0, $left:0, $z-index:1) {
+    top: $top;
+    position: $position;
+    left: $left;
+    z-index: $z-index;
+}
+@mixin position-top-right($position:fixed, $top:0, $right:0, $z-index:1) {
+    position: $position;
+    top: $top;
+    right: $right;
+    z-index: $z-index;
+}
+@mixin position-bottom($position:fixed, $bottom:0, $left:0, $z-index:1) {
+    position: $position;
+    bottom: $bottom;
+    left: $left;
+    z-index: $z-index;
+}
+@mixin position-bottom-right($position:fixed, $bottom:0, $right:0, $z-index:1) {
+    position: $position;
+    bottom: $bottom;
+    right: $right;
+    z-index: $z-index;
+}
+//焦点图比例控制
+@mixin focus($width:100%) {
+    width: $width;
+    height: $width*(3/6.4);
+}
+//产品图片上小标签
+@mixin tags($width:$base-size*6, $height:$width, $bg-color:$orange, $border-radius:100%, $font-size:.24rem, $font-color:#fff) {
+    width: $width;
+    height: $height;
+    background-color: $bg-color;
+    font-size: $font-size;
+    color: $font-color;
+    text-align: center;
+    line-height: $height;
+    display: block;
+    border-radius: $border-radius;
+    overflow: hidden;
+    font-style: normal;
+    opacity: 0.9;
+}
+//图片上下居中的比例控制
+@mixin img-center($max-width:100%, $max-height:100%, $vertical-align:middle) {
+    max-width: $max-width;
+    max-height: $max-height;
+    vertical-align: $vertical-align;
+}
+//按钮
+@mixin btns($width:auto, $height:.76rem, $bg-color:$primary, $border:none, $display:block, $float:auto, $margin:$base-size*2 auto, $padding:0 $base-size*2, $border-radius:5px, $font-size:.26rem, $color:$white) {
+    width: $width;
+    height: $height;
+    background-color: $bg-color;
+    font-size: $font-size;
+    color: $color;
+    display: $display;
+    border: $border;
+    float: $float;
+    margin: $margin;
+    padding: $padding;
+    border-radius: $border-radius;
+}
+@mixin btn($float, $display, $width, $height, $padding, $margin, $border, $border-radius, $bg-color, $font-size, $color) {
+    float: $float;
+    display: $display;
+    width: $width;
+    height: $height;
+    padding: $padding;
+    margin: $margin;
+    border: $border;
+    border-radius: $border-radius;
+    background-color: $bg-color;
+    font-size: $font-size;
+    color: $color;
+}
+//文本、图片上下垂直对齐方式
+@mixin align($width:100%, $height:100%, $text-align:center, $vertical-align:middle) {    
+    display: table-cell;
+    width: $width;
+    height: $height;
+    overflow: hidden;
+    text-align: $text-align;
+    vertical-align: $vertical-align;
+}
+//文本框
+@mixin texts($width, $height, $border, $bg, $border-radius, $display, $float, $margin, $padding, $font-size) {
+    width: $width;
+    height: $height;
+    border: $border;
+    background: $bg;
+    border-radius: $border-radius;
+    display: $display;
+    float: $float;
+    margin: $margin;
+    padding: $padding;
+    font-size: $font-size;
+    position: relative;
+    overflow: hidden;
+}
+//文本上下垂直对齐的
+@mixin text-align($text-align:center, $line-height:$base-line-height) {
+    text-align: $text-align;
+    line-height: $line-height;
+}

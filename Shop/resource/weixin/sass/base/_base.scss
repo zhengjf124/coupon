@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    filter:alpha(opacity=65);
+    -webkit-box-shadow: none;
+    /* 去除阴影*/
+    box-shadow: none;
+    opacity: 0.65;
+    /* 透明处理*/
+}
+center {
+    text-align: center;
+    vertical-align: middle;
+}
+display-block {   
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+span-center {
+    display: inline-block;
+    height: 100%;    
+    vertical-align: middle;
+}
+gradual {
+    animation: gradual 1s;
+    -webkit-animation: gradual 1s;
+    -moz-animation: gradual 1s;
+    -o-animation: gradual 1s;
+}
+@keyframes gradual {
+    0% {
+        opacity: 0;
+    }
+    90% {
+        opacity: .9;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes gradual {
+    0% {
+        opacity: 0;
+    }
+    90% {
+        opacity: .9;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes gradual {
+    0% {
+        opacity: 0;
+    }
+    90% {
+        opacity: .9;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-o-keyframes gradual {
+    0% {
+        opacity: 0;
+    }
+    90% {
+        opacity: .9;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;   
+}
+border-top {
+    border-top: 1px solid rgba($gray,.5);
+}
+border-bottom {
+    border-bottom: 1px solid rgba($gray,.5);
+}
+border-left {
+    border-left: 1px solid rgba($gray,.5);
+}
+border-right {
+    border-right: 1px solid rgba($gray,.5);
+}
+.hidden{
+    display: hidden;
+}
