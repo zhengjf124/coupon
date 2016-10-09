@@ -71,8 +71,19 @@ class AddressController extends ApiController
      */
     public function getDistrict()
     {
+        if (!preg_match('/^[1-9][0-9]*$/', $this->_parameters['city_id'])) {
+            $this->_returnError(10020, '城市ID不合法');
+        }
         $list = M('area_china')->where(array('type' => 4, 'parent_id' => $this->_parameters['city_id']))->field('id as district_id,name as district_name')->select();
         $this->_returnData(['list' => $list]);
     }
 
+    public function getTradingArea()
+    {
+        if (!preg_match('/^[1-9][0-9]*$/', $this->_parameters['district_id'])) {
+            $this->_returnError(10021, '县区ID不合法');
+        }
+        $list = M('trading_area')->where(array('district_id' => $this->_parameters['district_id']))->field('area_id,area_name')->select();
+        $this->_returnData(['list' => $list]);
+    }
 }

@@ -60,3 +60,217 @@ INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000647s ]
 
+[ 2016-10-09T09:30:01+08:00 ] 192.168.1.100 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000695s ]
+
+[ 2016-10-09T09:40:54+08:00 ] 192.168.1.100 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000514s ]
+
+[ 2016-10-09T10:14:49+08:00 ] 192.168.1.100 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000581s ]
+
+[ 2016-10-09T12:01:51+08:00 ] 192.168.1.100 /address/getCity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000461s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000583s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000638s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 104 行.
+SQL: SHOW COLUMNS FROM `gwshop_area_china` [ RunTime:0.0436s ]
+SQL: SELECT id as city_id,name as city_name FROM `gwshop_area_china` WHERE `type` = 3  [ RunTime:0.0078s ]
+
+[ 2016-10-09T12:02:51+08:00 ] 192.168.1.100 /address/getCity/parameters/%7b%22city_id%22%3a%22130500%22%7d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000685s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000771s ]
+SQL: SHOW COLUMNS FROM `gwshop_area_china` [ RunTime:0.0035s ]
+SQL: SELECT id as city_id,name as city_name FROM `gwshop_area_china` WHERE `type` = 3  [ RunTime:0.0039s ]
+
+[ 2016-10-09T12:03:25+08:00 ] 192.168.1.100 /address/getDistrict/parameters/%7B%22city_id%22%3a%22130500%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000400s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000446s ]
+SQL: SHOW COLUMNS FROM `gwshop_area_china` [ RunTime:0.0034s ]
+SQL: SELECT id as district_id,name as district_name FROM `gwshop_area_china` WHERE `type` = 4 AND `parent_id` = 130500  [ RunTime:0.0022s ]
+
+[ 2016-10-09T12:03:45+08:00 ] 192.168.1.100 /address/getCity/parameters/%7B%22city_id%22%3a%22130500%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000321s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000718s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000806s ]
+SQL: SHOW COLUMNS FROM `gwshop_area_china` [ RunTime:0.0052s ]
+SQL: SELECT id as city_id,name as city_name FROM `gwshop_area_china` WHERE `type` = 3  [ RunTime:0.0028s ]
+
+[ 2016-10-09T12:04:05+08:00 ] 192.168.1.100 /address/getDistrict/parameters/%7B%22city_id%22%3a%22350100%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000561s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000576s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000632s ]
+SQL: SHOW COLUMNS FROM `gwshop_area_china` [ RunTime:0.0035s ]
+SQL: SELECT id as district_id,name as district_name FROM `gwshop_area_china` WHERE `type` = 4 AND `parent_id` = 350100  [ RunTime:0.0024s ]
+
+[ 2016-10-09T14:44:59+08:00 ] 192.168.1.100 /address/getTradingArea/parameters/%7B%22city_id%22%3a%22350100%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000899s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001021s ]
+NOTIC: [8] Undefined index: district_id D:\xampp\htdocs\coupon\Shop\Application\Home\Controller\AddressController.class.php 第 83 行.
+
+[ 2016-10-09T14:45:11+08:00 ] 192.168.1.100 /address/getTradingArea/parameters/%7B%22district_id%22%3a%22350100%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000409s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000464s ]
+ERR: 1146:Table 'coupon.gwshop_trading_area' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `gwshop_trading_area`
+ERR: 1146:Table 'coupon.gwshop_trading_area' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `gwshop_trading_area`
+
+[ 2016-10-09T14:47:02+08:00 ] 192.168.1.100 /address/getTradingArea/parameters/%7B%22district_id%22%3a%22350100%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000320s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001172s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001286s ]
+ERR: 1146:Table 'coupon.gwshop_trading_area' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `gwshop_trading_area`
+ERR: 1146:Table 'coupon.gwshop_trading_area' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `gwshop_trading_area`
+
+[ 2016-10-09T14:47:59+08:00 ] 192.168.1.100 /address/getTradingArea/parameters/%7B%22district_id%22%3a%22350100%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000441s ]
+SQL: SHOW COLUMNS FROM `gwshop_trading_area` [ RunTime:0.0035s ]
+SQL: SELECT `area_id`,`area_name` FROM `gwshop_trading_area` WHERE `district_id` = 350100  [ RunTime:0.0003s ]
+
+[ 2016-10-09T14:48:17+08:00 ] 192.168.1.100 /address/getCity/parameters/%7B%22city_id%22%3a%22130500%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000277s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000490s ]
+SQL: SHOW COLUMNS FROM `gwshop_area_china` [ RunTime:0.0030s ]
+SQL: SELECT id as city_id,name as city_name FROM `gwshop_area_china` WHERE `type` = 3  [ RunTime:0.0057s ]
+
+[ 2016-10-09T14:48:48+08:00 ] 192.168.1.100 /address/getDistrict/parameters/%7B%22city_id%22%3a%22350100%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000441s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000645s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000731s ]
+SQL: SHOW COLUMNS FROM `gwshop_area_china` [ RunTime:0.0032s ]
+SQL: SELECT id as district_id,name as district_name FROM `gwshop_area_china` WHERE `type` = 4 AND `parent_id` = 350100  [ RunTime:0.0020s ]
+
+[ 2016-10-09T14:51:58+08:00 ] 192.168.1.100 /address/getTradingArea/parameters/%7B%22district_id%22%3a%22350102%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000660s ]
+SQL: SHOW COLUMNS FROM `gwshop_trading_area` [ RunTime:0.0029s ]
+SQL: SELECT `area_id`,`area_name` FROM `gwshop_trading_area` WHERE `district_id` = 350102  [ RunTime:0.0004s ]
+
+[ 2016-10-09T14:53:50+08:00 ] 192.168.1.100 /address/getTradingArea/parameters/%7B%22district_id%22%3a%22350102%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000566s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000483s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000542s ]
+SQL: SHOW COLUMNS FROM `gwshop_trading_area` [ RunTime:0.0034s ]
+SQL: SELECT `area_id`,`area_name` FROM `gwshop_trading_area` WHERE `district_id` = 350102  [ RunTime:0.0004s ]
+
+[ 2016-10-09T14:55:08+08:00 ] 192.168.1.100 /address/getTradingArea/parameters/%7B%22district_id%22%3a%22350103%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000383s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001171s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001291s ]
+SQL: SHOW COLUMNS FROM `gwshop_trading_area` [ RunTime:0.0038s ]
+SQL: SELECT `area_id`,`area_name` FROM `gwshop_trading_area` WHERE `district_id` = 350103  [ RunTime:0.0004s ]
+
+[ 2016-10-09T14:57:48+08:00 ] 192.168.1.100 /address/getTradingArea/parameters/%7B%22district_id%22%3a%22350103%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000732s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000664s ]
+SQL: SHOW COLUMNS FROM `gwshop_trading_area` [ RunTime:0.0032s ]
+SQL: SELECT `area_id`,`area_name` FROM `gwshop_trading_area` WHERE `district_id` = 350103  [ RunTime:0.0007s ]
+
+[ 2016-10-09T14:59:45+08:00 ] 192.168.1.100 /address/getDistrict/parameters/%7B%22city_id%22%3a%22350111%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000472s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000555s ]
+SQL: SHOW COLUMNS FROM `gwshop_area_china` [ RunTime:0.0035s ]
+SQL: SELECT id as district_id,name as district_name FROM `gwshop_area_china` WHERE `type` = 4 AND `parent_id` = 350111  [ RunTime:0.0347s ]
+
+[ 2016-10-09T14:59:48+08:00 ] 192.168.1.100 /address/getDistrict/parameters/%7B%22city_id%22%3a%22350100%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000652s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000740s ]
+SQL: SHOW COLUMNS FROM `gwshop_area_china` [ RunTime:0.0048s ]
+SQL: SELECT id as district_id,name as district_name FROM `gwshop_area_china` WHERE `type` = 4 AND `parent_id` = 350100  [ RunTime:0.0028s ]
+
+[ 2016-10-09T14:59:49+08:00 ] 192.168.1.100 /address/getDistrict/parameters/%7B%22city_id%22%3a%22350100%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000422s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000629s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000700s ]
+SQL: SHOW COLUMNS FROM `gwshop_area_china` [ RunTime:0.0038s ]
+SQL: SELECT id as district_id,name as district_name FROM `gwshop_area_china` WHERE `type` = 4 AND `parent_id` = 350100  [ RunTime:0.0021s ]
+
+[ 2016-10-09T14:59:52+08:00 ] 192.168.1.100 /address/getTradingArea/parameters/%7B%22district_id%22%3a%22350111%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000339s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000483s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000554s ]
+SQL: SHOW COLUMNS FROM `gwshop_trading_area` [ RunTime:0.0040s ]
+SQL: SELECT `area_id`,`area_name` FROM `gwshop_trading_area` WHERE `district_id` = 350111  [ RunTime:0.0466s ]
+
+[ 2016-10-09T17:02:49+08:00 ] 192.168.1.100 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000647s ]
+
