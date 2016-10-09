@@ -71,8 +71,7 @@ class AddressController extends ApiController
      */
     public function getDistrict()
     {
-        $parameters = $this->_createParameters();
-        $list = M('area_china')->where(array('type' => 4, 'parent_id' => $parameters['city_id']))->field('id as district_id,name as district_name')->select();
+        $list = M('area_china')->where(array('type' => 4, 'parent_id' => $this->_parameters['city_id']))->field('id as district_id,name as district_name')->select();
         $this->_returnData(['list' => $list]);
     }
 

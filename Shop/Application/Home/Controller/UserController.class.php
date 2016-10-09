@@ -78,15 +78,14 @@ class UserController extends MemberController
      */
     public function update()
     {
-        $parameters = $this->_createParameters();
         $data = [];
 
-        if (empty($parameters['nick_name']) === false) {
-            $data['nick_name'] = $parameters['nick_name'];
+        if (empty($this->_parameters['nick_name']) === false) {
+            $data['nick_name'] = $this->_parameters['nick_name'];
         }
 
-        if (in_array($parameters['sex'], array(0, 1, 2))) {
-            $data['nick_name'] = $parameters['sex'];
+        if (in_array($this->_parameters['sex'], array(0, 1, 2))) {
+            $data['nick_name'] = $this->_parameters['sex'];
         }
         /*        if ($_FILES['headimgurl']) {
                     $upload = new \Think\Upload();// 实例化上传类
@@ -96,7 +95,7 @@ class UserController extends MemberController
                     $upload->replace = true; // 存在同名文件是否是覆盖，默认为false
                     //$upload->saveName  =  'file_'.$id; // 存在同名文件是否是覆盖，默认为false
 
-                    //$User->headimgurl = $parameters['nick_name'];
+                    //$User->headimgurl = $this->_parameters['nick_name'];
 
                 }*/
         // var_dump($User);exit;

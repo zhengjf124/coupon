@@ -5,19 +5,19 @@ use Think\Controller;
 
 class ApiController extends Controller
 {
-    protected $_url = '';
+    //protected $_url = '';
 
     protected $_now = '';
 
-    //protected $_parameters = [];
+    protected $_parameters = [];
 
 
     public function __construct()
     {
         parent::__construct();
         header("Access-Control-Allow-Origin: *");
+        $this->_parameters = $this->_createParameters();
         //$this->_checkSign();
-        //$this->_parameters = $this->_createParameters();
         $this->_now = time();
     }
 
@@ -28,11 +28,10 @@ class ApiController extends Controller
      */
     protected function _checkPassport()
     {
-        $parameters = $this->_createParameters();
-        if (!preg_match('/^[0-9a-zA-Z]{32}$/', $parameters['passport'])) {
+        if (!preg_match('/^[0-9a-zA-Z]{32}$/', $this->_parameters['passport'])) {
             $this->_returnError('10010', 'passport不合法');
         }
-        $user_id = M('user_passport')->getFieldByPassport($parameters['passport'], 'user_id');
+        $user_id = M('user_passport')->getFieldByPassport($this->_parameters['passport'], 'user_id');
         if ($user_id) {
             $userInfo = M('user')->field('user_id,nick_name,mobile,headimgurl,sex')->find($user_id);
             if ($userInfo) {
@@ -79,7 +78,7 @@ class ApiController extends Controller
      */
     protected function _checkSign()
     {
-        $parameters = $this->_createParameters();
+        $parameters = $this->_parameters;
         $parameters['token'] = AUTH_KEY;
         ksort($parameters);
         $sign = '';
@@ -104,7 +103,7 @@ class ApiController extends Controller
     {
         $parameters = $_GET['parameters'] ? $_GET['parameters'] : urldecode(I('parameters'));
         if (empty($parameters) === true) {
-            $this->_returnError(10001, 'sign不合法');
+            return [];
         }
         $result = json_decode($parameters, true);
         if (is_array($result)) {
@@ -138,6 +137,18 @@ class ApiController extends Controller
     protected function getNoteCode($mobile)
     {
         return cookie('coupon_code_' . $mobile);
+    }
+
+    /**
+     * 删除短信验证码和接收手机号码
+     * @access protected
+     * @since 1.0
+     * @return bool
+     */
+    protected function delNoteCode($mobile)
+    {
+        cookie('coupon_code_' . $mobile, null);
+        return true;
     }
 
 

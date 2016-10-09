@@ -1,0 +1,62 @@
+[ 2016-10-09T08:31:37+08:00 ] 192.168.1.100 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.027871s ]
+
+[ 2016-10-09T08:31:39+08:00 ] 192.168.1.100 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000349s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009455s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009531s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0484s ]
+SQL: SELECT id as cat_id,`type_name`,`type_img` FROM `gwshop_goods_category` WHERE `parent_id` = 0 ORDER BY sort_order  [ RunTime:0.0710s ]
+
+[ 2016-10-09T08:31:39+08:00 ] 192.168.1.100 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+
+[ 2016-10-09T08:31:53+08:00 ] 192.168.1.100 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000414s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000512s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0028s ]
+SQL: SELECT id as cat_id,`type_name`,`type_img` FROM `gwshop_goods_category` WHERE `parent_id` = 0 ORDER BY sort_order  [ RunTime:0.0005s ]
+
+[ 2016-10-09T08:31:54+08:00 ] 192.168.1.100 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000338s ]
+
+[ 2016-10-09T08:52:13+08:00 ] 192.168.1.100 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000457s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000517s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000571s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 104 行.
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0043s ]
+SQL: SELECT id as cat_id,`type_name`,`type_img` FROM `gwshop_goods_category` WHERE `parent_id` = 0 ORDER BY sort_order  [ RunTime:0.0010s ]
+
+[ 2016-10-09T08:52:17+08:00 ] 192.168.1.100 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000507s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000784s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000862s ]
+NOTIC: [8] Undefined index: parameters D:\xampp\htdocs\coupon\Shop\Application\ApiController.class.php 第 104 行.
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0031s ]
+SQL: SELECT id as cat_id,`type_name`,`type_img` FROM `gwshop_goods_category` WHERE `parent_id` = 0 ORDER BY sort_order  [ RunTime:0.0005s ]
+
+[ 2016-10-09T09:03:54+08:00 ] 192.168.1.100 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000647s ]
+

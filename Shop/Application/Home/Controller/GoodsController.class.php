@@ -51,8 +51,7 @@ class GoodsController extends ApiController
      */
     public function categoryList()
     {
-        $parameters = $this->_createParameters();
-        $cat_id = intval($parameters['cat_id']);
+        $cat_id = intval($this->_parameters['cat_id']);
         if (!preg_match('/^[1-9][0-9]*$/', $cat_id)) {
             $this->_returnError('1', '分类ID不正确');
         }

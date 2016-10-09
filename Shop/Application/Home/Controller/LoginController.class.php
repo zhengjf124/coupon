@@ -47,55 +47,56 @@ class LoginController extends ApiController
      */
     public function register()
     {
-        $parameters = $this->_createParameters();
-        if (!preg_match('/^1[34578][0-9]{9}$/', $parameters['mobile'])) {
+        if (!preg_match('/^1[34578][0-9]{9}$/', $this->_parameters['mobile'])) {
             $this->_returnError('10008', '手机号码不合法');
         }
 
-        /*        $nick_name = trim($parameters['nick_name']);
+        /*        $nick_name = trim($this->_parameters['nick_name']);
                 if (empty($nick_name) === true) {
                     $this->_returnError('10005', '用户昵称为空');
                 }*/
 
-        if (!preg_match('/^[\w+]{6,16}$/', $parameters['password'])) {
+        if (!preg_match('/^[\w+]{6,16}$/', $this->_parameters['password'])) {
             $this->_returnError('10004', '密码不合法');
         }
 
-        $note_code = $parameters['note_code'];
+        $note_code = $this->_parameters['note_code'];
         if (!preg_match('/^[0-9]{4,6}$/', $note_code)) {
             $this->_returnError('10007', '短信验证码不合法');
         }
 
         /*用户来源*/
         $all_from = ['android', 'ios', 'web', 'wx'];
-        if (!in_array($parameters['user_from'], $all_from)) {
+        if (!in_array($this->_parameters['user_from'], $all_from)) {
             $this->_returnError('10006', '用户来源不合法');
         }
 
-        $code_info = $this->getNoteCode($parameters['mobile']);
+        $code_info = $this->getNoteCode($this->_parameters['mobile']);
         if ($note_code != $code_info['code']) {
             $this->_returnError(10011, '短信验证码错误');
         }
 
-        if ($parameters['mobile'] != $code_info['mobile']) {
+        if ($this->_parameters['mobile'] != $code_info['mobile']) {
             $this->_returnError(10012, '接收短信的手机号与提交的手机号不匹配');
         }
 
-        $user = D('User')->checkField('mobile', $parameters['mobile']);
+        $user = D('User')->checkField('mobile', $this->_parameters['mobile']);
         if ($user) {
             $this->_returnError('10003', '手机号码已经被注册');
         }
 
-        $data['mobile'] = $parameters['mobile'];
-        $data['password'] = $this->passwordEncryption($parameters['password']);
-        $data['nick_name'] = $parameters['mobile'];
-        $data['user_from'] = $parameters['user_from'];
+        $data['mobile'] = $this->_parameters['mobile'];
+        $data['password'] = $this->passwordEncryption($this->_parameters['password']);
+        $data['nick_name'] = $this->_parameters['mobile'];
+        $data['user_from'] = $this->_parameters['user_from'];
         $data['reg_time'] = $this->_now;
         $data['last_login'] = $this->_now;
         $data['login_count'] = 1;
         $data['last_ip'] = get_client_ip();
         $user_id = M('user')->data($data)->add();
         $passport = $this->_createPassport($user_id);
+        /*删除保存的短信验证码信息*/
+        $this->delNoteCode($this->_parameters['mobile']);
         $data = [
             'passport' => $passport
         ];
@@ -126,21 +127,20 @@ class LoginController extends ApiController
      */
     public function login()
     {
-        $parameters = $this->_createParameters();
-        if (!preg_match('/^1[34578][0-9]{9}$/', $parameters['mobile'])) {
+        if (!preg_match('/^1[34578][0-9]{9}$/', $this->_parameters['mobile'])) {
             $this->_returnError('10008', '手机号码不合法');
         }
 
-        if (!preg_match('/^[\w+]{6,16}$/', $parameters['password'])) {
+        if (!preg_match('/^[\w+]{6,16}$/', $this->_parameters['password'])) {
             $this->_returnError('10004', '密码不合法');
         }
 
-        $user = D('User')->checkField('mobile', $parameters['mobile']);
+        $user = D('User')->checkField('mobile', $this->_parameters['mobile']);
         if (!$user) {
             $this->_returnError('10009', '用户名或密码错误');
         }
 
-        if ($this->passwordEncryption($parameters['password']) != $user['password']) {
+        if ($this->passwordEncryption($this->_parameters['password']) != $user['password']) {
             $this->_returnError('10009', '用户名或密码错误');
         }
 
@@ -173,11 +173,11 @@ class LoginController extends ApiController
      */
     public function sendNoteCode()
     {
-        $parameters = $this->_createParameters();
-        if (!preg_match('/^1[34578][0-9]{9}$/', $parameters['mobile'])) {
+        if (!preg_match('/^1[34578][0-9]{9}$/', $this->_parameters['mobile'])) {
             $this->_returnError('10008', '手机号码不合法');
         }
-        if ($this->getNoteCode($parameters['mobile'])) {
+        
+        if ($this->getNoteCode($this->_parameters['mobile'])) {
             $this->_returnError(10013, '短信已发送，请勿重复操作');
         } else {
             $code = rand(100000, 999999);
@@ -192,12 +192,12 @@ class LoginController extends ApiController
             $req->setSmsType("normal");
             $req->setSmsFreeSignName("大鱼测试");
             $req->setSmsParam('{"code":"' . $code . '","product":"E购联盟"}');
-            $req->setRecNum($parameters['mobile']);
+            $req->setRecNum($this->_parameters['mobile']);
             $req->setSmsTemplateCode("SMS_16751324");
             $resp = $c->execute($req);
             $resp = $this->object_array($resp);
             if ($resp['err_code'] == 0) {
-                $this->saveNoteCode(array('code' => $code, 'mobile' => $parameters['mobile']));
+                $this->saveNoteCode(array('code' => $code, 'mobile' => $this->_parameters['mobile']));
                 $this->_returnData();
             } else {
                 $this->_returnError(10014, '短信发送失败，请重试');
@@ -230,16 +230,16 @@ class LoginController extends ApiController
                     }
                     echo json_encode($resp);
             exit;
-            //$parameters = '%7b%22mobile%22%3a%2213688888888%22%2c%22password%22%3a%22123456%22%2c%22time%22%3a%221474941959%22%7d';
+            //$this->_parameters = '%7b%22mobile%22%3a%2213688888888%22%2c%22password%22%3a%22123456%22%2c%22time%22%3a%221474941959%22%7d';
                    $a['mobile'] = 13688888888;
                     $a['password'] = 123456;
                     $a['time'] = 1474941959;
                     $b = json_encode($a);
-                    //$parameters = $b;
-                    $parameters = urlencode($b);
-                    $data['parameters'] = $parameters;
+                    //$this->_parameters = $b;
+                    $this->_parameters = urlencode($b);
+                    $data['parameters'] = $this->_parameters;
                     echo $this->_curlPost('http://192.168.1.100/home/login/login', $data);
-                    //echo $this->_curlGet('http://192.168.1.100/home/login/login?parameters=' . $parameters);
+                    //echo $this->_curlGet('http://192.168.1.100/home/login/login?parameters=' . $this->_parameters);
         }*/
 
     /**
