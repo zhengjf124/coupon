@@ -13,6 +13,7 @@
  * SDK工作目录
  * 存放日志，TOP缓存数据
  */
+
 if (!defined("TOP_SDK_WORK_DIR"))
 {
 	define("TOP_SDK_WORK_DIR", "/tmp/");

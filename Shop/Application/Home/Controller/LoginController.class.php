@@ -1,8 +1,10 @@
 <?php
 
 namespace Home\Controller;
+
 require_once(APP_PATH . 'ApiController.class.php');
-require_once('lib/alidayu/TopSdk.php');
+require_once(APP_PATH . 'Home/Common/Util/alidayu/TopSdk.php');
+
 use Application\ApiController;
 
 /**
@@ -176,7 +178,7 @@ class LoginController extends ApiController
         if (!preg_match('/^1[34578][0-9]{9}$/', $this->_parameters['mobile'])) {
             $this->_returnError('10008', '手机号码不合法');
         }
-        
+
         if ($this->getNoteCode($this->_parameters['mobile'])) {
             $this->_returnError(10013, '短信已发送，请勿重复操作');
         } else {
@@ -204,43 +206,6 @@ class LoginController extends ApiController
             }
         }
     }
-
-
-    /*    public function test()
-        {
-                    date_default_timezone_set('Asia/Shanghai');
-                    $c = new \TopClient;
-                    $appkey = '23471823';
-                    $secret = '33bd1b34ce9ca370adf3d6493e8c4759';
-                    $c->appkey = $appkey;
-                    $c->secretKey = $secret;
-                    $req = new \AlibabaAliqinFcSmsNumSendRequest;
-                    //$req->setExtend("123456");
-                    $messinfo2['messphone'] = '13675091372';
-                    $vcode = 1234;
-                    $req->setSmsType("normal");
-                    $req->setSmsFreeSignName("大鱼测试");
-                    $req->setSmsParam('{"code":"' . $vcode . '","product":"E购联盟"}');
-                    $req->setRecNum($messinfo2['messphone']);
-                    $req->setSmsTemplateCode("SMS_16751324");
-                    $resp = $c->execute($req);
-                    $resp = $this->object_array($resp);
-                    if ($resp['err_code'] == 0) {
-
-                    }
-                    echo json_encode($resp);
-            exit;
-            //$this->_parameters = '%7b%22mobile%22%3a%2213688888888%22%2c%22password%22%3a%22123456%22%2c%22time%22%3a%221474941959%22%7d';
-                   $a['mobile'] = 13688888888;
-                    $a['password'] = 123456;
-                    $a['time'] = 1474941959;
-                    $b = json_encode($a);
-                    //$this->_parameters = $b;
-                    $this->_parameters = urlencode($b);
-                    $data['parameters'] = $this->_parameters;
-                    echo $this->_curlPost('http://192.168.1.100/home/login/login', $data);
-                    //echo $this->_curlGet('http://192.168.1.100/home/login/login?parameters=' . $this->_parameters);
-        }*/
 
     /**
      * 将对象转换为数组
