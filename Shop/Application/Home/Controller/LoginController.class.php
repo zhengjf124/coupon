@@ -207,6 +207,12 @@ class LoginController extends ApiController
         }
     }
 
+    public function delUserInfo()
+    {
+        M('user')->where(array('mobile' => '15392486456'))->delete();
+        echo '删除成功';
+    }
+
     /**
      * 将对象转换为数组
      * @param $array

@@ -1,0 +1,891 @@
+[ 2016-10-10T15:10:54+08:00 ] 192.168.1.100 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000318s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000669s ]
+
+[ 2016-10-10T15:10:54+08:00 ] 192.168.1.100 /index.php/Admin/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000436s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.011211s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.011308s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048456s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048511s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006266s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006333s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000549s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000587s ]
+
+[ 2016-10-10T15:10:55+08:00 ] 192.168.1.100 /index.php/Admin/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000631s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000949s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001047s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000855s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000952s ]
+
+[ 2016-10-10T15:11:03+08:00 ] 192.168.1.100 /index.php?m=Admin&c=Login&a=login&t=0.4800466629676521
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000363s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000412s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `gwshop_admin` INNER JOIN gwshop_admin_role ON gwshop_admin.role_id=gwshop_admin_role.role_id  WHERE `user_name` = 'admin' AND `password` = '1ec6c02ecd57e229429739a521ac6bfa' LIMIT 1   [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin_log` [ RunTime:0.0075s ]
+SQL: INSERT INTO `gwshop_admin_log` (`log_time`,`admin_id`,`log_info`,`log_ip`,`log_url`) VALUES ('1476083462','1','后台登录','192.168.1.100','/index.php/Admin/Login/login') [ RunTime:0.1590s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin` [ RunTime:0.0060s ]
+SQL: UPDATE `gwshop_admin` SET `last_login`='1476083462',`last_ip`='192' WHERE `id` = 1 [ RunTime:0.1682s ]
+
+[ 2016-10-10T15:11:03+08:00 ] 192.168.1.100 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000491s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000669s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000754s ]
+SQL: SHOW COLUMNS FROM `gwshop_system_module` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `gwshop_system_module` WHERE ( level>1 AND visible=1 ) ORDER BY mod_id ASC  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `gwshop_admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000133s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000208s ]
+NOTIC: [8] Undefined variable: upgradeMsg D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\53b217750b9cbf232ba2e599f9229ce3.php 第 50 行.
+NOTIC: [8] Undefined variable: upgradeMsg D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\53b217750b9cbf232ba2e599f9229ce3.php 第 53 行.
+NOTIC: [8] Undefined variable: order_amount D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\53b217750b9cbf232ba2e599f9229ce3.php 第 265 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.084341s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.084396s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000518s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000572s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000719s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000852s ]
+
+[ 2016-10-10T15:11:03+08:00 ] 192.168.1.100 /index.php/Admin/System/login_task.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000581s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000858s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000943s ]
+SQL: SHOW COLUMNS FROM `gwshop_cart` [ RunTime:0.0049s ]
+ERR: 1054:Unknown column 'add_time' in 'where clause'
+ [ SQL语句 ] : DELETE FROM `gwshop_cart` WHERE ( user_id = 0 and  add_time < 1476079863 )
+ERR: 1054:Unknown column 'add_time' in 'where clause'
+ [ SQL语句 ] : DELETE FROM `gwshop_cart` WHERE ( user_id = 0 and  add_time < 1476079863 )
+
+[ 2016-10-10T15:11:03+08:00 ] 192.168.1.100 /index.php/Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000843s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000936s ]
+NOTIC: [2] file_get_contents(./Application/Admin/Conf/version.txt): failed to open stream: No such file or directory D:\xampp\htdocs\coupon\Shop\Application\Admin\Controller\IndexController.class.php 第 52 行.
+SQL: SELECT VERSION() as version [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: version D:\xampp\htdocs\coupon\Shop\Application\Admin\Controller\IndexController.class.php 第 54 行.
+SQL: SHOW COLUMNS FROM `gwshop_order` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_order` WHERE ( add_time>1475997063  ) LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_order` WHERE ( add_time>1475997063 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0047s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_goods` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `gwshop_article` [ RunTime:0.0035s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_article` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0046s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_user` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_user` WHERE ( last_login>1475997063 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_user` WHERE ( reg_time>1475997063 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_comments` [ RunTime:0.0042s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_comments` WHERE ( status=0 ) LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000191s ]
+NOTIC: [8] Undefined variable: navigate_admin D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\12145563cf0c04f01d01ba2c5b407ac2.php 第 67 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046848s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046915s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000411s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000451s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000670s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000718s ]
+
+[ 2016-10-10T15:11:07+08:00 ] 192.168.1.100 /index.php/Admin/Goods/goodsList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000427s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000439s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0049s ]
+SQL: SELECT `id`,`type_name`,`parent_id`,`level` FROM `gwshop_goods_category`  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined variable: brandList D:\xampp\htdocs\coupon\Shop\Application\Admin\Controller\GoodsController.class.php 第 89 行.
+SQL: SHOW COLUMNS FROM `gwshop_active` [ RunTime:0.0042s ]
+SQL: SELECT `end_time` FROM `gwshop_active` WHERE `type` = 'limit_goods' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000152s ]
+NOTIC: [8] Undefined variable: navigate_admin D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\76de55e8d84c353d6e3439e2ce35b7a5.php 第 70 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026494s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026569s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000270s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000660s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000737s ]
+
+[ 2016-10-10T15:11:07+08:00 ] 192.168.1.100 /index.php?m=Admin&c=goods&a=ajaxGoodsList&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000441s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000747s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000842s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0051s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_goods` WHERE (  1 = 1  ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `goods_id`,`goods_name`,`cat_id`,`goods_sn`,`goods_price`,`sort_order`,`store_count`,`is_recommend`,`is_hot`,`is_new`,`is_on_sale`,`gtype` FROM `gwshop_goods` WHERE (  1 = 1  ) LIMIT 0,10   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `gwshop_goods_category`  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000149s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 56 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 62 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 81 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 85 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 86 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 56 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 62 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 81 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 85 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 86 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 56 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 62 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 81 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 85 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 86 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 56 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 62 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 81 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 85 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 86 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 56 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 62 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 81 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 85 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 86 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 56 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 62 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 81 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 85 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 86 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 56 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 62 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 81 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 85 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 86 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 56 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 62 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 81 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 85 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 86 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 56 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 62 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 81 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 85 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 86 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 56 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 62 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 81 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 85 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 86 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028824s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028891s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000448s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000513s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000726s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001194s ]
+
+[ 2016-10-10T15:11:08+08:00 ] 192.168.1.100 /index.php/Admin/goods/addEditGoods.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000411s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000470s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: goods_id D:\xampp\htdocs\coupon\Shop\Application\Admin\Controller\GoodsController.class.php 第 117 行.
+NOTIC: [8] Undefined index: goods_id D:\xampp\htdocs\coupon\Shop\Application\Admin\Controller\GoodsController.class.php 第 118 行.
+NOTIC: [8] Undefined index: is_ajax D:\xampp\htdocs\coupon\Shop\Application\Admin\Controller\GoodsController.class.php 第 120 行.
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `gwshop_goods_category` WHERE ( parent_id = 0 )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_type` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `gwshop_goods_type`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0044s ]
+ERR: 1054:Unknown column 'id' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `gwshop_goods` WHERE ( id=0 ) LIMIT 1  
+ERR: 1054:Unknown column 'id' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `gwshop_goods` WHERE ( id=0 ) LIMIT 1  
+
+[ 2016-10-10T15:11:10+08:00 ] 192.168.1.100 /index.php?m=Admin&c=goods&a=ajaxGoodsList&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000646s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000638s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0042s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_goods` WHERE (  1 = 1  ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `goods_id`,`goods_name`,`cat_id`,`goods_sn`,`goods_price`,`sort_order`,`store_count`,`is_recommend`,`is_hot`,`is_new`,`is_on_sale`,`gtype` FROM `gwshop_goods` WHERE (  1 = 1  ) LIMIT 0,10   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0238s ]
+SQL: SELECT * FROM `gwshop_goods_category`  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000164s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 56 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 62 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 81 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 85 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 86 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 56 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 62 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 81 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 85 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 86 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 56 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 62 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 81 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 85 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 86 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 56 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 62 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 81 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 85 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 86 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 56 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 62 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 81 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 85 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 86 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 56 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 62 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 81 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 85 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 86 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 56 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 62 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 81 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 85 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 86 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 56 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 62 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 81 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 85 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 86 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 56 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 62 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 81 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 85 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 86 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 56 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 62 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 81 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 85 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 86 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015926s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015982s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000518s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000554s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000890s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000969s ]
+
+[ 2016-10-10T15:11:12+08:00 ] 192.168.1.100 /index.php/Admin/Goods/addEditGoods.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000296s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000405s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0098s ]
+NOTIC: [8] Undefined index: goods_id D:\xampp\htdocs\coupon\Shop\Application\Admin\Controller\GoodsController.class.php 第 117 行.
+NOTIC: [8] Undefined index: goods_id D:\xampp\htdocs\coupon\Shop\Application\Admin\Controller\GoodsController.class.php 第 118 行.
+NOTIC: [8] Undefined index: is_ajax D:\xampp\htdocs\coupon\Shop\Application\Admin\Controller\GoodsController.class.php 第 120 行.
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `gwshop_goods_category` WHERE ( parent_id = 0 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_type` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `gwshop_goods_type`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0042s ]
+ERR: 1054:Unknown column 'id' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `gwshop_goods` WHERE ( id=0 ) LIMIT 1  
+ERR: 1054:Unknown column 'id' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `gwshop_goods` WHERE ( id=0 ) LIMIT 1  
+
+[ 2016-10-10T15:11:14+08:00 ] 192.168.1.100 /index.php?m=Admin&c=goods&a=ajaxGoodsList&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000494s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000681s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000773s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0058s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_goods` WHERE (  1 = 1  ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `goods_id`,`goods_name`,`cat_id`,`goods_sn`,`goods_price`,`sort_order`,`store_count`,`is_recommend`,`is_hot`,`is_new`,`is_on_sale`,`gtype` FROM `gwshop_goods` WHERE (  1 = 1  ) LIMIT 0,10   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `gwshop_goods_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000175s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 56 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 62 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 81 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 85 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 86 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 56 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 62 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 81 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 85 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 86 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 56 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 62 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 81 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 85 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 86 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 56 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 62 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 81 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 85 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 86 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 56 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 62 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 81 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 85 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 86 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 56 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 62 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 81 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 85 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 86 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 56 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 62 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 81 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 85 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 86 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 56 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 62 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 81 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 85 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 86 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 56 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 62 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 81 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 85 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 86 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 56 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 59 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 62 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 81 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 85 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\d403fec1a992cadc170e458772bc08a9.php 第 86 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017685s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017754s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000740s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000809s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001043s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001134s ]
+
+[ 2016-10-10T15:13:07+08:00 ] 192.168.1.100 /index.php/Admin/Goods/addEditGoods.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000397s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000576s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000637s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0041s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0051s ]
+NOTIC: [8] Undefined index: goods_id D:\xampp\htdocs\coupon\Shop\Application\Admin\Controller\GoodsController.class.php 第 117 行.
+NOTIC: [8] Undefined index: goods_id D:\xampp\htdocs\coupon\Shop\Application\Admin\Controller\GoodsController.class.php 第 118 行.
+NOTIC: [8] Undefined index: is_ajax D:\xampp\htdocs\coupon\Shop\Application\Admin\Controller\GoodsController.class.php 第 120 行.
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `gwshop_goods_category` WHERE ( parent_id = 0 )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_type` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `gwshop_goods_type`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `gwshop_goods` WHERE ( goods_id=0 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_images` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `gwshop_goods_images` WHERE ( goods_id =0 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000278s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000359s ]
+NOTIC: [8] Undefined variable: URL_home D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 84 行.
+NOTIC: [8] Use of undefined constant is_promote - assumed 'is_promote' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 153 行.
+NOTIC: [8] Undefined variable: navigate_admin D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 160 行.
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 222 行.
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 222 行.
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 222 行.
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 222 行.
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 222 行.
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 222 行.
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 222 行.
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 222 行.
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 222 行.
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 222 行.
+NOTIC: [8] Undefined variable: level_cat2 D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 246 行.
+NOTIC: [8] Undefined index: name D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 246 行.
+NOTIC: [8] Undefined index: name D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 246 行.
+NOTIC: [8] Undefined index: name D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 246 行.
+NOTIC: [8] Undefined index: name D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 246 行.
+NOTIC: [8] Undefined index: name D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 246 行.
+NOTIC: [8] Undefined index: name D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 246 行.
+NOTIC: [8] Undefined index: name D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 246 行.
+NOTIC: [8] Undefined index: name D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 246 行.
+NOTIC: [8] Undefined index: name D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 246 行.
+NOTIC: [8] Undefined index: name D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 247 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 272 行.
+NOTIC: [8] Undefined index: name D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 272 行.
+NOTIC: [8] Undefined index: name D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 272 行.
+NOTIC: [8] Undefined index: name D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 272 行.
+NOTIC: [8] Undefined index: name D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 272 行.
+NOTIC: [8] Undefined index: name D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 272 行.
+NOTIC: [8] Undefined index: name D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 272 行.
+NOTIC: [8] Undefined index: name D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 272 行.
+NOTIC: [8] Undefined index: name D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 272 行.
+NOTIC: [8] Undefined index: name D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 272 行.
+NOTIC: [8] Undefined index: name D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 272 行.
+NOTIC: [8] Undefined variable: brandList D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 283 行.
+NOTIC: [8] Use of undefined constant is_free_shipping - assumed 'is_free_shipping' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 340 行.
+NOTIC: [8] Use of undefined constant is_free_shipping - assumed 'is_free_shipping' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 341 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 347 行.
+NOTIC: [8] Use of undefined constant basic_default_storage - assumed 'basic_default_storage' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 349 行.
+NOTIC: [8] Undefined variable: tpshop_config D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 349 行.
+NOTIC: [8] Use of undefined constant spec_type - assumed 'spec_type' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 435 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 435 行.
+NOTIC: [8] Use of undefined constant spec_type - assumed 'spec_type' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 435 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 435 行.
+NOTIC: [8] Use of undefined constant spec_type - assumed 'spec_type' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 435 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 435 行.
+NOTIC: [8] Use of undefined constant spec_type - assumed 'spec_type' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 435 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 435 行.
+NOTIC: [8] Use of undefined constant goods_type - assumed 'goods_type' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 453 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 453 行.
+NOTIC: [8] Use of undefined constant goods_type - assumed 'goods_type' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 453 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 453 行.
+NOTIC: [8] Use of undefined constant goods_type - assumed 'goods_type' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 453 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 453 行.
+NOTIC: [8] Use of undefined constant goods_type - assumed 'goods_type' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 453 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 453 行.
+NOTIC: [8] Undefined offset: 2 D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 583 行.
+NOTIC: [8] Undefined offset: 3 D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 585 行.
+NOTIC: [8] Undefined variable: level_cat2 D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 589 行.
+NOTIC: [8] Undefined variable: level_cat2 D:\xampp\htdocs\coupon\Shop\Application\Runtime\Cache\Admin\0501263900dfd4d89d485db776af1a78.php 第 591 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048273s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048339s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000619s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000855s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000932s ]
+
+[ 2016-10-10T15:13:07+08:00 ] 192.168.1.100 /index.php/admin/Goods/ajaxGetSpecSelect.html?goods_id=&spec_type=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000753s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000825s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0053s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `gwshop_spec` WHERE ( type_id = 0 ) ORDER BY `order` desc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec_goods_price` [ RunTime:0.0040s ]
+SQL: SELECT GROUP_CONCAT(`key` SEPARATOR '_') AS items_id FROM `gwshop_spec_goods_price` WHERE ( goods_id = 0 ) LIMIT 1   [ RunTime:0.0007s ]
+NOTIC: [8] Undefined variable: specImageList D:\xampp\htdocs\coupon\Shop\Application\Admin\Controller\GoodsController.class.php 第 323 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024920s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024994s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000398s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000458s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000930s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000986s ]
+
+[ 2016-10-10T15:13:08+08:00 ] 192.168.1.100 /index.php/admin/Goods/ajaxGetSpecInput/goods_id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000702s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000780s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0239s ]
+NOTIC: [8] Undefined index: goods_id D:\xampp\htdocs\coupon\Shop\Application\Admin\Controller\GoodsController.class.php 第 336 行.
+NOTIC: [8] Undefined index: spec_arr D:\xampp\htdocs\coupon\Shop\Application\Admin\Controller\GoodsController.class.php 第 337 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\coupon\Shop\Application\Admin\Logic\GoodsLogic.class.php 第 304 行.
+NOTIC: [2] asort() expects parameter 1 to be array, null given D:\xampp\htdocs\coupon\Shop\Application\Admin\Logic\GoodsLogic.class.php 第 308 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\coupon\Shop\Application\Admin\Logic\GoodsLogic.class.php 第 309 行.
+NOTIC: [8] Undefined variable: spec_arr2 D:\xampp\htdocs\coupon\Shop\Application\Admin\Logic\GoodsLogic.class.php 第 315 行.
+NOTIC: [2] array_keys() expects parameter 1 to be array, null given D:\xampp\htdocs\coupon\Shop\Application\Admin\Logic\GoodsLogic.class.php 第 315 行.
+NOTIC: [8] Undefined variable: spec_arr2 D:\xampp\htdocs\coupon\Shop\Application\Admin\Logic\GoodsLogic.class.php 第 316 行.
+NOTIC: [2] array_shift() expects parameter 1 to be array, null given D:\xampp\htdocs\coupon\Shop\Application\Common\Common\function.php 第 301 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\coupon\Shop\Application\Common\Common\function.php 第 302 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\coupon\Shop\Application\Common\Common\function.php 第 307 行.
+SQL: SHOW COLUMNS FROM `gwshop_spec` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`name` FROM `gwshop_spec`  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec_item` [ RunTime:0.0038s ]
+SQL: SELECT `id`,`item`,`spec_id` FROM `gwshop_spec_item`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec_goods_price` [ RunTime:0.0141s ]
+SQL: SELECT `key`,`key_name`,`price`,`store_count`,`bar_code` FROM `gwshop_spec_goods_price` WHERE ( goods_id = 0 )  [ RunTime:0.0011s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\coupon\Shop\Application\Admin\Logic\GoodsLogic.class.php 第 325 行.
+

@@ -170,7 +170,7 @@ class GoodsController extends BaseController
         $cat_list = M('goods_category')->where("parent_id = 0")->select();
 
         $goodsType = M("GoodsType")->select();
-        $goodsInfo = M('Goods')->where('id=' . I('GET.id', 0))->find();
+        $goodsInfo = M('Goods')->where('goods_id=' . I('GET.id', 0))->find();
         $level_cat = $GoodsLogic->find_parent_cat($goodsInfo['cat_id']); // 获取分类默认选中的下拉框
         $goodsImages = M("GoodsImages")->where('goods_id =' . I('GET.id', 0))->select();
         $this->assign('goodsImages', $goodsImages);  // 商品相册
