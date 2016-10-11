@@ -78,6 +78,31 @@ class AddressController extends ApiController
         $this->_returnData(['list' => $list]);
     }
 
+    /**
+     * 获取获取商圈 \n
+     * URI : /home/address/getDistrict
+     * @param :
+     *     name   | type   | null | description
+     * -----------|--------|------|-------------
+     *  parameters| string | 必填 | 参数(json)
+     *
+     * parameters:
+     *     name     | type | null | description
+     * -------------|------|------|-------------
+     *  district_id |  int | 必填 | 县/区ID
+     *
+     * @return
+     *    name  |  type   | description
+     * ---------|---------|----------------------
+     *   list   |  array  |  商圈列表
+     *
+     * list :
+     *     name   |  type  | description
+     * -----------|--------|----------------------
+     *   area_id  |  int   |  商圈ID
+     *  area_name | string |  商圈名称
+     *
+     */
     public function getTradingArea()
     {
         if (!preg_match('/^[1-9][0-9]*$/', $this->_parameters['district_id'])) {
