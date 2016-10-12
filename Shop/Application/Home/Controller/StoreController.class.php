@@ -28,11 +28,20 @@ class StoreController extends ApiController
      *   list   |  array  |  城市列表
      *
      * list :
-     *    name   |  type  | description
-     * ----------|--------|----------------------
-     *   city_id |  int   |  城市ID
-     * city_name | string |  城市名称
+     *      name    |  type  | description
+     * -------------|--------|----------------------
+     *    store_id  |  int   |  商家ID
+     *   store_name | string |  商家名称
+     * comment_count| string |  评论次数
+     *     label    | string |  标签
+     *   keywords   | string |  关键字
+     *   avg_price  | float  |  人均消费
+     *   store_img  | string |  列表引导图
+     * comment_level| string |  评论等级 0-5 0代表 无评论 1-5分别代表1到5颗星
+     *   distance   | string |  距离
      *
+     * @note
+     * 测试地址：http://coupon.usrboot.com/home/store/storeLost/parameters/%7b%22city_id%22%3a%22350100%22%2c%22page%22%3a%221%22%7d
      */
     public function storeLost()
     {
