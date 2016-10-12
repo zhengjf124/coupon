@@ -52,9 +52,11 @@ class IndexController extends ApiController
      */
     public function index()
     {
-        $data['type_list'] = M('goods_category')->where(['parent_id' => 0, 'is_hot' => 1, 'is_show' => 1])->field('id as cat_id,type_name,type_img')->order('sort_order')->select();
-        $this->_returnData($data);
+        $type_list = M('goods_category')->where(['parent_id' => 0, 'is_hot' => 1, 'is_show' => 1])->field('id as cat_id,type_name,type_img')->order('sort_order')->select();
+        if (!is_array($type_list)) {
+            $type_list = array();
+        }
+        $this->_returnData(['type_list' => $type_list]);
     }
-
 
 }

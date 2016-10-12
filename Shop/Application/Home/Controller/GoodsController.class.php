@@ -55,8 +55,11 @@ class GoodsController extends ApiController
         if (!preg_match('/^[1-9][0-9]*$/', $cat_id)) {
             $this->_returnError('1', '分类ID不正确');
         }
-        $data['type_list'] = M('goods_category')->where(['parent_id' => $cat_id, 'is_show' => 1])->field('id as cat_id,type_name,type_img')->order('sort_order,is_hot desc')->select();
-        $this->_returnData($data);
+        $list = M('goods_category')->where(['parent_id' => $cat_id, 'is_show' => 1])->field('id as cat_id,type_name,type_img')->order('sort_order,is_hot desc')->select();
+        if (!is_array($list)) {
+            $list = array();
+        }
+        $this->_returnData(['type_list' => $list]);
     }
 
 

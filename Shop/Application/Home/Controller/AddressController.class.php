@@ -39,7 +39,11 @@ class AddressController extends ApiController
      */
     public function getCity()
     {
+
         $list = M('area_china')->where(array('type' => 3))->field('id as city_id,name as city_name')->select();
+        if (!is_array($list)) {
+            $list = array();
+        }
         $this->_returnData(['list' => $list]);
     }
 
@@ -75,12 +79,15 @@ class AddressController extends ApiController
             $this->_returnError(10020, '城市ID不合法');
         }
         $list = M('area_china')->where(array('type' => 4, 'parent_id' => $this->_parameters['city_id']))->field('id as district_id,name as district_name')->select();
+        if (!is_array($list)) {
+            $list = array();
+        }
         $this->_returnData(['list' => $list]);
     }
 
     /**
      * 获取获取商圈 \n
-     * URI : /home/address/getDistrict
+     * URI : /home/address/getTradingArea
      * @param :
      *     name   | type   | null | description
      * -----------|--------|------|-------------
@@ -109,6 +116,9 @@ class AddressController extends ApiController
             $this->_returnError(10021, '县区ID不合法');
         }
         $list = M('trading_area')->where(array('district_id' => $this->_parameters['district_id']))->field('area_id,area_name')->select();
+        if (!is_array($list)) {
+            $list = array();
+        }
         $this->_returnData(['list' => $list]);
     }
 }
