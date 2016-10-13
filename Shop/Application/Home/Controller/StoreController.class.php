@@ -16,7 +16,7 @@ class StoreController extends ApiController
 
     /**
      * 获取商家列表 \n
-     * URI : /home/store/storeLost
+     * URI : /home/store/storeList
      * @param :
      *     name   | type   | null | description
      * -----------|--------|------|-------------
@@ -45,9 +45,9 @@ class StoreController extends ApiController
      *   distance   | string |  距离
      *
      * @note
-     * 测试地址：http://coupon.usrboot.com/home/store/storeLost/parameters/%7b%22city_id%22%3a%22350100%22%2c%22page%22%3a%221%22%7d
+     * 测试地址：http://coupon.usrboot.com/home/store/storeList/parameters/%7b%22city_id%22%3a%22350100%22%2c%22page%22%3a%221%22%7d
      */
-    public function storeLost()
+    public function storeList()
     {
         if (!preg_match('/^[1-9][0-9]*$/', $this->_parameters['city_id'])) {
             $this->_returnError(10020, '城市ID不合法');
@@ -125,7 +125,7 @@ class StoreController extends ApiController
      * -------------|--------|----------------------
      *    store_id  |  int   |  商家ID
      *   store_name | string |  商家名称
-     * comment_count| string |  评论次数
+     * comment_count|  int   |  评论次数
      *     label    | string |  标签
      *   keywords   | string |  关键字
      *   avg_price  | float  |  人均消费
@@ -146,7 +146,7 @@ class StoreController extends ApiController
      *   coupon_img |  int   |  列表引导图
      *
      * @note
-     * 测试地址：http://coupon.usrboot.com/home/store/detail/parameters/%7B%22store_id%22:%2223%22%7D
+     * 测试地址：http://coupon.usrboot.com/home/store/detail/parameters/%7B%22store_id%22:%223%22%7D
      *
      */
     public function detail()
