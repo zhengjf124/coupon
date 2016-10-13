@@ -69,9 +69,9 @@ class AddressController extends ApiController
      * list :
      *      name     |  type  | description
      * --------------|--------|----------------------
-     *     district_id   |  int   |  县/区ID
+     *  district_id  |  int   |  县/区ID
      * district_name | string |  县/区名称
-     *
+     *    area_num   |  int   |  县/区下的商圈数量
      */
     public function getDistrict()
     {
@@ -79,8 +79,12 @@ class AddressController extends ApiController
             $this->_returnError(10020, '城市ID不合法');
         }
         $list = M('area_china')->where(array('type' => 4, 'parent_id' => $this->_parameters['city_id']))->field('id as district_id,name as district_name')->select();
-        if (!is_array($list)) {
+        if (!is_array($list) || empty($list)) {
             $list = array();
+        } else {
+            foreach ($list as &$value) {
+                $value['area_num'] = M('trading_area')->where(array('district_id' => $value['district_id']))->count();
+            }
         }
         $this->_returnData(['list' => $list]);
     }
@@ -116,7 +120,7 @@ class AddressController extends ApiController
             $this->_returnError(10021, '县区ID不合法');
         }
         $list = M('trading_area')->where(array('district_id' => $this->_parameters['district_id']))->field('area_id,area_name')->select();
-        if (!is_array($list)) {
+        if (!is_array($list) || empty($list)) {
             $list = array();
         }
         $this->_returnData(['list' => $list]);

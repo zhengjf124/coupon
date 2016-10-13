@@ -90,19 +90,7 @@ class GoodsController extends ApiController
      */
     public function getSortList()
     {
-        $data['list'][0]['sort_id'] = 1;
-        $data['list'][0]['sort_name'] = '智能排序';
-        $data['list'][1]['sort_id'] = 2;
-        $data['list'][1]['sort_name'] = '离我最近';
-        $data['list'][2]['sort_id'] = 3;
-        $data['list'][2]['sort_name'] = '人气最高';
-        $data['list'][3]['sort_id'] = 4;
-        $data['list'][3]['sort_name'] = '评价最好';
-        $data['list'][4]['sort_id'] = 5;
-        $data['list'][4]['sort_name'] = '价格最高';
-        $data['list'][5]['sort_id'] = 6;
-        $data['list'][5]['sort_name'] = '价格最低';
-        $this->_returnData($data);
+        $this->_returnData($this->sortList());
     }
 
 
