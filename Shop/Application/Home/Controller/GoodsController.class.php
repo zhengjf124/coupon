@@ -22,10 +22,48 @@ class GoodsController extends ApiController
 
     }
 
+    /**
+     * 一级分类列表接口 \n
+     * URI : /home/goods/onceCategoryList
+     * @param :
+     *     name   | type   | null| description
+     * -----------|--------|-----|-------------
+     *  parameters| string | 必填 | 参数(json)
+     *
+     * parameters：
+     *   name   | type  |  null | description
+     * ---------|-------|-------|-------------
+     *   -----  |  ---  |  ---  |    无
+     *
+     * @return
+     *    name  |  type   | description
+     * ---------|---------|----------------------
+     * type_list|  array  | 分类列表二维数组
+     *
+     * list :
+     *    name   |  type  | description
+     * ----------|--------|----------------------
+     *   cat_id  |  int   |  分类ID
+     * type_name | string | 分类名称
+     * type_img  | string | 分类图片
+     *
+     */
+    public function onceCategoryList()
+    {
+        $list = M('goods_category')->where(['parent_id' => 0, 'is_show' => 1])->field('id as cat_id,type_name,type_img')->order('sort_order,is_hot desc')->select();
+        if ($list) {
+            foreach ($list as &$value) {
+                $value['category_num'] = M('goods_category')->where(array('parent_id' => $value['cat_id'], 'is_show' => 1))->count();
+            }
+        } else {
+            $list = array();
+        }
+        $this->_returnData(['type_list' => $list]);
+    }
 
     /**
-     * 分类列表接口 \n
-     * URI : /home/goods/categoryList
+     * 二级分类列表接口 \n
+     * URI : /home/goods/secondCategoryList
      * @param :
      *     name   | type   | null| description
      * -----------|--------|-----|-------------
@@ -49,7 +87,7 @@ class GoodsController extends ApiController
      * type_img  | string | 分类图片
      *
      */
-    public function categoryList()
+    public function secondCategoryList()
     {
         $cat_id = intval($this->_parameters['cat_id']);
         if (!preg_match('/^[1-9][0-9]*$/', $cat_id)) {
