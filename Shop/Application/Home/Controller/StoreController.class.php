@@ -20,6 +20,11 @@ class StoreController extends ApiController
      * @param :
      *     name   | type   | null | description
      * -----------|--------|------|-------------
+     *  parameters| string | 必填 | 参数(json)
+     *
+     * parameters:
+     *     name   | type   | null | description
+     * -----------|--------|------|-------------
      *   city_id  |  int   | 必须  | 城市ID
      *    page    |  int   | 必须  | 页码
      *   area_id  |  int   | 可选  | 商圈ID
@@ -112,6 +117,11 @@ class StoreController extends ApiController
      * @param :
      *     name   | type   | null | description
      * -----------|--------|------|-------------
+     *  parameters| string | 必填 | 参数(json)
+     *
+     * parameters:
+     *     name   | type   | null | description
+     * -----------|--------|------|-------------
      *  store_id  |  int   | 必须  | 商家ID
      *
      * @return
@@ -129,8 +139,8 @@ class StoreController extends ApiController
      *     label    | string |  标签
      *   keywords   | string |  关键字
      *   avg_price  | float  |  人均消费
-     *   store_img  | string |  详情页图片
-     *  store_phone | string |  详情页图片
+     * store_banner | string |  详情页图片
+     *  store_phone | string |  联系电话
      *    address   | string |  地址
      * comment_level|  int   |  评论等级 0-5，0代表无评论，1-5分别代表1到5颗星
      *   distance   | string |  距离
@@ -154,7 +164,7 @@ class StoreController extends ApiController
         if (!preg_match('/^[1-9][0-9]*$/', $this->_parameters['store_id'])) {
             $this->_returnError(10042, '商家ID不合法');
         }
-        $store_detail = M('store')->where(array('store_id' => $this->_parameters['store_id']))->field('store_id,store_name,comment_count,label,keywords,avg_price,store_banner,store_phone,address')->find();
+        $store_detail = M('store')->where(array('store_id' => $this->_parameters['store_id'], 'is_delete' => 0))->field('store_id,store_name,comment_count,label,keywords,avg_price,store_banner,store_phone,address')->find();
         if (!$store_detail || !is_array($store_detail)) {
             $this->_returnError(10043, '商家不存在');
         }
@@ -163,7 +173,7 @@ class StoreController extends ApiController
 
         $coupon_ids = M('coupons_store')->where(array('store_id' => $store_detail['store_id']))->getField('coupon_id', true);
         if ($coupon_ids) {
-            $coupon_list = M('coupons_sale')->where(array('coupon_id' => array('in', $coupon_ids)))->field('coupon_id,coupon_name,coupon_price,market_price,coupon_sales,coupon_img')->order('sort_order')->select();
+            $coupon_list = M('coupons_sale')->where(array('coupon_id' => array('in', $coupon_ids), 'is_delete' => 0))->field('coupon_id,coupon_name,coupon_price,market_price,coupon_sales,coupon_img')->order('sort_order')->select();
         }
         if (!isset($coupon_list)) {
             $coupon_list = array();
