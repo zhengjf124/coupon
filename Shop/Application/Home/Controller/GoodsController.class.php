@@ -41,12 +41,15 @@ class GoodsController extends ApiController
      * type_list|  array  | 分类列表二维数组
      *
      * list :
-     *    name   |  type  | description
-     * ----------|--------|----------------------
-     *   cat_id  |  int   |  分类ID
-     * type_name | string | 分类名称
-     * type_img  | string | 分类图片
+     *     name   |  type  | description
+     * -----------|--------|----------------------
+     *    cat_id  |  int   |  分类ID
+     *  type_name | string | 分类名称
+     *  type_img  | string | 分类图片
+     *category_num| string | 下级分类数
      *
+     * @note
+     * 测试地址:http://coupon.usrboot.com/goods/onceCategoryList
      */
     public function onceCategoryList()
     {
@@ -86,6 +89,8 @@ class GoodsController extends ApiController
      * type_name | string | 分类名称
      * type_img  | string | 分类图片
      *
+     * @note
+     * 测试地址:http://coupon.usrboot.com/goods/secondCategoryList/parameters/%7b%22cat_id%22%3a%221%22%7d
      */
     public function secondCategoryList()
     {

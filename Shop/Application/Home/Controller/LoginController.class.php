@@ -74,7 +74,7 @@ class LoginController extends ApiController
         }
 
         $code_info = $this->getNoteCode($this->_parameters['mobile']);
-        if ($note_code != $code_info['code']) {
+        if (!$code_info || $note_code != $code_info['code']) {
             $this->_returnError(10011, '短信验证码错误');
         }
 
@@ -181,30 +181,31 @@ class LoginController extends ApiController
 
         if ($this->getNoteCode($this->_parameters['mobile'])) {
             $this->_returnError(10013, '短信已发送，请勿重复操作');
-        } else {
-            $code = rand(100000, 999999);
-            date_default_timezone_set('Asia/Shanghai');
-            $c = new \TopClient;
-            $appkey = '23471823';
-            $secret = '33bd1b34ce9ca370adf3d6493e8c4759';
-            $c->appkey = $appkey;
-            $c->secretKey = $secret;
-            $req = new \AlibabaAliqinFcSmsNumSendRequest;
-            //$req->setExtend("123456");
-            $req->setSmsType("normal");
-            $req->setSmsFreeSignName("大鱼测试");
-            $req->setSmsParam('{"code":"' . $code . '","product":"E购联盟"}');
-            $req->setRecNum($this->_parameters['mobile']);
-            $req->setSmsTemplateCode("SMS_16751324");
-            $resp = $c->execute($req);
-            $resp = $this->object_array($resp);
-            if ($resp['err_code'] == 0) {
-                $this->saveNoteCode(array('code' => $code, 'mobile' => $this->_parameters['mobile']));
-                $this->_returnData();
-            } else {
-                $this->_returnError(10014, '短信发送失败，请重试');
-            }
         }
+
+        $code = rand(100000, 999999);
+        date_default_timezone_set('Asia/Shanghai');
+        $c = new \TopClient;
+        $appkey = '23471823';
+        $secret = '33bd1b34ce9ca370adf3d6493e8c4759';
+        $c->appkey = $appkey;
+        $c->secretKey = $secret;
+        $req = new \AlibabaAliqinFcSmsNumSendRequest;
+        //$req->setExtend("123456");
+        $req->setSmsType("normal");
+        $req->setSmsFreeSignName("大鱼测试");
+        $req->setSmsParam('{"code":"' . $code . '","product":"E购联盟"}');
+        $req->setRecNum($this->_parameters['mobile']);
+        $req->setSmsTemplateCode("SMS_16751324");
+        $resp = $c->execute($req);
+        $resp = $this->object_array($resp);
+        if ($resp['err_code'] == 0) {
+            $this->saveNoteCode(array('code' => $code, 'mobile' => $this->_parameters['mobile']));
+            $this->_returnData();
+        } else {
+            $this->_returnError(10014, '短信发送失败，请重试');
+        }
+
     }
 
     public function delUserInfo()

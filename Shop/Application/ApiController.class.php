@@ -123,8 +123,8 @@ class ApiController extends Controller
     protected function saveNoteCode($data)
     {
         /*5分钟内有效*/
-        cookie('coupon_code_' . $data['mobile'], null);
-        cookie('code_' . $data['mobile'], $data, array('expire' => 300, 'prefix' => 'coupon_'));
+        S('mobile_code_' . $data['mobile'], null);
+        S('mobile_code_' . $data['mobile'], $data, array('expire' => 300));
         return true;
     }
 
@@ -136,7 +136,7 @@ class ApiController extends Controller
      */
     protected function getNoteCode($mobile)
     {
-        return cookie('coupon_code_' . $mobile);
+        return S('mobile_code_' . $mobile);
     }
 
     /**
@@ -147,7 +147,7 @@ class ApiController extends Controller
      */
     protected function delNoteCode($mobile)
     {
-        cookie('coupon_code_' . $mobile, null);
+        S('mobile_code_' . $mobile, null);
         return true;
     }
 

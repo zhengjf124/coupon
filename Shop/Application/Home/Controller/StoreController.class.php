@@ -50,7 +50,7 @@ class StoreController extends ApiController
      *   distance   | string |  距离
      *
      * @note
-     * 测试地址：http://coupon.usrboot.com/home/store/storeList/parameters/%7b%22city_id%22%3a%22350100%22%2c%22page%22%3a%221%22%7d
+     * 测试地址：http://coupon.usrboot.com/home/store/storeList/parameters/%7b%22city_id%22%3a%22350100%22%2c%22page%22%3a%221%22%2c%22cat_id%22%3a%2220%22%2c%22area_id%22%3a%223%22%7d
      */
     public function storeList()
     {
@@ -87,7 +87,7 @@ class StoreController extends ApiController
 
         $where['is_show'] = 1;
 
-        $listRows = 1;//一页的条数
+        $listRows = 10;//一页的条数
         $totalRows = M('store')->where($where)->count();//总条数
         $totalPages = ceil($totalRows / $listRows);//总页数
         if ($nowPage > $totalPages) {

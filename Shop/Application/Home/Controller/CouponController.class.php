@@ -48,6 +48,7 @@ class CouponController extends ApiController
      * coupon_price | float  |  实际价格
      * coupon_sales |  int   |  销量
      * coupon_banner| string |  详情页图片
+     * coupon_detail| string |  详细介绍
      *
      * coupon_list:
      *      name    |  type  | description
@@ -61,7 +62,7 @@ class CouponController extends ApiController
      *   distance   | string |  距离
      *
      * @note
-     * 测试地址：http://coupon.usrboot.com/home/store/detail/parameters/%7B%22store_id%22:%223%22%7D
+     * 测试地址：http://coupon.usrboot.com/home/coupon/detail/parameters/%7B%22coupon_id%22:%223%22%7D
      *
      */
     public function detail()
@@ -70,11 +71,11 @@ class CouponController extends ApiController
             $this->_returnError(10044, '优惠券ID不合法');
         }
 
-        $coupon_detail = M('coupons_sale')->where(array('coupon_id' => $this->_parameters['coupon_id'], 'is_delete' => 0))->field('coupon_id,coupon_name,coupon_desc,market_price,coupon_price,coupon_sales,coupon_banner')->find();
+        $coupon_detail = M('coupons_sale')->where(array('coupon_id' => $this->_parameters['coupon_id'], 'is_delete' => 0))->field('coupon_id,coupon_name,coupon_desc,market_price,coupon_price,coupon_sales,coupon_banner,coupon_detail')->find();
         if (!$coupon_detail || !is_array($coupon_detail)) {
             $this->_returnError(10045, '优惠券不存在');
         }
-
+        $coupon_detail['coupon_detail'] = htmlspecialchars_decode($coupon_detail['coupon_detail']);
         $store_ids = M('coupons_store')->where(array('coupon_id' => $coupon_detail['coupon_id']))->getField('store_id', true);
         if ($store_ids) {
             $store_list = M('store')->where(array('store_id' => array('in', $store_ids), 'is_delete' => 0))->field('store_id,store_name,comment_count,store_phone,address')->order('sort_order')->select();
