@@ -31,7 +31,7 @@ class CollectController extends MemberController
      *   -----  |  ----  |  无数据
      *
      * @note
-     * 测试地址：http://192.168.1.100/home/collect/collectStore/parameters/%7b%22passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%2c%22store_id%22%3a%221%22%7d
+     * 测试地址：http://coupon.usrboot.com/home/collect/collectStore/parameters/%7b%22passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%2c%22store_id%22%3a%221%22%7d
      */
     public function collectStore()
     {
@@ -71,7 +71,7 @@ class CollectController extends MemberController
      *   -----  |  ----  |  无数据
      *
      * @note
-     * 测试地址：http://192.168.1.100/home/collect/cancelCollectStore/parameters/%7b%22passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%2c%22store_id%22%3a%221%22%7d
+     * 测试地址：http://coupon.usrboot.com/home/collect/cancelCollectStore/parameters/%7b%22passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%2c%22store_id%22%3a%221%22%7d
      */
     public function cancelCollectStore()
     {
@@ -106,7 +106,7 @@ class CollectController extends MemberController
      *   -----  |  ----  |  无数据
      *
      * @note
-     * 测试地址：http://192.168.1.100/home/collect/collectCoupon/parameters/%7b%22passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%2c%22coupon_id%22%3a%221%22%7d
+     * 测试地址：http://coupon.usrboot.com/home/collect/collectCoupon/parameters/%7b%22passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%2c%22coupon_id%22%3a%221%22%7d
      */
     public function collectCoupon()
     {
@@ -146,7 +146,7 @@ class CollectController extends MemberController
      *   -----  |  ----  |  无数据
      *
      * @note
-     * 测试地址：http://192.168.1.100/home/collect/cancelCollectCoupon/parameters/%7b%22passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%2c%22coupon_id%22%3a%221%22%7d
+     * 测试地址：http://coupon.usrboot.com/home/collect/cancelCollectCoupon/parameters/%7b%22passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%2c%22coupon_id%22%3a%221%22%7d
      */
     public function cancelCollectCoupon()
     {
@@ -193,7 +193,7 @@ class CollectController extends MemberController
      *
      *
      * @note
-     * 测试地址：http://192.168.1.100/home/collect/couponList/parameters/%7b%22passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%2c%22store_id%22%3a%221%22%7d
+     * 测试地址：http://coupon.usrboot.com/home/collect/couponList/parameters/%7b%22passport%22%3a%22d2ab2b971ff0dc34b54c0eaa664873f0%22%2c%22store_id%22%3a%221%22%7d
      */
     public function couponList()
     {

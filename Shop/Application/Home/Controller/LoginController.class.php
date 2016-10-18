@@ -207,7 +207,7 @@ class LoginController extends ApiController
         }
 
     }
-
+    
     public function delUserInfo()
     {
         M('user')->where(array('mobile' => '15392486456'))->delete();

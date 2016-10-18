@@ -59,6 +59,19 @@ class ApiController extends Controller
     }
 
     /**
+     * 删除登录票据
+     * @param int $user_id 用户ID
+     * @param string $type 用户类型（来源 - app web wx）
+     * @return bool
+     */
+    protected function _delPassport($user_id, $type = 'app')
+    {
+        M('user_passport')->where(array('user_id' => $user_id, 'type' => $type))->delete();
+        return true;
+    }
+
+
+    /**
      * 密码加密
      * @access protected
      * @param string $string 需要加密字符串

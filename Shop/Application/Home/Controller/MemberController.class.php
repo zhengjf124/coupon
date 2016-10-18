@@ -14,6 +14,4 @@ class MemberController extends ApiController
         $this->user_info = $this->_checkPassport();
         $this->user_id = $this->user_info['user_id'];
     }
-
-
-}
+}//end

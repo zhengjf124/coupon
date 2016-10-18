@@ -106,4 +106,29 @@ class UserController extends MemberController
         $this->_returnData();
     }
 
+    /**
+     * 退出登录 \n
+     * URI : /home/user/logout
+     * @param :
+     *    name    | type   | null| description
+     * -----------|--------|-----|-------------
+     *  parameters| string | 必填 | 参数(json)
+     *
+     * parameters：
+     *    name   |  type  | null | description
+     * ----------|--------|------|-------------
+     *  passport | string | 必填 |  用户登录凭证
+     *
+     * @return
+     *   name   |  type  | description
+     * ---------|--------|--------------
+     *   -----  |  ----  |  无数据
+     *
+     */
+    public function logout()
+    {
+        $this->_delPassport($this->user_id, 'app');//删除用户票据
+        $this->_returnData();
+    }
+
 }//end
