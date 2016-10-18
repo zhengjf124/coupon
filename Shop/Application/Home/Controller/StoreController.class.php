@@ -3,8 +3,11 @@
 namespace Home\Controller;
 
 require_once(APP_PATH . 'ApiController.class.php');
+require_once(APP_PATH . 'Common/Util/QrCode.php');
 
 use Application\ApiController;
+
+//use Common\Util\QrCode;
 
 class StoreController extends ApiController
 {
@@ -123,6 +126,7 @@ class StoreController extends ApiController
      *     name   | type   | null | description
      * -----------|--------|------|-------------
      *  store_id  |  int   | 必须  | 商家ID
+     *  passport  | string | 可选  | 用户票据
      *
      * @return
      *      name    |  type  | description
@@ -144,6 +148,7 @@ class StoreController extends ApiController
      *    address   | string |  地址
      * comment_level|  int   |  评论等级 0-5，0代表无评论，1-5分别代表1到5颗星
      *   distance   | string |  距离
+     *   collect    |  int   |  是否收藏 0-未收藏、1-已收藏
      *
      * coupon_list:
      *      name    |  type  | description
@@ -170,6 +175,17 @@ class StoreController extends ApiController
         }
         $store_detail['comment_level'] = 3;//评论等级0-5 0代表 无评论 1-5分别代表1到5颗星
         $store_detail['distance'] = '<500m';//距离
+        $store_detail['collect'] = 0;//未收藏
+
+        if (preg_match('/^[0-9a-zA-Z]{32}$/', $this->_parameters['passport'])) {
+            $user_id = M('user_passport')->getFieldByPassport($this->_parameters['passport'], 'user_id');
+            if ($user_id) {
+                $collect_info = M('store_favorite')->where(array('user_id' => $user_id, 'store_id' => $store_detail['store_id']))->field('collect_id')->find();
+                if ($collect_info) {
+                    $store_detail['collect'] = 1;//已收藏
+                }
+            }
+        }
 
         $coupon_ids = M('coupons_store')->where(array('store_id' => $store_detail['store_id']))->getField('coupon_id', true);
         if ($coupon_ids) {
@@ -180,4 +196,12 @@ class StoreController extends ApiController
         }
         $this->_returnData(['store_detail' => $store_detail, 'coupon_list' => $coupon_list]);
     }
+
+    /*    public function test()
+        {
+            $path = 'Public1/upload1/test1/' . date('YmdHis') . rand(1000, 9999) . '.jpg';
+            $a = new QrCode('http://www.baidu.com', $path);
+            var_dump($a->setQrCode());
+        }*/
+
 }
